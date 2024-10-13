@@ -790,6 +790,13 @@ main {
   line-height: 1.6;
 }
 
+.timeline-list a {
+  text-decoration: underline;
+  color: var(--vegas-gold);
+  font-weight: var(--fw-400);
+  line-height: 1.6;
+}
+
 .timeline-item:not(:last-child)::before {
   content: "";
   position: absolute;
@@ -948,7 +955,7 @@ main {
   height: 200px;
   border-radius: 16px;
   overflow: hidden;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .project-img::before {
@@ -1013,6 +1020,7 @@ main {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
+  margin-bottom: 15px;
 }
 
 
