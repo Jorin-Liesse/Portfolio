@@ -73,15 +73,21 @@ for (let i = 0; i < selectItems.length; i++) {
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
+  // First loop to remove "active" class from all filterItems
   for (let i = 0; i < filterItems.length; i++) {
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
+    filterItems[i].classList.remove("active");
   }
+  
+  // Use a timeout to allow the page to update before the second loop
+  setTimeout(function () {
+    for (let i = 0; i < filterItems.length; i++) {
+      if (selectedValue === "all") {
+        filterItems[i].classList.add("active");
+      } else if (selectedValue === filterItems[i].dataset.category) {
+        filterItems[i].classList.add("active");
+      }
+    }
+  }, 0); // Set the delay to 0 to allow for microtask queue execution
 };
 
 // add event in all filter button items for large screen
