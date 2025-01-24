@@ -121,6 +121,7 @@ input, textarea {
   width: 100%;
   background: none;
   font: inherit;
+  border: red solid 1px;
 }
 
 ::selection {
