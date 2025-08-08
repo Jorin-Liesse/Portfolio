@@ -66,6 +66,12 @@ for (let i = 0; i < selectItems.length; i++) {
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
     filterFunc(selectedValue);
+
+    if (lastClickedBtn) lastClickedBtn.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtn = this;
+
+    closeProjectPage();
   });
 }
 
@@ -77,13 +83,13 @@ const filterFunc = function (selectedValue) {
   for (let i = 0; i < filterItems.length; i++) {
     filterItems[i].classList.remove("active");
   }
-  
+
   // Use a timeout to allow the page to update before the second loop
   setTimeout(function () {
     for (let i = 0; i < filterItems.length; i++) {
       if (selectedValue === "all") {
         filterItems[i].classList.add("active");
-      } else if (selectedValue === filterItems[i].dataset.category) {
+      } else if (filterItems[i].dataset.category && filterItems[i].dataset.category.includes(selectedValue)) {
         filterItems[i].classList.add("active");
       }
     }
@@ -99,9 +105,11 @@ for (let i = 0; i < filterBtn.length; i++) {
     selectValue.innerText = this.innerText;
     filterFunc(selectedValue);
 
-    lastClickedBtn.classList.remove("active");
+    if (lastClickedBtn) lastClickedBtn.classList.remove("active");
     this.classList.add("active");
     lastClickedBtn = this;
+
+    closeProjectPage();
   });
 }
 
@@ -139,5 +147,42 @@ for (let i = 0; i < navigationLinks.length; i++) {
         navigationLinks[i].classList.remove("active");
       }
     }
+
+    // lastClickedBtn = filterBtn[0];
+    lastClickedBtn.click();
+    closeProjectPage();
   });
 }
+
+const projectList = document.querySelector(".project-list");
+
+let lastOpenedProject = null;
+
+const openProjectPage = function (event, projectClass) {
+  event.preventDefault(); // Stops the link from navigating
+
+  const projectPage = document.querySelector(`.${projectClass}`);
+  if (projectPage) {
+    projectPage.classList.add("active");
+    window.scrollTo(0, 0);
+  }
+
+  if (projectList) {
+    projectList.classList.add("hidden");
+  }
+
+  if (lastClickedBtn) lastClickedBtn.classList.remove("active");
+
+  lastOpenedProject = projectClass;
+};
+
+const closeProjectPage = function () {
+  const projectPage = document.querySelector(`.${lastOpenedProject}`);
+  if (projectPage) {
+    projectPage.classList.remove("active");
+  }
+
+  if (projectList) {
+    projectList.classList.remove("hidden");
+  }
+};

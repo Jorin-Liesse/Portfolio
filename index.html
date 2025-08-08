@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon Jorin Liesse Website" type="image/svg+xml" href="assets/icon.svg" sizes="any">
+  <link rel="icon Jorin Liesse Website" type="image/svg+xml" href="assets/icons/icon.svg" sizes="any">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <title>Jorin Liesse Portfolio</title>
 
   <!--favicon-->
-  <link rel="shortcut icon" href="./assets/my-avatar1.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="./assets/images/my-avatar1.avif" type="image/x-icon" />
 
   <!--custom css link-->
   <link rel="stylesheet" href="style.css" />
@@ -30,7 +30,7 @@
     <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
         <figure class="avatar-box">
-          <img rel="Jorin Liesse Profile Image" src="./assets/my-avatar-1.png" width="80" />
+          <img rel="Jorin Liesse Profile Image" src="./assets/images/my-avatar-1.avif" width="80" />
         </figure>
 
         <div class="info-content">
@@ -183,7 +183,7 @@
           <ul class="service-list">
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/icon-dev.svg
+                <img src="./assets/icons/icon-dev.svg
                 " alt="design icon" width="40" />
               </div>
 
@@ -200,7 +200,7 @@
 
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/icon-dev.svg" alt="Web development icon" width="40" />
+                <img src="./assets/icons/icon-dev.svg" alt="Web development icon" width="40" />
               </div>
 
               <div class="service-content-box">
@@ -216,7 +216,7 @@
 
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/icon-dev.svg" alt="mobile app icon" width="40" />
+                <img src="./assets/icons/icon-dev.svg" alt="mobile app icon" width="40" />
               </div>
 
               <div class="service-content-box">
@@ -232,7 +232,7 @@
 
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/icon-dev.svg" alt="camera icon" width="40" />
+                <img src="./assets/icons/icon-dev.svg" alt="camera icon" width="40" />
               </div>
 
               <div class="service-content-box">
@@ -365,13 +365,19 @@
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Digital Arts & Entertainment</h4>
               <span>September 2023 - June 2026, Kortrijk Belgium</span>
-              <p class="timeline-text">Independent Game Production</p>
+              <p class="timeline-text">Independent Game Production (Bachelor's Degree)</p>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Het Vlaamse Kruis</h4>
               <span>November 2021 - February 2021, Hasselt Belgium</span>
-              <p class="timeline-text">First Aid</p>
+              <p class="timeline-text">First Aid (Certificate)</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Van Veldeke</h4>
+              <span>September 2017 - June 2023, Hasselt Belgium</span>
+              <p class="timeline-text">Math & Sciences (High School Diploma)</p>
             </li>
           </ol>
         </section>
@@ -473,6 +479,12 @@
           <ol class="timeline-list">
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">
+                DAE Game Jam 2025.2
+              </h4>
+              <a href="https://jorinliesse.itch.io/zombrush" target="_blank">ZomBrush</a>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
                 DAE Game Jam 2024.2
               </h4>
               <a href="https://jorinliesse.itch.io/ghost-of-nature" target="_blank">Ghost Of Nature</a>
@@ -505,7 +517,7 @@
         <section class="projects">
           <ul class="filter-list">
             <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+              <button class="active" data-filter-btn>Best</button>
             </li>
 
             <li class="filter-item">
@@ -513,15 +525,19 @@
             </li>
 
             <!-- <li class="filter-item">
-                <button data-filter-btn>Applications</button>
-              </li> -->
+              <button data-filter-btn>Applications</button>
+            </li> -->
+
+            <li class="filter-item">
+              <button data-filter-btn>Models</button>
+            </li>
 
             <li class="filter-item">
               <button data-filter-btn>Websites</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Models</button>
+              <button data-filter-btn>All</button>
             </li>
           </ul>
 
@@ -538,7 +554,7 @@
 
             <ul class="select-list">
               <li class="select-item">
-                <button data-select-item>All</button>
+                <button data-select-item>Best</button>
               </li>
 
               <li class="select-item">
@@ -546,28 +562,50 @@
               </li>
 
               <!-- <li class="select-item">
-                  <button data-select-item>Applications</button>
-                </li> -->
+                <button data-select-item>Applications</button>
+              </li> -->
+
+              <li class="select-item">
+                <button data-select-item>Models</button>
+              </li>
 
               <li class="select-item">
                 <button data-select-item>Websites</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Models</button>
+                <button data-select-item>All</button>
               </li>
             </ul>
           </div>
 
           <ul class="project-list">
-            <li class="project-item active" data-filter-item data-category="games">
-              <a href="https://jorinliesse.itch.io/crazy-coast" target="_blank">
+            <li class="project-item active" data-filter-item data-category="games best">
+              <!-- <a href="https://jorinliesse.itch.io/light-bridger" target="_blank"> -->
+              <a href="#" role="button" onclick="openProjectPage(event, 'project-light-bridger')">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/page-Crazy-Coast.png" alt="crazy-coast" loading="lazy" />
+                  <img src="./assets/images/page-light-bridger.avif" alt="light-bridger" loading="lazy" />
+                </figure>
+
+                <h3 class="project-title">Light Bridger</h3>
+
+                <p class="project-category">Games</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="games">
+              <!-- <a href="https://jorinliesse.itch.io/crazy-coast" target="_blank"> -->
+              <a href="#" role="button" onclick="openProjectPage(event, 'project-crazy-coast')">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/page-crazy-coast.avif" alt="crazy-coast" loading="lazy" />
                 </figure>
 
                 <h3 class="project-title">Crazy Coast</h3>
@@ -577,13 +615,14 @@
             </li>
 
             <li class="project-item active" data-filter-item data-category="games">
-              <a href="https://jorinliesse.itch.io/ghost-of-nature" target="_blank">
+              <!-- <a href="https://jorinliesse.itch.io/ghost-of-nature" target="_blank"> -->
+              <a href="#" role="button" onclick="openProjectPage(event, 'project-ghost-of-nature')">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/page-Ghost-of-Nature.png" alt="ghost-of-nature" loading="lazy" />
+                  <img src="./assets/images/page-ghost-of-nature.avif" alt="ghost-of-nature" loading="lazy" />
                 </figure>
 
                 <h3 class="project-title">Ghost of Nature</h3>
@@ -592,63 +631,120 @@
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="games">
-              <a href="https://jorin-liesse.github.io/Angry-Birds/" target="_blank">
+            <li class="project-item active" data-filter-item data-category="games best">
+              <!-- <a href="https://jorinliesse.itch.io/zombrush" target="_blank"> -->
+              <a href="#" role="button" onclick="openProjectPage(event, 'project-zombrush')">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/page-angry-birds.png" alt="angry-birds" loading="lazy" />
+                  <img src="./assets/images/page-zombrush.avif" alt="zombrush" loading="lazy" />
                 </figure>
 
-                <h3 class="project-title">Angry Birds</h3>
+                <h3 class="project-title">Zombrush</h3>
+
+                <p class="project-category">Games</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="games best">
+              <!-- <a href="https://jorin-liesse.github.io/Angry-Birds/" target="_blank"> -->
+              <a href="#" role="button" onclick="openProjectPage(event, 'project-angry-birds')">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/page-angry-birds.avif" alt="angry-birds" loading="lazy" />
+                </figure>
+
+                <h3 class="project-title">Angry Birds Clone</h3>
+
+                <p class="project-category">Games</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="games best">
+              <!-- <a href="https://jorin-liesse.github.io/Flappy-Bird/" target="_blank"> -->
+              <a href="#" role="button" onclick="openProjectPage(event, 'project-flappy-bird')">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/page-flappy-bird.avif" alt="flappy-bird" loading="lazy" />
+                </figure>
+
+                <h3 class="project-title">Flappy Bird Clone</h3>
 
                 <p class="project-category">Games</p>
               </a>
             </li>
 
             <li class="project-item active" data-filter-item data-category="games">
-              <a href="https://jorin-liesse.github.io/Flappy-Bird/" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/page-flappy-bird.png" alt="flappy-bird" loading="lazy" />
-                </figure>
-
-                <h3 class="project-title">Flappy Bird</h3>
-
-                <p class="project-category">Games</p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="games">
-              <a href="https://play.unity.com/en/games/4e26bc3b-4571-4c90-9bae-22f50d977581/mario-3d-world"
+              <!-- <a href="https://play.unity.com/en/games/4e26bc3b-4571-4c90-9bae-22f50d977581/mario-3d-world" -->
+              <a href="#" role="button" onclick="openProjectPage(event, 'project-super-mario-3D-world')"
                 target="_blank">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/page-super-mario-3D-wolrd.png" alt="super-mario-3D-wolrd" loading="lazy" />
+                  <img src="./assets/images/page-super-mario-3D-world.avif" alt="super-mario-3D-world" loading="lazy" />
                 </figure>
 
-                <h3 class="project-title">Mario 3D Wolrd</h3>
+                <h3 class="project-title">Mario 3D World Clone</h3>
 
                 <p class="project-category">Games</p>
               </a>
             </li>
-            
-            <li class="project-item active" data-filter-item data-category="models">
-              <a href="https://skfb.ly/oPyCE" target="_blank">
+
+            <li class="project-item active" data-filter-item data-category="games">
+              <!-- <a href="https://play.unity.com/en/games/2a2c8200-4885-4aea-bf04-005cc70ef928/steam-engine-simulator" -->
+              <a href="#" role="button" onclick="openProjectPage(event, 'project-steam-engine-simulator')"
+                target="_blank">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/page-DAE-Diorama-By-the-ocean.png" alt="DAE Diorama - By the ocean"
+                  <img src="./assets/images/page-steam-engine-simulator.avif" alt="steam engine simulator" loading="lazy" />
+                </figure>
+
+                <h3 class="project-title">Steam Engine Simulator</h3>
+
+                <p class="project-category">Games</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="models best">
+              <!-- <a href="https://skfb.ly/oPyCE" target="_blank"> -->
+              <a href="#" role="button" onclick="openProjectPage(event, 'project-DAE-castle-scene')">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/page-DAE-castle-scene.avif" alt="DAE - Castle Scene"
+                    loading="lazy" />
+                </figure>
+
+                <h3 class="project-title">DAE - Castle Scene</h3>
+
+                <p class="project-category">Models</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="models">
+              <!-- <a href="https://skfb.ly/oPyCE" target="_blank"> -->
+              <a href="#" role="button" onclick="openProjectPage(event, 'project-DAE-diorama-by-the-ocean')">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/page-DAE-diorama-by-the-ocean.avif" alt="DAE Diorama - By the ocean"
                     loading="lazy" />
                 </figure>
 
@@ -658,30 +754,15 @@
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="models">
-              <a href="https://skfb.ly/oUSts" target="_blank">
+            <li class="project-item active" data-filter-item data-category="models best">
+              <!-- <a href="https://skfb.ly/ptKUA" target="_blank"> -->
+              <a href="#" role="button" onclick="openProjectPage(event, 'project-DAE-moustachekart')">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/page-DAE-A-Castle-For-Games.png" alt="DAE - A Castle For Games" loading="lazy" />
-                </figure>
-
-                <h3 class="project-title">DAE - A castle for games</h3>
-
-                <p class="project-category">Models</p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="models">
-              <a href="https://skfb.ly/ptKUA" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/page-DAE - MoustacheKart.png" alt="DAE - MoustacheKart" loading="lazy" />
+                  <img src="./assets/images/page-DAE-moustachekart.avif" alt="DAE - MoustacheKart" loading="lazy" />
                 </figure>
 
                 <h3 class="project-title">DAE - MoustacheKart</h3>
@@ -690,14 +771,15 @@
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="models">
-              <a href="https://skfb.ly/psA9t" target="_blank">
+            <li class="project-item active" data-filter-item data-category="models best">
+              <!-- <a href="https://skfb.ly/psA9t" target="_blank"> -->
+              <a href="#" role="button" onclick="openProjectPage(event, 'project-DAE-roboddy')">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/page-DAE - Roboddy.png" alt="DAE - Roboddy" loading="lazy" />
+                  <img src="./assets/images/page-DAE-Roboddy.avif" alt="DAE - Roboddy" loading="lazy" />
                 </figure>
 
                 <h3 class="project-title">DAE - Roboddy</h3>
@@ -705,15 +787,32 @@
                 <p class="project-category">Models</p>
               </a>
             </li>
-
             <li class="project-item active" data-filter-item data-category="websites">
-              <a href="https://jorin-liesse.github.io/Recipe-Book/" target="_blank">
+              <!-- <a href="https://jorin-liesse.github.io/Portfolio/" target="_blank"> -->
+              <a href="#" role="button" onclick="openProjectPage(event, 'project-portfolio')">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/page-recipe-book.png" alt="recipe-book" loading="lazy" />
+                  <img src="./assets/images/page-portfolio.avif" alt="portfolio" loading="lazy" />
+                </figure>
+
+                <h3 class="project-title">Portfolio</h3>
+
+                <p class="project-category">Websites</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="websites">
+              <!-- <a href="https://jorin-liesse.github.io/Recipe-Book/" target="_blank"> -->
+              <a href="#" role="button" onclick="openProjectPage(event, 'project-recipe-book')">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/page-recipe-book.avif" alt="recipe-book" loading="lazy" />
                 </figure>
 
                 <h3 class="project-title">Recipe Book</h3>
@@ -722,6 +821,50 @@
               </a>
             </li>
           </ul>
+
+          <div class="project-light-bridger project-page">
+            <img class="project-presenter" src="./assets/images/page-light-bridger.avif" alt="Light Bridger" loading="lazy" />
+          </div>
+          <div class="project-crazy-coast project-page">
+            <img class="project-presenter" src="./assets/images/page-crazy-coast.avif" alt="Crazy Coast" loading="lazy" />
+          </div>
+          <div class="project-ghost-of-nature project-page">
+            <img class="project-presenter" src="./assets/images/page-ghost-of-nature.avif" alt="Ghost of Nature" loading="lazy" />
+          </div>
+          <div class="project-zombrush project-page">
+            <img class="project-presenter" src="./assets/images/page-zombrush.avif" alt="Zombrush" loading="lazy" />
+          </div>
+          <div class="project-angry-birds project-page">
+            <img class="project-presenter" src="./assets/images/page-angry-birds.avif" alt="Angry Birds" loading="lazy" />
+          </div>
+          <div class="project-flappy-bird project-page">
+            <img class="project-presenter" src="./assets/images/page-flappy-bird.avif" alt="Flappy Bird" loading="lazy" />
+          </div>
+          <div class="project-super-mario-3D-world project-page">
+            <img class="project-presenter" src="./assets/images/page-super-mario-3D-world.avif" alt="Super Mario 3D World" loading="lazy" />
+          </div>
+          <div class="project-steam-engine-simulator project-page">
+            <img class="project-presenter" src="./assets/images/page-steam-engine-simulator.avif" alt="Steam Engine Simulator" loading="lazy" />
+          </div>
+          <div class="project-DAE-castle-scene project-page">
+            <video class="project-presenter" src="./assets/videos/presenter-DAE_castle-scene.mp4" autoplay muted loop></video>
+            <!-- <img class="project-presenter" src="./assets/page-DAE-castle-scene.avif" alt="DAE Castle Scene" loading="lazy" /> -->
+          </div>
+          <div class="project-DAE-diorama-by-the-ocean project-page">
+            <img class="project-presenter" src="./assets/images/page-DAE-diorama-by-the-ocean.avif" alt="DAE Diorama by the Ocean" loading="lazy" />
+          </div>
+          <div class="project-DAE-moustachekart project-page">
+            <img class="project-presenter" src="./assets/images/page-DAE-moustachekart.avif" alt="DAE Moustachekart" loading="lazy" />
+          </div>
+          <div class="project-DAE-roboddy project-page">
+            <img class="project-presenter" src="./assets/images/page-DAE-roboddy.avif" alt="DAE Roboddy" loading="lazy" />
+          </div>
+          <div class="project-portfolio project-page">
+            <img class="project-presenter" src="./assets/images/page-portfolio.avif" alt="Portfolio" loading="lazy" />
+          </div>
+          <div class="project-recipe-book project-page">
+            <img class="project-presenter" src="./assets/images/page-recipe-book.avif" alt="Recipe Book" loading="lazy" />
+          </div>
         </section>
       </article>
 
@@ -764,7 +907,7 @@
   </main>
 
   <!--custom js link-->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
   <script src="script.js"></script>
 
   <!--ionicon link-->

@@ -934,6 +934,10 @@ main {
   margin-bottom: 10px;
 }
 
+.project-list.hidden {
+  display: none;
+}
+
 .project-item { display: none; }
 
 .project-item.active {
@@ -1022,8 +1026,25 @@ main {
   margin-bottom: 15px;
 }
 
+.project-page {
+  display: none;
+}
 
+.project-page.active {
+  display: block;
+  animation: fade 0.5s ease backwards;
+}
 
+.project-page * {
+  animation: scaleUp 0.25s ease forwards;
+}
+
+.project-presenter {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
 
 
 /*-----------------------------------*\
