@@ -1041,10 +1041,49 @@ main {
 
 .project-presenter {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
   object-fit: cover;
   border-radius: 16px;
 }
+
+.project-presenter {
+  overflow: hidden;       /* Hide overflow content */
+  scrollbar-width: 0px;  /* Firefox */
+}
+
+iframe.project-presenter {
+  width: 1280px;
+  height: 720px;
+}
+
+.project-presenter::-webkit-scrollbar {
+  display: none;          /* Chrome, Safari */
+}
+
+/* Container that keeps 16:9 aspect ratio, width 100% */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 720/1280 = 0.5625 or 56.25% */
+  overflow: hidden;
+}
+
+/* Iframe styled to be exactly 1280x720 but scaled down to fit container */
+.scaled-iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 1280px;
+  height: 720px;
+  border: none;
+  
+  /* Scale down iframe to fit container width */
+  transform-origin: top left;
+  
+  /* Calculate scale dynamically using CSS calc() */
+  transform: scale(calc(100% / 1280));
+}
+
 
 
 /*-----------------------------------*\
