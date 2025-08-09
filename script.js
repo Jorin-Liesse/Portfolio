@@ -187,6 +187,8 @@ const closeProjectPage = function () {
   if (projectList) {
     projectList.classList.remove("hidden");
   }
+
+  muteIframes();
 };
 
 const calcScale = function () {
@@ -197,6 +199,13 @@ const calcScale = function () {
 
   const scale = presenterContainer.clientWidth / 1280;
   iframe.style.setProperty('--iframe-presenter-scale', scale);
+};
+
+const muteIframes = function () {
+  const iframes = document.querySelectorAll("iframe.mute");
+  iframes.forEach(iframe => {
+    iframe.src = iframe.src; // Reload the iframe to mute it
+  });
 };
 
 // Apply calcScale on window resize and on page load

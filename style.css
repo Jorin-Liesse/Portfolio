@@ -1114,17 +1114,26 @@ main {
   margin-bottom: 15px;
 }
 
+@keyframes scaleUpPage {
+  0% {
+    --animation-scale: 0.5;
+  }
+  100% {
+    --animation-scale: 1;
+  }
+}
+
 .project-page {
   display: none;
 }
 
 .project-page.active {
   display: block;
-  /* animation: fade 0.5s ease backwards; */
+  animation: fade 0.5s ease backwards;
 }
 
 .project-page * {
-  /* animation: scaleUp 0.25s ease forwards; */
+  animation: scaleUp 0.25s ease forwards;
 }
 
 .project-presenter {
@@ -1142,13 +1151,15 @@ main {
 }
 
 .iframe-presenter-container iframe {
+  animation: scaleUpPage 0.25s ease forwards;
+  --animation-scale: 1;
   --iframe-presenter-scale: 1;
   background-color: var(--smoky-black);
   border-radius: calc(16px / var(--iframe-presenter-scale));
   border: none;
   width: 1280px;
   height: 720px;
-  transform: scale(var(--iframe-presenter-scale));
+  transform: scale(calc(var(--iframe-presenter-scale) * var(--animation-scale)));
   transform-origin: top left;
 }
 
