@@ -170,10 +170,12 @@ const openProjectPage = function (event, projectClass) {
   if (projectList) {
     projectList.classList.add("hidden");
   }
-
+  
   if (lastClickedBtn) lastClickedBtn.classList.remove("active");
 
   lastOpenedProject = projectClass;
+
+  calcScale();
 };
 
 const closeProjectPage = function () {
@@ -186,3 +188,18 @@ const closeProjectPage = function () {
     projectList.classList.remove("hidden");
   }
 };
+
+const calcScale = function () {
+  const presenterContainer = document.querySelector(`.${lastOpenedProject} .iframe-presenter-container`);
+  if (!presenterContainer) return;
+
+  const iframe = presenterContainer.querySelector("iframe");
+
+  const scale = presenterContainer.clientWidth / 1280;
+  iframe.style.setProperty('--iframe-presenter-scale', scale);
+};
+
+// Apply calcScale on window resize and on page load
+window.addEventListener("resize", function () {
+  calcScale();
+});
