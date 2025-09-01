@@ -188,7 +188,7 @@ const closeProjectPage = function () {
     projectList.classList.remove("hidden");
   }
 
-  muteIframes();
+  muteElements();
 };
 
 const calcScale = function () {
@@ -201,8 +201,8 @@ const calcScale = function () {
   iframe.style.setProperty('--iframe-presenter-scale', scale);
 };
 
-const muteIframes = function () {
-  const iframes = document.querySelectorAll("iframe.mute");
+const muteElements = function () {
+  const iframes = document.querySelectorAll("iframe");
   iframes.forEach(iframe => {
     iframe.src = iframe.src; // Reload the iframe to mute it
   });
@@ -212,3 +212,16 @@ const muteIframes = function () {
 window.addEventListener("resize", function () {
   calcScale();
 });
+
+// const toggleVolume = function (icon) {
+//   icon.classList.toggle("active");
+//   const parentElement = icon.parentElement;
+//   const video = parentElement.querySelector("video");
+
+//   if (video) video.muted = !video.muted;
+
+//   const otherVolumeIcons = parentElement.parentElement.querySelectorAll(".volume-icon");
+//   otherVolumeIcons.forEach(otherIcon => {
+//     if (otherIcon !== icon) otherIcon.classList.toggle("active");
+//   });
+// };
