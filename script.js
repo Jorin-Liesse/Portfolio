@@ -89,7 +89,10 @@ const filterFunc = function (selectedValue) {
     for (let i = 0; i < filterItems.length; i++) {
       if (selectedValue === "all") {
         filterItems[i].classList.add("active");
-      } else if (filterItems[i].dataset.category && filterItems[i].dataset.category.includes(selectedValue)) {
+      } else if (
+        filterItems[i].dataset.category &&
+        filterItems[i].dataset.category.includes(selectedValue)
+      ) {
         filterItems[i].classList.add("active");
       }
     }
@@ -170,7 +173,7 @@ const openProjectPage = function (event, projectClass) {
   if (projectList) {
     projectList.classList.add("hidden");
   }
-  
+
   if (lastClickedBtn) lastClickedBtn.classList.remove("active");
 
   lastOpenedProject = projectClass;
@@ -192,18 +195,20 @@ const closeProjectPage = function () {
 };
 
 const calcScale = function () {
-  const presenterContainer = document.querySelector(`.${lastOpenedProject} .iframe-presenter-container`);
+  const presenterContainer = document.querySelector(
+    `.${lastOpenedProject} .iframe-presenter-container`
+  );
   if (!presenterContainer) return;
 
   const iframe = presenterContainer.querySelector("iframe");
 
   const scale = presenterContainer.clientWidth / 1280;
-  iframe.style.setProperty('--iframe-presenter-scale', scale);
+  iframe.style.setProperty("--iframe-presenter-scale", scale);
 };
 
 const muteElements = function () {
   const iframes = document.querySelectorAll("iframe");
-  iframes.forEach(iframe => {
+  iframes.forEach((iframe) => {
     iframe.src = iframe.src; // Reload the iframe to mute it
   });
 };
@@ -211,6 +216,11 @@ const muteElements = function () {
 // Apply calcScale on window resize and on page load
 window.addEventListener("resize", function () {
   calcScale();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  calcScale();
+  URLParams();
 });
 
 // const toggleVolume = function (icon) {
@@ -226,11 +236,11 @@ window.addEventListener("resize", function () {
 //   });
 // };
 
-const params = new URLSearchParams(window.location.search);
+const URLParams = function () {
+  const params = new URLSearchParams(window.location.search);
+  const param = params.get("pre-filter");
 
-    // Example: https://example.com/?pre-filter=HelloWorld
-    const param = params.get("pre-filter");
-
-    if (param) {
-      filterFunc(param.toLowerCase());
-    }
+  if (param) {
+    filterFunc(param.toLowerCase());
+  }
+};
