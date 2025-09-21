@@ -32,4 +32,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          publish_dir: ./dist   # <- deploy the Parcel output directly
+          publish_dir: ./dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
