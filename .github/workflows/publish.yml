@@ -17,7 +17,7 @@ jobs:
         run: npm install -g parcel
 
       - name: Build with Parcel
-        run: parcel build index.html --dist-dir dist
+        run: parcel build index.html --dist-dir _site
 
       - name: Upload
         uses: actions/upload-pages-artifact@v3
