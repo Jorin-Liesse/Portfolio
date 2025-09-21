@@ -1,5 +1,5 @@
 // ---------- Helpers ----------
-const toggleActive = elem => elem.classList.toggle("active");
+const toggleActive = (elem) => elem.classList.toggle("active");
 
 // ---------- Sidebar ----------
 const sidebar = document.querySelector("[data-sidebar]");
@@ -21,12 +21,16 @@ const toggleModal = () => {
   modal.overlay.classList.toggle("active");
 };
 
-document.querySelectorAll("[data-testimonials-item]").forEach(item => {
+document.querySelectorAll("[data-testimonials-item]").forEach((item) => {
   item.addEventListener("click", () => {
     modal.img.src = item.querySelector("[data-testimonials-avatar]").src;
     modal.img.alt = item.querySelector("[data-testimonials-avatar]").alt;
-    modal.title.innerHTML = item.querySelector("[data-testimonials-title]").innerHTML;
-    modal.text.innerHTML = item.querySelector("[data-testimonials-text]").innerHTML;
+    modal.title.innerHTML = item.querySelector(
+      "[data-testimonials-title]"
+    ).innerHTML;
+    modal.text.innerHTML = item.querySelector(
+      "[data-testimonials-text]"
+    ).innerHTML;
     toggleModal();
   });
 });
@@ -43,16 +47,24 @@ const filterItems = document.querySelectorAll("[data-filter-item]");
 
 let lastClickedBtn = filterBtns[0];
 
+const param = new URLSearchParams(window.location.search).get("pre-filter");
+if (param) {
+  lastClickedBtn =
+    [...filterBtns].find(
+      (btn) => btn.innerText.toLowerCase() === param.toLowerCase()
+    ) || lastClickedBtn;
+}
+
 const filterFunc = function (selectedValue) {
-  filterItems.forEach(item => item.classList.remove("active"));
+  filterItems.forEach((item) => item.classList.remove("active"));
   filterItems[0]?.offsetWidth;
 
-  filterItems.forEach(item => {
-    const match = selectedValue === "all" || item.dataset.category?.includes(selectedValue);
+  filterItems.forEach((item) => {
+    const match =
+      selectedValue === "all" || item.dataset.category?.includes(selectedValue);
     if (match) item.classList.add("active");
   });
 };
-
 
 const updateSelection = (btn, value) => {
   selectValue.innerText = btn.innerText;
@@ -66,32 +78,23 @@ const updateSelection = (btn, value) => {
 };
 
 select?.addEventListener("click", () => toggleActive(select));
-selectItems.forEach(item =>
+selectItems.forEach((item) =>
   item.addEventListener("click", () => {
     updateSelection(item, item.innerText.toLowerCase());
     toggleActive(select);
   })
 );
 
-filterBtns.forEach(btn =>
+filterBtns.forEach((btn) =>
   btn.addEventListener("click", () =>
     updateSelection(btn, btn.innerText.toLowerCase())
   )
 );
 
-// Apply pre-filter if query param exists
-const param = new URLSearchParams(window.location.search).get("pre-filter");
-if (param) {
-  const matchBtn = [...filterBtns].find(
-    btn => btn.innerText.toLowerCase() === param.toLowerCase()
-  );
-  if (matchBtn) updateSelection(matchBtn, param.toLowerCase());
-}
-
 // ---------- Form Validation ----------
 const form = document.querySelector("[data-form]");
 const formBtn = document.querySelector("[data-form-btn]");
-form?.querySelectorAll("[data-form-input]").forEach(input => {
+form?.querySelectorAll("[data-form-input]").forEach((input) => {
   input.addEventListener("input", () =>
     form.checkValidity()
       ? formBtn.removeAttribute("disabled")
@@ -103,7 +106,7 @@ form?.querySelectorAll("[data-form-input]").forEach(input => {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-navigationLinks.forEach(link =>
+navigationLinks.forEach((link) =>
   link.addEventListener("click", () => {
     const targetPage = link.innerText.toLowerCase();
     pages.forEach((page, i) => {
@@ -141,7 +144,6 @@ function closeProjectPage() {
   const projectPage = document.querySelector(`.${lastOpenedProject}`);
   projectPage?.classList.remove("active");
   projectList?.classList.remove("hidden");
-  muteElements();
 }
 
 function calcScale() {
@@ -153,12 +155,6 @@ function calcScale() {
   const iframe = container.querySelector("iframe");
   const scale = container.clientWidth / 1280;
   iframe.style.setProperty("--iframe-presenter-scale", scale);
-}
-
-function muteElements() {
-  document.querySelectorAll("iframe").forEach(iframe => {
-    iframe.src = iframe.src; // reload to mute
-  });
 }
 
 window.addEventListener("resize", calcScale);
