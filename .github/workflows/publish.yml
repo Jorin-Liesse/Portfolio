@@ -1,11 +1,6 @@
 name: publish
 on: [workflow_dispatch]
 
-on:
-  push:
-    branches:
-      - main   # change if you want another branch
-
 jobs:
   build:
     runs-on: ubuntu-latest
