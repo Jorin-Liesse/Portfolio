@@ -100,7 +100,21 @@ const filterFunc = function (selectedValue) {
 };
 
 // add event in all filter button items for large screen
+// let lastClickedBtn = filterBtn[0];
+
+const params = new URLSearchParams(window.location.search);
+const param = params.get("pre-filter");
+
+console.log("Pre-filter param:", param);
+
 let lastClickedBtn = filterBtn[0];
+for (let i = 0; i < filterBtn.length; i++) {
+  if (!param) break;
+  if (filterBtn[i].innerText.toLowerCase() === param.toLowerCase()) {
+    lastClickedBtn = filterBtn[i];
+    break;
+  }
+}
 
 for (let i = 0; i < filterBtn.length; i++) {
   filterBtn[i].addEventListener("click", function () {
@@ -220,27 +234,4 @@ window.addEventListener("resize", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   calcScale();
-  URLParams();
 });
-
-// const toggleVolume = function (icon) {
-//   icon.classList.toggle("active");
-//   const parentElement = icon.parentElement;
-//   const video = parentElement.querySelector("video");
-
-//   if (video) video.muted = !video.muted;
-
-//   const otherVolumeIcons = parentElement.parentElement.querySelectorAll(".volume-icon");
-//   otherVolumeIcons.forEach(otherIcon => {
-//     if (otherIcon !== icon) otherIcon.classList.toggle("active");
-//   });
-// };
-
-const URLParams = function () {
-  const params = new URLSearchParams(window.location.search);
-  const param = params.get("pre-filter");
-
-  if (param) {
-    filterFunc(param.toLowerCase());
-  }
-};
