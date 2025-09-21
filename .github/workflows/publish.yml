@@ -21,7 +21,6 @@ jobs:
       - name: Install dependencies
         run: |
           npm install -g parcel
-          npm install   # if you have a package.json
 
       # 4. Build project with Parcel
       - name: Build with Parcel
