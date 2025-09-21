@@ -225,3 +225,12 @@ window.addEventListener("resize", function () {
 //     if (otherIcon !== icon) otherIcon.classList.toggle("active");
 //   });
 // };
+
+const params = new URLSearchParams(window.location.search);
+
+    // Example: https://example.com/?pre-filter=HelloWorld
+    const param = params.get("pre-filter");
+
+    if (param) {
+      filterFunc(param.toLowerCase());
+    }
