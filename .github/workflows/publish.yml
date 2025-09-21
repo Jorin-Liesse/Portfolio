@@ -35,10 +35,10 @@ jobs:
 
   # Deploy job
   deploy:
-    name: build
+    name: deploy
 
     # Add a dependency to the build job
-    needs: minify
+    needs: build
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
