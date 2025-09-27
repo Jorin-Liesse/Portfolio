@@ -845,15 +845,50 @@ main {
 }
 
 .skill-card img {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
 }
 
 .skill-card h3 {
   color: var(--light-gray);
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    gap: 0.75rem 1rem; /* tighter gaps on small screens */
+    justify-content: flex-start; /* align left for natural reading flow */
+  }
+
+  .skill-card {
+    flex: 1 1 calc(50% - 1rem); /* two cards per row */
+    justify-content: flex-start;
+    padding: 0.75rem 1rem;
+  }
+
+  .skill-card img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .skill-card h3 {
+    font-size: 0.8rem;
+  }
+}
+
+/* Ultra-small screens (<=400px) */
+@media (max-width: 400px) {
+  .skill-card {
+    flex: 1 1 100%; /* full width for readability */
+    justify-content: center;
+    text-align: center;
+  }
+
+  .skill-card h3 {
+    font-size: 0.75rem;
+  }
 }
 
 /*-----------------------------------*\
