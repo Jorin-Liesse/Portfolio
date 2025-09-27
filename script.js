@@ -9,10 +9,7 @@ sidebarBtn?.addEventListener("click", () => toggleActive(sidebar));
 // ---------- Skill Cards ----------
 const skillCards = document.querySelectorAll("[data-skill-card]");
 skillCards.forEach((card) => {
-  card.addEventListener("click", () => {
-    skillCards.forEach((c) => c.classList.remove("active"));
-    toggleActive(card);
-  });
+  card.addEventListener("click", () => toggleActive(card));
 });
 
 // ---------- Testimonials Modal ----------
