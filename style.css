@@ -868,11 +868,12 @@ main {
     display: none;
   }
 
-  .skill-card:hover h3{
+  .skill-card:active h3{
     display: block;
   }
 
   .skill-card {
+    cursor: pointer;
     justify-content: center;
     padding: 0.5rem;
   }
