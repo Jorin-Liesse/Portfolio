@@ -868,7 +868,7 @@ main {
     display: none;
   }
 
-  .skill-card:active h3{
+  .skill-card.active h3{
     display: block;
   }
 

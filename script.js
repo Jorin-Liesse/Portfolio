@@ -6,6 +6,15 @@ const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn?.addEventListener("click", () => toggleActive(sidebar));
 
+// ---------- Skill Cards ----------
+const skillCards = document.querySelectorAll("[data-skill-card]");
+skillCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    skillCards.forEach((c) => c.classList.remove("active"));
+    toggleActive(card);
+  });
+});
+
 // ---------- Testimonials Modal ----------
 const modal = {
   container: document.querySelector("[data-modal-container]"),
