@@ -879,7 +879,7 @@ main {
 }
 
 /* Ultra-small screens (<=400px) */
-@media (max-width: 400px) {
+@media (max-width: 300px) {
   .skill-card {
     flex: 1 1 100%; /* full width for readability */
     justify-content: center;
