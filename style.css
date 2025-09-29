@@ -310,23 +310,6 @@ main {
 /*-----------------------------------*\
   #SIDEBAR
 \*-----------------------------------*/
-.coffeebutton {
-  background-color: grey;
-  border: none;
-  border-radius: 25px;
-  color: white;
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.coffeebutton:hover {
-  background-color: white;
-  color: grey;
-}
 
 .sidebar {
   margin-bottom: 15px;
@@ -856,28 +839,7 @@ main {
   margin: 0;
 }
 
-@media (max-width: 600px) {
-  .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem 1rem;
-    justify-content: center;
-  }
 
-  .skill-card h3 {
-    display: none;
-  }
-
-  .skill-card.active h3{
-    display: block;
-  }
-
-  .skill-card {
-    cursor: pointer;
-    justify-content: center;
-    padding: 0.5rem;
-  }
-}
 
 /*-----------------------------------*\
   #RESUME
@@ -1234,6 +1196,53 @@ main {
   height: 720px;
   transform: scale(calc(var(--iframe-presenter-scale) * var(--animation-scale)));
   transform-origin: top left;
+}
+
+.project-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.project-block {
+  position: relative;
+  flex: 1 1 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-block.half {
+  flex: 1 1 calc(50% - 16px);
+}
+
+.project-block img,
+.project-block video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-block .on-top-text {
+  position: absolute;
+  bottom: 12px; /* distance from bottom of image */
+  left: 12px;   /* distance from left */
+  margin: 0;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* .project-block p {
+  padding: 12px;
+} */
+
+
+.project-spacer {
+  padding-bottom: 16px;
 }
 
 .volume-icon {
@@ -1828,6 +1837,33 @@ textarea.form-input::-webkit-resizer {
 /**
  * responsive larger than 768px screen
  */
+
+ @media (max-width: 768px) {
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    justify-content: center;
+  }
+
+  .skill-card h3 {
+    display: none;
+  }
+
+  .skill-card.active h3{
+    display: block;
+  }
+
+  .skill-card {
+    cursor: pointer;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .project-block.half {
+    flex: 1 1 100%;
+  }
+}
 
 @media (min-width: 768px) {
   /**
