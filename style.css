@@ -790,6 +790,14 @@ main {
   filter: grayscale(0);
 }
 
+/* #LINKS */
+
+.links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  justify-content: center;
+}
 
 /* #SKILLS */
 
@@ -812,7 +820,7 @@ main {
   gap: 0.5rem;
   background: var(--border-gradient-onyx);
   border-radius: 0.75rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   padding: 0.5rem 0.75rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   width: auto;
@@ -838,8 +846,6 @@ main {
   font-weight: 600;
   margin: 0;
 }
-
-
 
 /*-----------------------------------*\
   #RESUME
@@ -1194,7 +1200,9 @@ main {
   border: none;
   width: 1280px;
   height: 720px;
-  transform: scale(calc(var(--iframe-presenter-scale) * var(--animation-scale)));
+  transform: scale(
+    calc(var(--iframe-presenter-scale) * var(--animation-scale))
+  );
   transform-origin: top left;
 }
 
@@ -1227,7 +1235,7 @@ main {
 .project-block .on-top-text {
   position: absolute;
   bottom: 12px; /* distance from bottom of image */
-  left: 12px;   /* distance from left */
+  left: 12px; /* distance from left */
   margin: 0;
   padding: 8px 12px;
   background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
@@ -1239,7 +1247,6 @@ main {
 /* .project-block p {
   padding: 12px;
 } */
-
 
 .project-spacer {
   padding-bottom: 16px;
@@ -1459,6 +1466,14 @@ textarea.form-input::-webkit-resizer {
 
 .form-btn ion-icon {
   font-size: 16px;
+}
+
+.form-btn img {
+  color: red !important;
+  fill: red !important;
+  stroke: red !important;
+  width: 16px;
+  height: 16px;
 }
 
 .form-btn:hover {
@@ -1832,13 +1847,25 @@ textarea.form-input::-webkit-resizer {
   .form-btn ion-icon {
     font-size: 18px;
   }
+
+  .form-btn img {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 /**
  * responsive larger than 768px screen
  */
 
- @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .links-grid {
+    display: flex;
+    flex-direction: column; /* stack items vertically */
+    gap: 1rem; /* space between items */
+    width: 100%; /* make the container full width */
+  }
+
   .skills-grid {
     display: flex;
     flex-wrap: wrap;
@@ -1850,7 +1877,7 @@ textarea.form-input::-webkit-resizer {
     display: none;
   }
 
-  .skill-card.active h3{
+  .skill-card.active h3 {
     display: block;
   }
 
