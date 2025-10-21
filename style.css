@@ -1244,9 +1244,34 @@ main {
   font-size: 1rem;
 }
 
-/* .project-block p {
-  padding: 12px;
-} */
+.project-block.text-box {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+}
+
+.project-block.text-box::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.project-block.text-box p.centered {
+  text-align: center;
+}
+
+.project-block.text-box p {
+  color: var(--white-2);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
 
 .project-spacer {
   padding-bottom: 16px;
