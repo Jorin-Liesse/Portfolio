@@ -1,42 +1,42 @@
-# Website
+# sv
 
-## Table of Contents
-- Project Title
-- Table of Contents
-- Installation
-- Usage
-- Credits
-- License
-- Project Description
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## Installation
+## Creating a project
 
-## Usage
+If you're seeing this, you've probably already done this step. Congrats!
 
-## Credits
+```sh
+# create a new project
+npx sv create my-app
+```
 
-## License
-Please read the license provided in the main directory for information about how this software can be used and distributed.
+To recreate this project with the same configuration:
 
-## Project Description
+```sh
+# recreate this project
+npx sv@0.15.2 create --template minimal --types ts --add prettier eslint --install npm Portfolio-Svelte
+```
 
-## Todo
+## Developing
 
-- projects pages
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-- add all new projects
-    - new castle
-    - desk
-    - simple scene
-    - zombiebush
-    - game jam august
-    - mirror game
-    - porfolio website
+```sh
+npm run dev
 
-- order projects from best to not best
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-- new what am i doing
+## Building
 
-- best project tombnail
+To create a production version of your app:
 
-- real photo
+```sh
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

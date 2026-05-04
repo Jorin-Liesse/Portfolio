@@ -1,0 +1,27 @@
+{
+  "files.exclude": {
+    "**/.vscode": true,
+    "**/.git": true,
+    "**/.gitignore": true,
+    "**/workspace.code-workspace": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/package-lock.json": true,
+    "**/package.json": true,
+
+    "**/.svelte-kit": true,
+    "**/svelte.config.js": true,
+    "**/eslint.config.js": true,
+    "**/.npmrc": true,
+    "**/.prettierignore": true,
+    "**/.prettierrc": true,
+
+    "**/README.md": true,
+    "**/tsconfig.json": true,
+    "**/tsconfig.app.json": true,
+    "**/tsconfig.node.json": true,
+    "**/vite.config.ts": true,
+
+    "**/uninclude": true
+  }
+}
