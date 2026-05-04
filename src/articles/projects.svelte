@@ -173,8 +173,8 @@
         title="Artisans Desk"
         category="Models"
         categories="models best"
-        avif="images-AV1/page-Artisans-Desk.avif"
-        fallback="images-fallback/page-Artisans-Desk.jpg"
+        avif="images-AV1/page-artisans-desk.avif"
+        fallback="images-fallback/page-artisans-desk.jpg"
       />
 
       <ProjectItem
