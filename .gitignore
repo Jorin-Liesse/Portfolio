@@ -27,6 +27,7 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 ### VisualStudioCode ###
+.vscode/
 .vscode/*
 *.code-workspace
 !.vscode/settings.json
