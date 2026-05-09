@@ -1,9 +1,10 @@
 <script lang="ts">
+  import ArticlePage from '../components/article-page.svelte';
+
+  export let active = false;
 </script>
 
-<article class="contact" data-page="contact">
-  <h2 class="h2 article-title">Contact</h2>
-
+<ArticlePage title="Contact" id="contact" active={active}>
   <section class="mapbox" data-mapbox>
     <figure>
       <iframe
@@ -33,6 +34,6 @@
       </button>
     </form>
   </section>
-</article>
+</ArticlePage>
 
 <style></style>

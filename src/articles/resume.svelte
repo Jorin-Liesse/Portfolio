@@ -1,10 +1,10 @@
 <script lang="ts">
+  import ArticlePage from '../components/article-page.svelte';
+  export let active = false;
   // import Button from "../components/button.svelte";
 </script>
 
-<article class="resume" data-page="resume">
-  <h2 class="h2 article-title">Resume</h2>
-
+<ArticlePage title="Resume" id="resume" active={active}>
   <section class="timeline">
     <div class="title-wrapper">
       <div class="icon-box">
@@ -148,6 +148,6 @@
       <span>Download</span>
     </button>
   </a>
-</article>
+</ArticlePage>
 
 <style></style>

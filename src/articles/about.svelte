@@ -1,11 +1,13 @@
 <script lang="ts">
+  import ArticlePage from '../components/article-page.svelte';
+
   import SkillCard from '../components/skill-card.svelte';
   import ServiceCard from '../components/service-card.svelte';
+
+  export let active = false;
 </script>
 
-<article class="about active" data-page="about">
-  <h2 class="h2 article-title">About me</h2>
-
+<ArticlePage title="About me" id="about" active={active}>
   <section class="about-text">
     <p>
       I’m an indie game developer and designer focused on creating engaging player experiences. I work across all aspects of game development:
@@ -57,6 +59,6 @@
       />
     </ul>
   </section>
-</article>
+</ArticlePage>
 
 <style></style>

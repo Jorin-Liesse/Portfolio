@@ -1,30 +1,27 @@
 <script lang="ts">
+  import ProjectPage from '../components/project-page.svelte';
+
   import SkillCard from '../components/skill-card.svelte';
   import Button from '../components/button.svelte';
 </script>
 
-<div class="project-diorama-by-the-ocean project-page">
-  <div class="project-presenter iframe-presenter-container">
+<ProjectPage id="project-diorama-by-the-ocean">
+  {#snippet presenter()}
     <iframe
       title="DAE Diorama - By the ocean"
       frameborder="0"
       allow="autoplay; fullscreen; xr-spatial-tracking"
       loading="lazy"
       src="https://sketchfab.com/models/b0e9a08a3b894b7d82541a81806481ac/embed?autostart=1&camera=0&annotations_visible=0&preload=1&transparent=1&ui_hint=2"
-    >
-    </iframe>
-  </div>
+    ></iframe>
+  {/snippet}
 
-  <div class="project-spacer"></div>
-
-  <div class="skills-grid">
+  {#snippet skills()}
     <SkillCard icon="icons/unity-icon.svg" alt="Unity icon" title="Unity" />
     <SkillCard icon="icons/photoshop-icon.svg" alt="Photoshop icon" title="Photoshop" />
-  </div>
+  {/snippet}
 
-  <div class="project-spacer"></div>
-
-  <div class="project-content">
+  {#snippet content()}
     <div class="project-block text-box">
       <p class="service-item-text centered">
         This 3D artwork captures the vibrant essence of a Philippines island. Bold architecture and striking colors come alive under the warm sun,
@@ -33,11 +30,6 @@
         beauty of nature.
       </p>
     </div>
-  </div>
-
-  <div class="project-spacer"></div>
-
-  <div class="project-content">
     <div class="project-block half">
       <picture>
         <source srcset="images-AV1/diorama-by-the-ocean/boat.avif" type="image/avif" />
@@ -50,14 +42,11 @@
         <img src="images-fallback/diorama-by-the-ocean/house.jpg" alt="Detail render" loading="lazy" />
       </picture>
     </div>
-  </div>
+  {/snippet}
 
-  <div class="project-spacer"></div>
-  <div class="project-spacer"></div>
-
-  <div class="links-grid">
+  {#snippet links()}
     <a href="https://skfb.ly/oPyCE" class="link" target="_blank">
       <Button icon="icons/sketchfab.svg" alt="Sketchfab Icon" title="Sketchfab" />
     </a>
-  </div>
-</div>
+  {/snippet}
+</ProjectPage>

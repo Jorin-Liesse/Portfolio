@@ -8,4 +8,13 @@
   </a>
 </li>
 
-<style></style>
+<style>
+  .social-item .social-link {
+    color: var(--light-gray-70);
+    font-size: 18px;
+  }
+
+  .social-item .social-link:hover {
+    color: var(--light-gray);
+  }
+</style>

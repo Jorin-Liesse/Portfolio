@@ -1,26 +1,26 @@
 <script lang="ts">
+  import ProjectPage from '../components/project-page.svelte';
+
   import SkillCard from '../components/skill-card.svelte';
   import Button from '../components/button.svelte';
 </script>
 
-<div class="project-light-bridger project-page">
-  <video class="project-presenter" autoplay muted loop playsinline>
-    <source src="video-AV1/presenter-light-bridger.webm" type="video/webm; codecs=av01.0.05M.08,opus" />
-    <source src="video-fallback/presenter-light-bridger.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
-  </video>
+<ProjectPage id="project-light-bridger">
+  {#snippet presenter()}
+    <video class="project-presenter" autoplay muted loop playsinline>
+      <source src="video-AV1/presenter-light-bridger.webm" type="video/webm; codecs=av01.0.05M.08,opus" />
+      <source src="video-fallback/presenter-light-bridger.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
+    </video>
+  {/snippet}
 
-  <div class="project-spacer"></div>
-
-  <div class="skills-grid">
+  {#snippet skills()}
     <SkillCard icon="icons/unity-icon.svg" alt="Unity icon" title="Unity" />
     <SkillCard icon="icons/cs-icon.svg" alt="C# icon" title="C Sharp" />
     <SkillCard icon="icons/blender-icon.svg" alt="Blender icon" title="Blender" />
     <SkillCard icon="icons/miro-icon.svg" alt="Miro icon" title="Miro" />
-  </div>
+  {/snippet}
 
-  <div class="project-spacer"></div>
-
-  <div class="project-content">
+  {#snippet content()}
     <div class="project-block text-box">
       <p class="service-item-text centered">
         For Light Bridger, I started from the idea of using light as a physical tool. This evolved into a puzzle platformer where players build
@@ -29,11 +29,6 @@
         clear and consistent vision.
       </p>
     </div>
-  </div>
-
-  <div class="project-spacer"></div>
-
-  <div class="project-content">
     <div class="project-block half text-box">
       <p class="service-item-text">• State</p>
       <p class="service-item-text">• Singleton</p>
@@ -52,12 +47,9 @@
       <p class="service-item-text">‎</p>
       <p class="h5 on-top-text">Project Highlights</p>
     </div>
-  </div>
+  {/snippet}
 
-  <div class="project-spacer"></div>
-  <div class="project-spacer"></div>
-
-  <div class="links-grid">
+  {#snippet links()}
     <a href="https://jorinliesse.itch.io/light-bridger" class="link" target="_blank">
       <Button icon="icons/itch.svg" alt="Itch Icon" title="Itch" />
     </a>
@@ -67,5 +59,5 @@
     <a href="https://miro.com/app/board/uXjVIf3QwEk=/?share_link_id=857605827096" class="link" target="_blank">
       <Button icon="icons/miro.svg" alt="Miro Icon" title="Miro" />
     </a>
-  </div>
-</div>
+  {/snippet}
+</ProjectPage>

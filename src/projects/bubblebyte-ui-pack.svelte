@@ -1,39 +1,27 @@
 <script lang="ts">
+  import ProjectPage from '../components/project-page.svelte';
+
   import SkillCard from '../components/skill-card.svelte';
 </script>
 
-<div class="project-bubblebyte-ui-pack project-page">
-  <picture>
-    <source srcset="images-AV1/bubblebyte-ui-pack/presenter-bubblebyte-ui-pack.avif" type="image/avif" />
-    <img
-      class="project-presenter"
-      src="images-fallback/bubblebyte-ui-pack/presenter-bubblebyte-ui-pack.jpg"
-      alt="Bubblebyte UI Pack"
-      loading="lazy"
-    />
-  </picture>
+<ProjectPage id="project-bubblebyte-ui-pack">
+  {#snippet presenter()}
+    <picture>
+      <source srcset="images-AV1/bubblebyte-ui-pack/presenter-bubblebyte-ui-pack.avif" type="image/avif" />
+      <img
+        class="project-presenter iframe-presenter-container"
+        src="images-fallback/bubblebyte-ui-pack/presenter-bubblebyte-ui-pack.jpg"
+        alt="Bubblebyte UI Pack"
+        loading="lazy"
+      />
+    </picture>
+  {/snippet}
 
-  <div class="project-spacer"></div>
-
-  <div class="skills-grid">
+  {#snippet skills()}
     <SkillCard icon="icons/photoshop-icon.svg" alt="Photoshop icon" title="Photoshop" />
-  </div>
+  {/snippet}
 
-  <div class="project-spacer"></div>
-
-  <div class="project-content">
-    <div class="project-block text-box">
-      <p class="service-item-text centered">
-        For this project, I focused on creating a soft and playful UI style with rounded shapes and warm colors. The design emphasizes approachability
-        and clarity, making it ideal for casual or mobile games. I used smooth gradients and subtle shadows to give the elements depth while
-        maintaining a clean, friendly look.
-      </p>
-    </div>
-  </div>
-
-  <div class="project-spacer"></div>
-
-  <div class="project-content">
+  {#snippet content()}
     <div class="project-block half">
       <video autoplay muted loop playsinline>
         <source src="video-AV1/presenter-bubblebyte-ui-pack.webm" type="video/webm; codecs=av01.0.05M.08,opus" />
@@ -87,5 +75,5 @@
     <div class="project-block half">
       <p class="h5"></p>
     </div>
-  </div>
-</div>
+  {/snippet}
+</ProjectPage>

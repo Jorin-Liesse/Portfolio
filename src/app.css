@@ -64,42 +64,6 @@
   --transition-2: 0.5s ease-in-out;
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-}
-
-img,
-picture,
-video {
-  -webkit-user-drag: none;
-  display: block;
-}
-
-figure {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-button {
-  font: inherit;
-  background: none;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-}
-
 input,
 textarea {
   display: block;
@@ -107,15 +71,6 @@ textarea {
   background: none;
   font: inherit;
   border: red solid 1px;
-}
-
-::selection {
-  background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
-}
-
-:focus {
-  outline-color: var(--orange-yellow-crayola);
 }
 
 html {
@@ -372,34 +327,6 @@ article.active {
   gap: 16px;
 }
 
-.contact-item {
-  min-width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.contact-info {
-  max-width: calc(100% - 46px);
-  width: calc(100% - 46px);
-}
-
-.contact-title {
-  color: var(--light-gray-70);
-  font-size: var(--fs-8);
-  text-transform: uppercase;
-  margin-bottom: 2px;
-}
-
-.contact-info :is(.contact-link, .contact-value, address, phone, mail) {
-  color: var(--white-2);
-  font-size: var(--fs-7);
-}
-
-.contact-info address {
-  font-style: normal;
-}
-
 .social-list {
   display: flex;
   justify-content: flex-start;
@@ -407,15 +334,6 @@ article.active {
   gap: 15px;
   padding-bottom: 4px;
   padding-left: 7px;
-}
-
-.social-item .social-link {
-  color: var(--light-gray-70);
-  font-size: 18px;
-}
-
-.social-item .social-link:hover {
-  color: var(--light-gray);
 }
 
 /*-----------------------------------*\
@@ -539,14 +457,10 @@ article.active {
 
 /* #SKILLS */
 
-.skills {
-  margin-bottom: 30px;
-}
-
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 1.5rem;
+  gap: 1rem;
   justify-content: center;
 }
 
@@ -948,7 +862,6 @@ article.active {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 20px;
 }
 
 .project-block {

@@ -41,25 +41,6 @@ filterBtns.forEach((btn) => btn.addEventListener('click', () => updateSelection(
 //   lastClickedBtn = [...filterBtns].find((btn) => btn.innerText.toLowerCase() === param.toLowerCase()) || lastClickedBtn;
 // }
 
-// ---------- Page Navigation ----------
-const navigationLinks = document.querySelectorAll('[data-nav-link]');
-const pages = document.querySelectorAll('[data-page]');
-
-navigationLinks.forEach((link) =>
-  link.addEventListener('click', () => {
-    const targetPage = link.innerText.toLowerCase();
-    pages.forEach((page, i) => {
-      const active = page.dataset.page === targetPage;
-      page.classList.toggle('active', active);
-      navigationLinks[i].classList.toggle('active', active);
-    });
-
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-    lastClickedBtn?.click();
-    closeProjectPage();
-  })
-);
-
 // ---------- Project Pages ----------
 const projectList = document.querySelector('.project-list');
 let lastOpenedProject = null;
