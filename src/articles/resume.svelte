@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   // import Button from "../components/button.svelte";
 </script>
 
@@ -149,3 +149,5 @@
     </button>
   </a>
 </article>
+
+<style></style>

@@ -1,36 +1,15 @@
-// ---------- Helpers ----------
-const toggleActive = (elem) => elem.classList.toggle('active');
-
-// ---------- Sidebar ----------
-const sidebar = document.querySelector('[data-sidebar]');
-const sidebarBtn = document.querySelector('[data-sidebar-btn]');
-sidebarBtn?.addEventListener('click', () => toggleActive(sidebar));
-
-// ---------- Skill Cards ----------
-const skillCards = document.querySelectorAll('[data-skill-card]');
-skillCards.forEach((card) => {
-  card.addEventListener('click', () => toggleActive(card));
-});
-
 // ---------- Custom Select + Filter ----------
 const select = document.querySelector('[data-select]');
-const selectValue = document.querySelector('[data-selecct-value]');
+const selectValue = document.querySelector('[data-select-value]');
 const selectItems = document.querySelectorAll('[data-select-item]');
 const filterBtns = document.querySelectorAll('[data-filter-btn]');
 const filterItems = document.querySelectorAll('[data-filter-item]');
 
 let lastClickedBtn = filterBtns[0];
 
-const param = new URLSearchParams(window.location.search).get('pre-filter');
-if (param) {
-  lastClickedBtn = [...filterBtns].find((btn) => btn.innerText.toLowerCase() === param.toLowerCase()) || lastClickedBtn;
-}
-
 const filterFunc = function (selectedValue) {
-  filterItems.forEach((item) => item.classList.remove('active'));
-  filterItems[0]?.offsetWidth;
-
   filterItems.forEach((item) => {
+    item.classList.remove('active');
     const match = selectedValue === 'all' || item.dataset.category?.includes(selectedValue);
     if (match) item.classList.add('active');
   });
@@ -47,22 +26,20 @@ const updateSelection = (btn, value) => {
   closeProjectPage();
 };
 
-select?.addEventListener('click', () => toggleActive(select));
+select?.addEventListener('click', () => select.classList.toggle('active'));
 selectItems.forEach((item) =>
   item.addEventListener('click', () => {
     updateSelection(item, item.innerText.toLowerCase());
-    toggleActive(select);
+    select.classList.remove('active');
   })
 );
 
 filterBtns.forEach((btn) => btn.addEventListener('click', () => updateSelection(btn, btn.innerText.toLowerCase())));
 
-// ---------- Form Validation ----------
-const form = document.querySelector('[data-form]');
-const formBtn = document.querySelector('[data-form-btn]');
-form?.querySelectorAll('[data-form-input]').forEach((input) => {
-  input.addEventListener('input', () => (form.checkValidity() ? formBtn.removeAttribute('disabled') : formBtn.setAttribute('disabled', '')));
-});
+// const param = new URLSearchParams(window.location.search).get('pre-filter');
+// if (param) {
+//   lastClickedBtn = [...filterBtns].find((btn) => btn.innerText.toLowerCase() === param.toLowerCase()) || lastClickedBtn;
+// }
 
 // ---------- Page Navigation ----------
 const navigationLinks = document.querySelectorAll('[data-nav-link]');
@@ -77,7 +54,7 @@ navigationLinks.forEach((link) =>
       navigationLinks[i].classList.toggle('active', active);
     });
 
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     lastClickedBtn?.click();
     closeProjectPage();
   })
@@ -101,7 +78,7 @@ function openProjectPage(event, projectClass) {
 
   if (projectPage) {
     projectPage.classList.add('active');
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }
   projectList?.classList.add('hidden');
 

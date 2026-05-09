@@ -1,9 +1,15 @@
-<script>
+<script lang="ts">
   import ContactCard from '../components/contact-card.svelte';
   import SocialItem from '../components/social-item.svelte';
+
+  let sidebarOpen: boolean = false;
+
+  function toggleSidebar(): void {
+    sidebarOpen = !sidebarOpen;
+  }
 </script>
 
-<aside class="sidebar" data-sidebar>
+<aside class="sidebar" class:active={sidebarOpen}>
   <div class="sidebar-info">
     <figure class="avatar-box">
       <picture>
@@ -18,7 +24,7 @@
       <p class="title">Game Developer</p>
     </div>
 
-    <button class="info_more-btn" data-sidebar-btn>
+    <button class="info_more-btn" onclick={toggleSidebar}>
       <span>Show Contacts</span>
 
       <ion-icon name="chevron-down"></ion-icon>
@@ -49,3 +55,5 @@
     <br />
   </div>
 </aside>
+
+<style></style>

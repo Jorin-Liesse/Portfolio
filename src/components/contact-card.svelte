@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   let { icon, title, value, link } = $props();
 </script>
 
@@ -12,3 +12,5 @@
     <p class="contact-value">{value}</p>
   </div>
 </a>
+
+<style></style>

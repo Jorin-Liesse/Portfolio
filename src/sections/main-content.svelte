@@ -1,5 +1,7 @@
-<script>
-  let { children } = $props();
+<script lang="ts">
+  import type { Snippet } from 'svelte';
+
+  let { children }: { children?: Snippet } = $props();
 </script>
 
 <main class="main-content">
@@ -23,5 +25,7 @@
     </ul>
   </nav>
 
-  {@render children()}
+  {@render children?.()}
 </main>
+
+<style></style>

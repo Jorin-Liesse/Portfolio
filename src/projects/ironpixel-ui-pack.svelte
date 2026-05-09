@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import SkillCard from '../components/skill-card.svelte';
 </script>
 

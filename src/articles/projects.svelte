@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import ProjectItem from '../components/project-item.svelte';
 
   import LightBridger from '../projects/light-bridger.svelte';
@@ -52,7 +52,7 @@
 
     <div class="filter-select-box">
       <button class="filter-select" data-select>
-        <div class="select-value" data-selecct-value>Select category</div>
+        <div class="select-value" data-select-value>Select category</div>
 
         <div class="select-icon">
           <ion-icon name="chevron-down"></ion-icon>
@@ -95,7 +95,6 @@
         avif="images-AV1/page-light-bridger.avif"
         fallback="images-fallback/page-light-bridger.jpg"
       />
-
       <ProjectItem
         link="project-crazy-coast"
         title="Crazy Coast"
@@ -104,7 +103,6 @@
         avif="images-AV1/page-crazy-coast.avif"
         fallback="images-fallback/page-crazy-coast.jpg"
       />
-
       <ProjectItem
         link="project-ghost-of-nature"
         title="Ghost of Nature"
@@ -113,7 +111,6 @@
         avif="images-AV1/page-ghost-of-nature.avif"
         fallback="images-fallback/page-ghost-of-nature.jpg"
       />
-
       <ProjectItem
         link="project-zombrush"
         title="Zombrush"
@@ -122,7 +119,6 @@
         avif="images-AV1/page-zombrush.avif"
         fallback="images-fallback/page-zombrush.jpg"
       />
-
       <ProjectItem
         link="project-angry-birds"
         title="Angry Birds Clone"
@@ -131,7 +127,6 @@
         avif="images-AV1/page-angry-birds.avif"
         fallback="images-fallback/page-angry-birds.jpg"
       />
-
       <ProjectItem
         link="project-flappy-bird"
         title="Flappy Bird Clone"
@@ -140,7 +135,6 @@
         avif="images-AV1/page-flappy-bird.avif"
         fallback="images-fallback/page-flappy-bird.jpg"
       />
-
       <ProjectItem
         link="project-super-mario-3D-world"
         title="Mario 3D World Clone"
@@ -149,7 +143,6 @@
         avif="images-AV1/page-super-mario-3D-world.avif"
         fallback="images-fallback/page-super-mario-3D-world.jpg"
       />
-
       <ProjectItem
         link="project-steam-engine-simulator"
         title="Steam Engine Simulator"
@@ -158,7 +151,6 @@
         avif="images-AV1/page-steam-engine-simulator.avif"
         fallback="images-fallback/page-steam-engine-simulator.jpg"
       />
-
       <ProjectItem
         link="project-castle-scene"
         title="Castle Scene"
@@ -167,7 +159,6 @@
         avif="images-AV1/page-castle-scene.avif"
         fallback="images-fallback/page-castle-scene.jpg"
       />
-
       <ProjectItem
         link="project-artisans-desk"
         title="Artisans Desk"
@@ -176,7 +167,6 @@
         avif="images-AV1/page-artisans-desk.avif"
         fallback="images-fallback/page-artisans-desk.jpg"
       />
-
       <ProjectItem
         link="project-diorama-by-the-ocean"
         title="Diorama - By the ocean"
@@ -185,7 +175,6 @@
         avif="images-AV1/page-diorama-by-the-ocean.avif"
         fallback="images-fallback/page-diorama-by-the-ocean.jpg"
       />
-
       <ProjectItem
         link="project-moustachekart"
         title="MoustacheKart"
@@ -194,7 +183,6 @@
         avif="images-AV1/page-moustachekart.avif"
         fallback="images-fallback/page-moustachekart.jpg"
       />
-
       <ProjectItem
         link="project-roboddy"
         title="Roboddy"
@@ -203,7 +191,6 @@
         avif="images-AV1/page-roboddy.avif"
         fallback="images-fallback/page-roboddy.jpg"
       />
-
       <ProjectItem
         link="project-bubblebyte-ui-pack"
         title="Bubblebyte UI Pack"
@@ -212,7 +199,6 @@
         avif="images-AV1/page-bubblebyte-ui-pack.avif"
         fallback="images-fallback/page-bubblebyte-ui-pack.jpg"
       />
-
       <ProjectItem
         link="project-ironpixel-ui-pack"
         title="IronPixel UI Pack"
@@ -221,7 +207,6 @@
         avif="images-AV1/page-ironpixel-ui-pack.avif"
         fallback="images-fallback/page-ironpixel-ui-pack.jpg"
       />
-
       <ProjectItem
         link="project-portfolio"
         title="Portfolio"
@@ -230,7 +215,6 @@
         avif="images-AV1/page-portfolio.avif"
         fallback="images-fallback/page-portfolio.jpg"
       />
-
       <ProjectItem
         link="project-recipe-book"
         title="Recipe Book"
@@ -260,3 +244,5 @@
     <RecipeBook />
   </section>
 </article>
+
+<style></style>

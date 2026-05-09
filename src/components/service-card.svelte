@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
   let { title, text } = $props();
 </script>
 
 <li class="service-item">
   <div class="service-icon-box">
-    <img src="icons/dev-icon.svg" alt="design icon" width="40" />
+    <svg><use href=icons/dev.svg></use></svg>
   </div>
 
   <div class="service-content-box">
@@ -12,3 +12,10 @@
     <p class="service-item-text">{text}</p>
   </div>
 </li>
+
+<style>
+  .service-icon-box svg {
+    width: 40px;
+    height: 40px;
+  }
+</style>

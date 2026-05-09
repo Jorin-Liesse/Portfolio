@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   let { icon, title, link } = $props();
 </script>
 
@@ -7,3 +7,5 @@
     <ion-icon name={icon}></ion-icon>
   </a>
 </li>
+
+<style></style>

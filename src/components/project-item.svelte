@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   let { link, title, category, categories, avif, fallback } = $props();
 </script>
 
@@ -19,3 +19,5 @@
     <p class="project-category">{category}</p>
   </button>
 </li>
+
+<style></style>

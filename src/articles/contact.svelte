@@ -1,5 +1,4 @@
-<script>
-  // import Button from "../components/button.svelte";
+<script lang="ts">
 </script>
 
 <article class="contact" data-page="contact">
@@ -22,19 +21,18 @@
 
     <form action="https://formsubmit.co/bff3948066a07247c417dda06165bbba" method="POST">
       <div class="input-wrapper">
-        <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input />
-
-        <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input />
+        <input type="text" name="fullname" class="form-input" placeholder="Full name" />
+        <input type="email" name="email" class="form-input" placeholder="Email address" />
       </div>
 
-      <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+      <textarea name="message" class="form-input" placeholder="Your Message"></textarea>
 
-      <!-- <Button icon="icons/paper-plane.svg" alt="Paper Plane Icon" title="Send Message" /> -->
-
-      <button class="form-btn" type="submit" data-form-btn>
+      <button class="form-btn" type="submit">
         <ion-icon name="paper-plane"></ion-icon>
         <span>Send Message</span>
       </button>
     </form>
   </section>
 </article>
+
+<style></style>

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import SkillCard from '../components/skill-card.svelte';
   import ServiceCard from '../components/service-card.svelte';
 </script>
@@ -58,3 +58,5 @@
     </ul>
   </section>
 </article>
+
+<style></style>

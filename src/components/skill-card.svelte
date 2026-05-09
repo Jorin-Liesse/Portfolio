@@ -1,8 +1,11 @@
-<script>
+<script lang="ts">
   let { icon, alt, title } = $props();
+
+  let active = $state(false);
+  const toggleCard = () => active = !active;
 </script>
 
-<div class="skill-card" data-skill-card>
+<button class="skill-card" class:active onclick={toggleCard}>
   <img src={icon} {alt} />
   <h3 class="h3">{title}</h3>
-</div>
+</button>

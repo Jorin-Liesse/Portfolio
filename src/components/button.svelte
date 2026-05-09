@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   let { icon, alt, title } = $props();
 </script>
 
@@ -6,3 +6,5 @@
   <img src={icon} {alt} />
   <span>{title}</span>
 </button>
+
+<style></style>
