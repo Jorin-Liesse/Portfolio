@@ -27,7 +27,7 @@
     if (!element) return;
 
     isDragging = true;
-    
+
     startMouseX = event.clientX;
     startMouseY = event.clientY;
     startWidth = rect.width;
@@ -50,10 +50,10 @@
     let newWidth = startWidth;
     let newHeight = startHeight;
 
-    if (direction.includes("right")) newWidth = startWidth + deltaX * 2;
-    if (direction.includes("left")) newWidth = startWidth - deltaX * 2;
-    if (direction.includes("bottom")) newHeight = startHeight + deltaY * 2;
-    if (direction.includes("top")) newHeight = startHeight - deltaY * 2;
+    if (direction.includes('right')) newWidth = startWidth + deltaX * 2;
+    if (direction.includes('left')) newWidth = startWidth - deltaX * 2;
+    if (direction.includes('bottom')) newHeight = startHeight + deltaY * 2;
+    if (direction.includes('top')) newHeight = startHeight - deltaY * 2;
 
     newWidth = Math.min(maximumWidth, Math.max(minimumWidth, newWidth));
     newHeight = Math.min(maximumHeight, Math.max(minimumHeight, newHeight));

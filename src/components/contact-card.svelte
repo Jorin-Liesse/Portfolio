@@ -1,10 +1,10 @@
 <script lang="ts">
-  let { icon, title, value, link } = $props();
+  let { src, title, value, link } = $props();
 </script>
 
 <a class="contact-item" href={link} target="_blank">
   <div class="icon-box">
-    <ion-icon name={icon} alt={title}></ion-icon>
+    <svg><use href={src}></use></svg>
   </div>
 
   <div class="contact-info">
@@ -36,5 +36,11 @@
   .contact-info .contact-value {
     color: var(--white-2);
     font-size: var(--fs-7);
+  }
+
+  .icon-box svg {
+    --primary-color: var(--orange-yellow);
+    width: 1.5rem;
+    height: 1.5rem;
   }
 </style>

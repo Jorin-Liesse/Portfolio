@@ -1,14 +1,24 @@
-<script lang="ts">
+<script module lang="ts">
   import ProjectPage from '../components/project-page.svelte';
+  import type { ProjectMetadata } from '$lib/types/project-meta-data';
 
   import SkillCard from '../components/skill-card.svelte';
+
+  export const projectMetadata: ProjectMetadata = {
+    link: 'project-ironpixel-ui-pack',
+    title: 'IronPixel UI Pack',
+    category: 'UI',
+    categories: 'ui',
+    avif: 'images-AV1/page-ironpixel-ui-pack.avif',
+    fallback: 'images-fallback/page-ironpixel-ui-pack.jpg'
+  };
 </script>
 
 <ProjectPage id="project-ironpixel-ui-pack">
   {#snippet presenter()}
     <picture>
       <source srcset="images-AV1/ironpixel-ui-pack/presenter-ironpixel-ui-pack.avif" type="image/avif" />
-      <img class="project-presenter" src="images-fallback/ironpixel-ui-pack/presenter-ironpixel-ui-pack.jpg" alt="Ironpixel UI Pack" loading="lazy" />
+      <img class="presenter-content" src="images-fallback/ironpixel-ui-pack/presenter-ironpixel-ui-pack.jpg" alt="Ironpixel UI Pack" loading="lazy" />
     </picture>
   {/snippet}
 

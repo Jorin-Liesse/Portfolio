@@ -1,10 +1,11 @@
 <script lang="ts">
   import ArticlePage from '../components/article-page.svelte';
+  import Button from '../components/button.svelte';
 
   export let active = false;
 </script>
 
-<ArticlePage title="Contact" id="contact" active={active}>
+<ArticlePage title="Contact" id="contact" {active}>
   <section class="mapbox" data-mapbox>
     <figure>
       <iframe
@@ -28,10 +29,7 @@
 
       <textarea name="message" class="form-input" placeholder="Your Message"></textarea>
 
-      <button class="form-btn" type="submit">
-        <ion-icon name="paper-plane"></ion-icon>
-        <span>Send Message</span>
-      </button>
+      <Button src="icons/send.svg" title="Send Message" />
     </form>
   </section>
 </ArticlePage>

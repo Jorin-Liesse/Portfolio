@@ -1,13 +1,23 @@
-<script lang="ts">
+<script module lang="ts">
   import ProjectPage from '../components/project-page.svelte';
-  
+  import type { ProjectMetadata } from '$lib/types/project-meta-data';
+
   import SkillCard from '../components/skill-card.svelte';
   import Button from '../components/button.svelte';
+
+  export const projectMetadata: ProjectMetadata = {
+    link: 'project-angry-birds',
+    title: 'Angry Birds Clone',
+    category: 'Games',
+    categories: 'games best',
+    avif: 'images-AV1/page-angry-birds.avif',
+    fallback: 'images-fallback/page-angry-birds.jpg'
+  };
 </script>
 
 <ProjectPage id="project-angry-birds">
   {#snippet presenter()}
-     <iframe title="Angry Birds Clone" src="https://jorin-liesse.github.io/Angry-Birds-JS/?muteMusic=true" loading="lazy"></iframe>
+    <iframe title="Angry Birds Clone" src="https://jorin-liesse.github.io/Angry-Birds-JS/?muteMusic=true" loading="lazy"></iframe>
   {/snippet}
 
   {#snippet skills()}
@@ -28,10 +38,10 @@
 
   {#snippet links()}
     <a href="https://github.com/Jorin-Liesse/Angry-Birds-JS" class="link" target="_blank">
-      <Button icon="icons/github.svg" alt="Github Icon" title="Github" />
+      <Button src="icons/github.svg" title="Github" />
     </a>
     <a href="https://jorin-liesse.github.io/Angry-Birds-JS/" class="link" target="_blank">
-      <Button icon="icons/website.svg" alt="Website Icon" title="Website" />
+      <Button src="icons/website.svg" title="Website" />
     </a>
   {/snippet}
 </ProjectPage>

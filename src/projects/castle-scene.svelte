@@ -1,12 +1,22 @@
-<script lang="ts">
+<script module lang="ts">
   import ProjectPage from '../components/project-page.svelte';
+  import type { ProjectMetadata } from '$lib/types/project-meta-data';
 
   import SkillCard from '../components/skill-card.svelte';
+
+  export const projectMetadata: ProjectMetadata = {
+    link: 'project-castle-scene',
+    title: 'Castle Scene',
+    category: 'Models',
+    categories: 'models best',
+    avif: 'images-AV1/page-castle-scene.avif',
+    fallback: 'images-fallback/page-castle-scene.jpg'
+  };
 </script>
 
 <ProjectPage id="project-castle-scene">
   {#snippet presenter()}
-    <video class="project-presenter" autoplay muted loop playsinline>
+    <video class="presenter-content" autoplay muted loop playsinline>
       <source src="video-AV1/presenter-castle-scene.webm" type="video/webm; codecs=av01.0.05M.08,opus" />
       <source src="video-fallback/presenter-castle-scene.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
     </video>

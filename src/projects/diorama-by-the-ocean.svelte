@@ -1,8 +1,18 @@
-<script lang="ts">
+<script module lang="ts">
   import ProjectPage from '../components/project-page.svelte';
+  import type { ProjectMetadata } from '$lib/types/project-meta-data';
 
   import SkillCard from '../components/skill-card.svelte';
   import Button from '../components/button.svelte';
+
+  export const projectMetadata: ProjectMetadata = {
+    link: 'project-diorama-by-the-ocean',
+    title: 'Diorama - By the ocean',
+    category: 'Models',
+    categories: 'models',
+    avif: 'images-AV1/page-diorama-by-the-ocean.avif',
+    fallback: 'images-fallback/page-diorama-by-the-ocean.jpg'
+  };
 </script>
 
 <ProjectPage id="project-diorama-by-the-ocean">
@@ -46,7 +56,7 @@
 
   {#snippet links()}
     <a href="https://skfb.ly/oPyCE" class="link" target="_blank">
-      <Button icon="icons/sketchfab.svg" alt="Sketchfab Icon" title="Sketchfab" />
+      <Button src="icons/sketchfab.svg" title="Sketchfab" />
     </a>
   {/snippet}
 </ProjectPage>

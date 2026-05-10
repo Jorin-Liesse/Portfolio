@@ -1,8 +1,18 @@
-<script lang="ts">
+<script module lang="ts">
   import ProjectPage from '../components/project-page.svelte';
+  import type { ProjectMetadata } from '$lib/types/project-meta-data';
 
   import SkillCard from '../components/skill-card.svelte';
   import Button from '../components/button.svelte';
+
+  export const projectMetadata: ProjectMetadata = {
+    link: 'project-recipe-book',
+    title: 'Recipe Book',
+    category: 'Websites',
+    categories: 'websites',
+    avif: 'images-AV1/page-recipe-book.avif',
+    fallback: 'images-fallback/page-recipe-book.jpg'
+  };
 </script>
 
 <ProjectPage id="project-recipe-book">
@@ -28,13 +38,13 @@
 
   {#snippet links()}
     <a href="https://github.com/Jorin-Liesse/Recipe-Book" class="link" target="_blank">
-      <Button icon="icons/github.svg" alt="Github Icon" title="Github Frontend" />
+      <Button src="icons/github.svg" title="Github Frontend" />
     </a>
     <a href="https://github.com/Jorin-Liesse/Recipes-API" class="link" target="_blank">
-      <Button icon="icons/github.svg" alt="Github Icon" title="Github Backend" />
+      <Button src="icons/github.svg" title="Github Backend" />
     </a>
     <a href="https://jorin-liesse.github.io/Recipe-Book/" class="link" target="_blank">
-      <Button icon="icons/website.svg" alt="Website Icon" title="Website" />
+      <Button src="icons/website.svg" title="Website" />
     </a>
   {/snippet}
 </ProjectPage>

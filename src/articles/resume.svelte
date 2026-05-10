@@ -1,14 +1,15 @@
 <script lang="ts">
   import ArticlePage from '../components/article-page.svelte';
+  import Button from "../components/button.svelte";
+
   export let active = false;
-  // import Button from "../components/button.svelte";
 </script>
 
-<ArticlePage title="Resume" id="resume" active={active}>
+<ArticlePage title="Resume" id="resume" {active}>
   <section class="timeline">
     <div class="title-wrapper">
       <div class="icon-box">
-        <ion-icon name="book-outline"></ion-icon>
+        <svg><use href="icons/book.svg"></use></svg>
       </div>
 
       <h3 class="h3">Education</h3>
@@ -35,12 +36,11 @@
     </ol>
   </section>
 
-  <br /><br />
 
   <section class="timeline">
     <div class="title-wrapper">
       <div class="icon-box">
-        <ion-icon name="book-outline"></ion-icon>
+        <svg><use href="icons/book.svg"></use></svg>
       </div>
 
       <h3 class="h3">Skills</h3>
@@ -79,12 +79,11 @@
     </ol>
   </section>
 
-  <br /><br />
 
   <section class="timeline">
     <div class="title-wrapper">
       <div class="icon-box">
-        <ion-icon name="book-outline"></ion-icon>
+        <svg><use href="icons/book.svg"></use></svg>
       </div>
 
       <h3 class="h3">Experience</h3>
@@ -110,12 +109,11 @@
     </ol>
   </section>
 
-  <br /><br />
 
   <section class="timeline">
     <div class="title-wrapper">
       <div class="icon-box">
-        <ion-icon name="book-outline"></ion-icon>
+        <svg><use href="icons/book.svg"></use></svg>
       </div>
 
       <h3 class="h3">Achievements</h3>
@@ -142,12 +140,14 @@
   </section>
 
   <a href="/documents/Resume.pdf" download rel="external">
-    <!-- <Button icon="icons/download-outline.svg" alt="Download Icon" title="Download Resume" /> -->
-    <button class="form-btn" type="button" data-form-btn>
-      <ion-icon name="download-outline"></ion-icon>
-      <span>Download</span>
-    </button>
+    <Button src="icons/download.svg" title="Download" />
   </a>
 </ArticlePage>
 
-<style></style>
+<style>
+  .icon-box svg {
+    --primary-color: var(--orange-yellow);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+</style>

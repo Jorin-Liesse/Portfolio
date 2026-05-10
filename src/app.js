@@ -11,7 +11,10 @@ const filterFunc = function (selectedValue) {
   filterItems.forEach((item) => {
     item.classList.remove('active');
     const match = selectedValue === 'all' || item.dataset.category?.includes(selectedValue);
-    if (match) item.classList.add('active');
+    if (match) {
+      void item.offsetWidth;
+      item.classList.add('active');
+    }
   });
 };
 
@@ -35,6 +38,9 @@ selectItems.forEach((item) =>
 );
 
 filterBtns.forEach((btn) => btn.addEventListener('click', () => updateSelection(btn, btn.innerText.toLowerCase())));
+
+
+// closeProjectPage();
 
 // const param = new URLSearchParams(window.location.search).get('pre-filter');
 // if (param) {
@@ -75,7 +81,7 @@ function closeProjectPage() {
 }
 
 function calcScale() {
-  const container = document.querySelector(`.${lastOpenedProject} .iframe-presenter-container`);
+  const container = document.querySelector(`.${lastOpenedProject} .presenter`);
   if (!container) return;
 
   const iframe = container.querySelector('iframe');

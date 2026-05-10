@@ -146,9 +146,6 @@
     --icon-highlight-color: #ffffff;
     --icon-shadow-color: #c3c3c3;
 
-    --primary-color: #ffdb70;
-    --secondary-color: #383838;
-
     --blur: 4px;
     --backdrop-darkness: rgba(0, 0, 0, 0.6);
 

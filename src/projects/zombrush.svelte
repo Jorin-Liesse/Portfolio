@@ -1,13 +1,23 @@
-<script lang="ts">
+<script module lang="ts">
   import ProjectPage from '../components/project-page.svelte';
+  import type { ProjectMetadata } from '$lib/types/project-meta-data';
 
   import SkillCard from '../components/skill-card.svelte';
   import Button from '../components/button.svelte';
+
+  export const projectMetadata: ProjectMetadata = {
+    link: 'project-zombrush',
+    title: 'Zombrush',
+    category: 'Games',
+    categories: 'games',
+    avif: 'images-AV1/page-zombrush.avif',
+    fallback: 'images-fallback/page-zombrush.jpg'
+  };
 </script>
 
 <ProjectPage id="project-zombrush">
   {#snippet presenter()}
-    <video class="project-presenter" autoplay muted loop playsinline>
+    <video class="presenter-content" autoplay muted loop playsinline>
       <source src="video-AV1/presenter-zombrush.webm" type="video/webm; codecs=av01.0.05M.08,opus" />
       <source src="video-fallback/presenter-zombrush.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
     </video>
@@ -58,10 +68,10 @@
 
   {#snippet links()}
     <a href="https://jorinliesse.itch.io/zombrush" class="link" target="_blank">
-      <Button icon="icons/itch.svg" alt="Itch Icon" title="Itch" />
+      <Button src="icons/itch.svg" title="Itch" />
     </a>
     <a href="https://github.com/Jorin-Liesse/GameJamUnwrap" class="link" target="_blank">
-      <Button icon="icons/github.svg" alt="Github Icon" title="Github" />
+      <Button src="icons/github.svg" title="Github" />
     </a>
   {/snippet}
 </ProjectPage>

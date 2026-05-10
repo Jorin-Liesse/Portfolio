@@ -2,7 +2,7 @@
   let { icon, alt, title } = $props();
 
   let active = $state(false);
-  const toggleCard = () => active = !active;
+  const toggleCard = () => (active = !active);
 </script>
 
 <button class="skill-card" class:active onclick={toggleCard}>

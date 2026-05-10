@@ -1,10 +1,20 @@
 <script lang="ts">
-  let { icon, alt, title } = $props();
+  let { src, title } = $props();
 </script>
 
 <button class="form-btn" type="submit" data-form-btn>
-  <img src={icon} {alt} />
+  <svg><use href={src}></use></svg>
   <span>{title}</span>
 </button>
 
-<style></style>
+<style>
+  svg {
+    --primary-color: var(--orange-yellow);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  span {
+    color: var(--orange-yellow);
+  }
+</style>

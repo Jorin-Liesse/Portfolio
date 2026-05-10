@@ -6,7 +6,7 @@
 
 <div class="{id} project-page">
   {#if presenter}
-    <section class="presenter project-presenter iframe-presenter-container">
+    <section class="presenter">
       {@render presenter()}
     </section>
 
@@ -14,7 +14,7 @@
   {/if}
 
   {#if skills}
-    <section class="skills skills-grid">
+    <section class="skills">
       {@render skills()}
     </section>
 
@@ -22,7 +22,7 @@
   {/if}
 
   {#if content}
-    <section class="content project-content">
+    <section class="content">
       {@render content()}
     </section>
 
@@ -30,8 +30,33 @@
   {/if}
 
   {#if links}
-    <section class="links links-grid">
+    <section class="links">
       {@render links()}
     </section>
   {/if}
 </div>
+
+<style>
+  .project-page {
+    position: relative;
+    display: none;
+  }
+
+  .project-page.active {
+    display: block;
+    animation: fade 0.5s ease backwards;
+  }
+
+  .project-page * {
+    animation: scaleUp 0.25s ease forwards;
+  }
+
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>

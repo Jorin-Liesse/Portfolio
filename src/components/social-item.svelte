@@ -1,20 +1,21 @@
 <script lang="ts">
-  let { icon, title, link } = $props();
+  let { src, title, link } = $props();
 </script>
 
 <li class="social-item">
   <a href={link} aria-label={title} class="social-link" target="_blank">
-    <ion-icon name={icon}></ion-icon>
+    <svg><use href={src}></use></svg>
   </a>
 </li>
 
 <style>
-  .social-item .social-link {
-    color: var(--light-gray-70);
-    font-size: 18px;
+  .social-item .social-link svg {
+    --primary-color: var(--light-gray-70);
+    width: 1rem;
+    height: 1rem;
   }
 
-  .social-item .social-link:hover {
-    color: var(--light-gray);
+  .social-item .social-link svg:hover {
+    --primary-color: var(--light-gray);
   }
 </style>

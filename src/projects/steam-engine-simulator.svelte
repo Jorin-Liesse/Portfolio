@@ -1,13 +1,23 @@
-<script lang="ts">
+<script module lang="ts">
   import ProjectPage from '../components/project-page.svelte';
+  import type { ProjectMetadata } from '$lib/types/project-meta-data';
 
   import SkillCard from '../components/skill-card.svelte';
   import Button from '../components/button.svelte';
+
+  export const projectMetadata: ProjectMetadata = {
+    link: 'project-steam-engine-simulator',
+    title: 'Steam Engine Simulator',
+    category: 'Games',
+    categories: 'games',
+    avif: 'images-AV1/page-steam-engine-simulator.avif',
+    fallback: 'images-fallback/page-steam-engine-simulator.jpg'
+  };
 </script>
 
 <ProjectPage id="project-steam-engine-simulator">
   {#snippet presenter()}
-    <video class="project-presenter" autoplay muted loop playsinline>
+    <video class="presenter-content" autoplay muted loop playsinline>
       <source src="video-AV1/presenter-steam-engine-simulator.webm" type="video/webm; codecs=av01.0.05M.08,opus" />
       <source src="video-fallback/presenter-steam-engine-simulator.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
     </video>
@@ -42,13 +52,13 @@
 
   {#snippet links()}
     <a href="https://github.com/Jorin-Liesse/Steam-Engine-Simulator" class="link" target="_blank">
-      <Button icon="icons/github.svg" alt="Github Icon" title="Github" />
+      <Button src="icons/github.svg" title="Github" />
     </a>
     <a href="https://play.unity.com/en/games/2a2c8200-4885-4aea-bf04-005cc70ef928/steam-engine-simulator" class="link" target="_blank">
-      <Button icon="icons/website.svg" alt="Website Icon" title="Website" />
+      <Button src="icons/website.svg" title="Website" />
     </a>
     <a href="https://skfb.ly/oYREX" class="link" target="_blank">
-      <Button icon="icons/sketchfab.svg" alt="Sketchfab Icon" title="Sketchfab" />
+      <Button src="icons/sketchfab.svg" title="Sketchfab" />
     </a>
   {/snippet}
 </ProjectPage>

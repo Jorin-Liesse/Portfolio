@@ -1,8 +1,18 @@
-<script lang="ts">
+<script module lang="ts">
   import ProjectPage from '../components/project-page.svelte';
+  import type { ProjectMetadata } from '$lib/types/project-meta-data';
 
   import SkillCard from '../components/skill-card.svelte';
   import Button from '../components/button.svelte';
+
+  export const projectMetadata: ProjectMetadata = {
+    link: 'project-moustachekart',
+    title: 'MoustacheKart',
+    category: 'Models',
+    categories: 'models best',
+    avif: 'images-AV1/page-moustachekart.avif',
+    fallback: 'images-fallback/page-moustachekart.jpg'
+  };
 </script>
 
 <ProjectPage id="project-moustachekart">
@@ -76,7 +86,7 @@
 
   {#snippet links()}
     <a href="https://skfb.ly/ptKUA" class="link" target="_blank">
-      <Button icon="icons/sketchfab.svg" alt="Sketchfab Icon" title="Sketchfab" />
+      <Button src="icons/sketchfab.svg" title="Sketchfab" />
     </a>
   {/snippet}
 </ProjectPage>

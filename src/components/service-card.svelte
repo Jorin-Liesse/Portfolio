@@ -4,7 +4,7 @@
 
 <li class="service-item">
   <div class="service-icon-box">
-    <svg><use href=icons/dev.svg></use></svg>
+    <svg><use href="icons/dev.svg"></use></svg>
   </div>
 
   <div class="service-content-box">
@@ -15,7 +15,8 @@
 
 <style>
   .service-icon-box svg {
-    width: 40px;
-    height: 40px;
+    --primary-color: var(--orange-yellow);
+    width: 2.5rem;
+    height: 2.5rem;
   }
 </style>

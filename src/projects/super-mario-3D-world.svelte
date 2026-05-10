@@ -1,13 +1,23 @@
-<script lang="ts">
+<script module lang="ts">
   import ProjectPage from '../components/project-page.svelte';
+  import type { ProjectMetadata } from '$lib/types/project-meta-data';
 
   import SkillCard from '../components/skill-card.svelte';
   import Button from '../components/button.svelte';
+
+  export const projectMetadata: ProjectMetadata = {
+    link: 'project-super-mario-3D-world',
+    title: 'Mario 3D World Clone',
+    category: 'Games',
+    categories: 'games',
+    avif: 'images-AV1/page-super-mario-3D-world.avif',
+    fallback: 'images-fallback/page-super-mario-3D-world.jpg'
+  };
 </script>
 
 <ProjectPage id="project-super-mario-3D-world">
   {#snippet presenter()}
-    <video class="project-presenter" autoplay muted loop playsinline>
+    <video class="presenter-content" autoplay muted loop playsinline>
       <source src="video-AV1/presenter-super-mario-3D-world.webm" type="video/webm; codecs=av01.0.05M.08,opus" />
       <source src="video-fallback/presenter-super-mario-3D-world.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
     </video>
@@ -55,10 +65,10 @@
 
   {#snippet links()}
     <a href="https://github.com/Jorin-Liesse/Mario-3D-World" class="link" target="_blank">
-      <Button icon="icons/github.svg" alt="Github Icon" title="Github" />
+      <Button src="icons/github.svg" title="Github" />
     </a>
     <a href="https://play.unity.com/en/games/4e26bc3b-4571-4c90-9bae-22f50d977581/mario-3d-world" class="link" target="_blank">
-      <Button icon="icons/website.svg" alt="Website Icon" title="Website" />
+      <Button src="icons/website.svg" title="Website" />
     </a>
   {/snippet}
 </ProjectPage>

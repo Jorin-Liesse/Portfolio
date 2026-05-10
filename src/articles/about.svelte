@@ -7,7 +7,7 @@
   export let active = false;
 </script>
 
-<ArticlePage title="About me" id="about" active={active}>
+<ArticlePage title="About me" id="about" {active}>
   <section class="about-text">
     <p>
       I’m an indie game developer and designer focused on creating engaging player experiences. I work across all aspects of game development:
@@ -21,21 +21,21 @@
   </section>
 
   <section class="skills">
-    <div class="skills-grid">
-      <SkillCard icon="icons/cs-icon.svg" alt="C# icon" title="C Sharp" />
-      <SkillCard icon="icons/unity-icon.svg" alt="Unity icon" title="Unity" />
-      <SkillCard icon="icons/blender-icon.svg" alt="Blender icon" title="Blender" />
-      <SkillCard icon="icons/photoshop-icon.svg" alt="Photoshop icon" title="Photoshop" />
-      <SkillCard icon="icons/substance-painter-icon.svg" alt="Substance Painter icon" title="Substance Painter" />
-      <SkillCard icon="icons/affinity-icon.svg" alt="Affinity icon" title="Affinity" />
-      <SkillCard icon="icons/html-icon.svg" alt="HTML icon" title="HTML" />
-      <SkillCard icon="icons/css-icon.svg" alt="CSS icon" title="CSS" />
-      <SkillCard icon="icons/javascript-icon.svg" alt="JavaScript icon" title="JavaScript" />
-      <SkillCard icon="icons/python-icon.svg" alt="Python icon" title="Python" />
-      <SkillCard icon="icons/miro-icon.svg" alt="Miro icon" title="Miro" />
-      <SkillCard icon="icons/github-icon.svg" alt="Github icon" title="Github" />
-    </div>
+    <SkillCard icon="icons/cs-icon.svg" alt="C# icon" title="C Sharp" />
+    <SkillCard icon="icons/unity-icon.svg" alt="Unity icon" title="Unity" />
+    <SkillCard icon="icons/blender-icon.svg" alt="Blender icon" title="Blender" />
+    <SkillCard icon="icons/photoshop-icon.svg" alt="Photoshop icon" title="Photoshop" />
+    <SkillCard icon="icons/substance-painter-icon.svg" alt="Substance Painter icon" title="Substance Painter" />
+    <SkillCard icon="icons/affinity-icon.svg" alt="Affinity icon" title="Affinity" />
+    <SkillCard icon="icons/html-icon.svg" alt="HTML icon" title="HTML" />
+    <SkillCard icon="icons/css-icon.svg" alt="CSS icon" title="CSS" />
+    <SkillCard icon="icons/javascript-icon.svg" alt="JavaScript icon" title="JavaScript" />
+    <SkillCard icon="icons/python-icon.svg" alt="Python icon" title="Python" />
+    <SkillCard icon="icons/miro-icon.svg" alt="Miro icon" title="Miro" />
+    <SkillCard icon="icons/github-icon.svg" alt="Github icon" title="Github" />
   </section>
+
+  <br />
 
   <section class="service">
     <h3 class="h3 service-title">What i'm doing</h3>
