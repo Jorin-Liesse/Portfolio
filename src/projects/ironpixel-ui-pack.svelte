@@ -8,7 +8,7 @@
     link: 'project-ironpixel-ui-pack',
     title: 'IronPixel UI Pack',
     category: 'UI',
-    categories: 'ui',
+    categories: ['UI'],
     avif: 'images-AV1/page-ironpixel-ui-pack.avif',
     fallback: 'images-fallback/page-ironpixel-ui-pack.jpg'
   };
@@ -29,9 +29,8 @@
   {#snippet content()}
     <div class="project-block text-box">
       <p class="service-item-text centered">
-        For this project, I developed a sleek, monochrome UI focused on clarity and modern aesthetics. The clean lines and simple shapes make it
-        adaptable to a wide range of game genres, from sci-fi to strategy. I aimed for a consistent visual language that feels professional and easy
-        to read, ensuring both functionality and strong visual identity.
+        For this project, I developed a sleek, monochrome UI focused on clarity and modern aesthetics. The clean lines and simple shapes make it adaptable to a wide range of game genres, from sci-fi
+        to strategy. I aimed for a consistent visual language that feels professional and easy to read, ensuring both functionality and strong visual identity.
       </p>
     </div>
     <div class="project-block half">

@@ -4,11 +4,17 @@
   import Projects from '../articles/projects.svelte';
   import Contact from '../articles/contact.svelte';
 
+  let aboutRef: InstanceType<typeof About>;
+  let resumeRef: InstanceType<typeof Resume>;
+  let projectsRef: InstanceType<typeof Projects>;
+  let contactRef: InstanceType<typeof Contact>;
+
   let activePage: string = 'about';
 
   function setPage(page: string) {
     activePage = page;
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    projectsRef?.closeProject();
   }
 </script>
 
@@ -33,10 +39,10 @@
     </ul>
   </nav>
 
-  <About active={activePage === 'about'} />
-  <Resume active={activePage === 'resume'} />
-  <Projects active={activePage === 'projects'} />
-  <Contact active={activePage === 'contact'} />
+  <About active={activePage === 'about'} bind:this={aboutRef} />
+  <Resume active={activePage === 'resume'} bind:this={resumeRef} />
+  <Projects active={activePage === 'projects'} bind:this={projectsRef} />
+  <Contact active={activePage === 'contact'} bind:this={contactRef} />
 </main>
 
 <style></style>

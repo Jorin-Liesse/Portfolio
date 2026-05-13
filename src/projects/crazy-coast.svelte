@@ -9,7 +9,7 @@
     link: 'project-crazy-coast',
     title: 'Crazy Coast',
     category: 'Games',
-    categories: 'games',
+    categories: ['Games'],
     avif: 'images-AV1/page-crazy-coast.avif',
     fallback: 'images-fallback/page-crazy-coast.jpg'
   };
@@ -34,9 +34,8 @@
       <p class="service-item-text centered">It’s calm on the island of Crazy Coast… until the storm hits.</p>
       <p class="service-item-text">‎</p>
       <p class="service-item-text centered">
-        Crazy Coast was created for the Brackeys Game Jam in just one week. It’s a survival game where players must escape the islands by completing
-        tasks while avoiding natural disasters. Our team consisted of seven developers, and I served as Lead Programmer, Project Manager, and
-        Animator, guiding the project while contributing to gameplay systems and visual elements.
+        Crazy Coast was created for the Brackeys Game Jam in just one week. It’s a survival game where players must escape the islands by completing tasks while avoiding natural disasters. Our team
+        consisted of seven developers, and I served as Lead Programmer, Project Manager, and Animator, guiding the project while contributing to gameplay systems and visual elements.
       </p>
     </div>
     <div class="project-block half">

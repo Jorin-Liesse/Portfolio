@@ -8,7 +8,7 @@
     link: 'project-castle-scene',
     title: 'Castle Scene',
     category: 'Models',
-    categories: 'models best',
+    categories: ['Models', 'Best'],
     avif: 'images-AV1/page-castle-scene.avif',
     fallback: 'images-fallback/page-castle-scene.jpg'
   };
@@ -32,9 +32,8 @@
   {#snippet content()}
     <div class="project-block text-box">
       <p class="service-item-text centered">
-        For this project, I focused on creating a soft, inviting scene featuring a castle. I used a modular workflow to build the castle efficiently
-        and applied custom shaders to enhance the surrounding nature elements. I also explored volumetric fog and clouds to give the scene a more
-        atmospheric and immersive feel.
+        For this project, I focused on creating a soft, inviting scene featuring a castle. I used a modular workflow to build the castle efficiently and applied custom shaders to enhance the
+        surrounding nature elements. I also explored volumetric fog and clouds to give the scene a more atmospheric and immersive feel.
       </p>
     </div>
     <div class="project-block half">

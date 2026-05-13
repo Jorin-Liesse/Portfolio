@@ -9,7 +9,7 @@
     link: 'project-ghost-of-nature',
     title: 'Ghost of Nature',
     category: 'Games',
-    categories: 'games',
+    categories: ['Games'],
     avif: 'images-AV1/page-ghost-of-nature.avif',
     fallback: 'images-fallback/page-ghost-of-nature.jpg'
   };

@@ -9,7 +9,7 @@
     link: 'project-super-mario-3D-world',
     title: 'Mario 3D World Clone',
     category: 'Games',
-    categories: 'games',
+    categories: ['Games'],
     avif: 'images-AV1/page-super-mario-3D-world.avif',
     fallback: 'images-fallback/page-super-mario-3D-world.jpg'
   };
@@ -32,9 +32,8 @@
   {#snippet content()}
     <div class="project-block text-box">
       <p class="service-item-text centered">
-        Welcome to Unity World Adventure, an exciting platformer game created as part of the Platform Development 2 course in Howest’s DAE program.
-        This project is a faithful recreation of the first level of the beloved Mario 3D World, showcasing my ability to replicate classic level
-        design and mechanics while building gameplay systems from scratch.
+        Welcome to Unity World Adventure, an exciting platformer game created as part of the Platform Development 2 course in Howest’s DAE program. This project is a faithful recreation of the first
+        level of the beloved Mario 3D World, showcasing my ability to replicate classic level design and mechanics while building gameplay systems from scratch.
       </p>
     </div>
     <div class="project-block half">

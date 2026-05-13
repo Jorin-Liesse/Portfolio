@@ -9,7 +9,7 @@
     link: 'project-artisans-desk',
     title: 'Artisans Desk',
     category: 'Models',
-    categories: 'models best',
+    categories: ['Models', 'Best'],
     avif: 'images-AV1/page-artisans-desk.avif',
     fallback: 'images-fallback/page-artisans-desk.jpg'
   };
@@ -18,6 +18,7 @@
 <ProjectPage id="project-artisans-desk">
   {#snippet presenter()}
     <iframe
+      class="presenter-content"
       title="DAE Artisan's Desk"
       frameborder="0"
       allow="autoplay; fullscreen; xr-spatial-tracking"

@@ -9,7 +9,7 @@
     link: 'project-portfolio',
     title: 'Portfolio',
     category: 'Websites',
-    categories: 'websites',
+    categories: ['Websites'],
     avif: 'images-AV1/page-portfolio.avif',
     fallback: 'images-fallback/page-portfolio.jpg'
   };
@@ -17,7 +17,7 @@
 
 <ProjectPage id="project-portfolio">
   {#snippet presenter()}
-    <iframe title="Portfolio Website" src="https://jorin-liesse.github.io/Portfolio/" loading="lazy"></iframe>
+    <iframe class="presenter-content" title="Portfolio Website" src="https://jorin-liesse.github.io/Portfolio/" loading="lazy"></iframe>
   {/snippet}
 
   {#snippet skills()}
@@ -29,9 +29,8 @@
   {#snippet content()}
     <div class="project-block text-box">
       <p class="service-item-text centered">
-        I created a portfolio website to showcase my projects and works effectively. I started from a template but heavily modified it to fit my
-        needs, customizing layouts, styles, and functionality to best present my skills and projects. The result is a tailored, professional site that
-        highlights my work clearly and interactively.
+        I created a portfolio website to showcase my projects and works effectively. I started from a template but heavily modified it to fit my needs, customizing layouts, styles, and functionality
+        to best present my skills and projects. The result is a tailored, professional site that highlights my work clearly and interactively.
       </p>
     </div>
   {/snippet}

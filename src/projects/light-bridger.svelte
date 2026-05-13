@@ -9,7 +9,7 @@
     link: 'project-light-bridger',
     title: 'Light Bridger',
     category: 'Games',
-    categories: 'games best',
+    categories: ['Games', 'Best'],
     avif: 'images-AV1/page-light-bridger.avif',
     fallback: 'images-fallback/page-light-bridger.jpg'
   };
@@ -33,10 +33,9 @@
   {#snippet content()}
     <div class="project-block text-box">
       <p class="service-item-text centered">
-        For Light Bridger, I started from the idea of using light as a physical tool. This evolved into a puzzle platformer where players build
-        bridges and paths out of laser beams. I explored how light could interact with the environment through mirrors and reflections to create
-        clever, skill-based puzzles. Through this project, I learned to design mechanics that encourage creative problem-solving while maintaining a
-        clear and consistent vision.
+        For Light Bridger, I started from the idea of using light as a physical tool. This evolved into a puzzle platformer where players build bridges and paths out of laser beams. I explored how
+        light could interact with the environment through mirrors and reflections to create clever, skill-based puzzles. Through this project, I learned to design mechanics that encourage creative
+        problem-solving while maintaining a clear and consistent vision.
       </p>
     </div>
     <div class="project-block half text-box">
@@ -67,7 +66,7 @@
       <Button src="icons/github.svg" title="Github" />
     </a>
     <a href="https://miro.com/app/board/uXjVIf3QwEk=/?share_link_id=857605827096" class="link" target="_blank">
-      <Button src="icons/miro.svg" alt="Miro Icon" title="Miro" />
+      <Button src="icons/miro.svg" title="Miro" />
     </a>
   {/snippet}
 </ProjectPage>

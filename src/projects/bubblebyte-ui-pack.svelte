@@ -8,7 +8,7 @@
     link: 'project-bubblebyte-ui-pack',
     title: 'Bubblebyte UI Pack',
     category: 'UI',
-    categories: 'ui best',
+    categories: ['UI', 'Best'],
     avif: 'images-AV1/page-bubblebyte-ui-pack.avif',
     fallback: 'images-fallback/page-bubblebyte-ui-pack.jpg'
   };
@@ -18,12 +18,7 @@
   {#snippet presenter()}
     <picture>
       <source srcset="images-AV1/bubblebyte-ui-pack/presenter-bubblebyte-ui-pack.avif" type="image/avif" />
-      <img
-        class="presenter-content"
-        src="images-fallback/bubblebyte-ui-pack/presenter-bubblebyte-ui-pack.jpg"
-        alt="Bubblebyte UI Pack"
-        loading="lazy"
-      />
+      <img class="presenter-content" src="images-fallback/bubblebyte-ui-pack/presenter-bubblebyte-ui-pack.jpg" alt="Bubblebyte UI Pack" loading="lazy" />
     </picture>
   {/snippet}
 

@@ -9,7 +9,7 @@
     link: 'project-moustachekart',
     title: 'MoustacheKart',
     category: 'Models',
-    categories: 'models best',
+    categories: ['Models', 'Best'],
     avif: 'images-AV1/page-moustachekart.avif',
     fallback: 'images-fallback/page-moustachekart.jpg'
   };
@@ -18,6 +18,7 @@
 <ProjectPage id="project-moustachekart">
   {#snippet presenter()}
     <iframe
+      class="presenter-content"
       title="MoustacheKart"
       frameborder="0"
       allow="autoplay; fullscreen; xr-spatial-tracking"
@@ -35,9 +36,8 @@
   {#snippet content()}
     <div class="project-block text-box">
       <p class="service-item-text centered">
-        I made a kart for a playful, stylized racing game, based on a jeep design. I handled every step: modeling in Blender, baking, texturing with
-        PBR materials, rigging, animating, and importing into Unity. The pipeline was set up for quick iterations, keeping the kart fun, readable, and
-        full of personality.
+        I made a kart for a playful, stylized racing game, based on a jeep design. I handled every step: modeling in Blender, baking, texturing with PBR materials, rigging, animating, and importing
+        into Unity. The pipeline was set up for quick iterations, keeping the kart fun, readable, and full of personality.
       </p>
     </div>
     <div class="project-block half">

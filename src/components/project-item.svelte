@@ -1,9 +1,9 @@
 <script lang="ts">
-  let { link, title, category, categories, avif, fallback } = $props();
+  let { link, title, category, categories, avif, fallback, onclick } = $props();
 </script>
 
 <li class="project-item active" data-filter-item data-category={categories}>
-  <button data-project-link={link}>
+  <button data-project-link={link} onclick={() => onclick(link)}>
     <figure class="project-img">
       <div class="project-item-icon-box">
         <svg><use href="icons/eye.svg"></use></svg>
@@ -41,7 +41,7 @@
   .project-item-icon-box {
     --scale: 0.8;
     background: var(--jet);
-    
+
     display: flex;
     align-items: center;
     justify-content: center;

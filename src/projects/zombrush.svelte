@@ -9,7 +9,7 @@
     link: 'project-zombrush',
     title: 'Zombrush',
     category: 'Games',
-    categories: 'games',
+    categories: ['Games'],
     avif: 'images-AV1/page-zombrush.avif',
     fallback: 'images-fallback/page-zombrush.jpg'
   };
@@ -34,10 +34,9 @@
       <p class="service-item-text centered">The city is overrun… and it’s a mess.</p>
       <p class="service-item-text">‎</p>
       <p class="service-item-text centered">
-        Zombrush was created for the Unwrap Game Jam in just three days. It’s an action-packed co-op game where zombies have taken over the city, and
-        your team must repaint the town to restore order—quickly and creatively! Our team consisted of four developers, and I served as Programmer,
-        building the gameplay systems that make spreading paint and battling zombies fun and responsive. The game is designed for two players with
-        controllers, emphasizing teamwork and fast-paced action.
+        Zombrush was created for the Unwrap Game Jam in just three days. It’s an action-packed co-op game where zombies have taken over the city, and your team must repaint the town to restore
+        order—quickly and creatively! Our team consisted of four developers, and I served as Programmer, building the gameplay systems that make spreading paint and battling zombies fun and
+        responsive. The game is designed for two players with controllers, emphasizing teamwork and fast-paced action.
       </p>
     </div>
     <div class="project-block half">

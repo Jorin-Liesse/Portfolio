@@ -1,6 +1,6 @@
 <script lang="ts">
   import ArticlePage from '../components/article-page.svelte';
-  import Button from "../components/button.svelte";
+  import Button from '../components/button.svelte';
 
   export let active = false;
 </script>
@@ -35,7 +35,6 @@
       </li>
     </ol>
   </section>
-
 
   <section class="timeline">
     <div class="title-wrapper">
@@ -79,7 +78,6 @@
     </ol>
   </section>
 
-
   <section class="timeline">
     <div class="title-wrapper">
       <div class="icon-box">
@@ -108,7 +106,6 @@
       </li>
     </ol>
   </section>
-
 
   <section class="timeline">
     <div class="title-wrapper">

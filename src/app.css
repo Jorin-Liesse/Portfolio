@@ -11,6 +11,7 @@
   --jet: hsl(0, 0%, 22%);
   --orange-yellow: hsl(45, 100%, 72%);
   --onyx: hsl(240, 1%, 17%);
+  --onyx-75: hsla(240, 1%, 17%, 0.75);
   --eerie-black-1: hsl(240, 2%, 13%);
   --eerie-black-2: hsl(240, 2%, 12%);
   --smoky-black: hsl(0, 0%, 7%);
@@ -333,7 +334,7 @@ article.active {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: var(--onyx-75);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
@@ -673,10 +674,6 @@ article.active {
   gap: 30px;
 }
 
-.project-list.hidden {
-  display: none;
-}
-
 .project-img {
   position: relative;
   width: 100%;
@@ -724,24 +721,14 @@ article.active {
 }
 
 .presenter-content {
+  background: var(--onyx-75);
+  border: 1px solid var(--jet);
+  box-shadow: var(--shadow-1);
   width: 100%;
+  height: 100%;
   aspect-ratio: 16 / 9;
-  border: none;
   object-fit: cover;
   border-radius: 16px;
-}
-
-.presenter iframe {
-  animation: scaleUpPage 0.25s ease forwards;
-  --animation-scale: 1;
-  --iframe-presenter-scale: 1;
-  background-color: var(--smoky-black);
-  border-radius: calc(16px / var(--iframe-presenter-scale));
-  border: none;
-  width: 1280px;
-  height: 720px;
-  transform: scale(calc(var(--iframe-presenter-scale) * var(--animation-scale)));
-  transform-origin: top left;
 }
 
 .content {
@@ -1024,7 +1011,6 @@ textarea.form-input::-webkit-resizer {
   .info-content .title {
     padding: 5px 18px;
   }
-
 
   .separator {
     margin: 32px 0;

@@ -83,13 +83,7 @@
 {#if devMode}
   <div id="assets-options" class="glass-panel" bind:this={assetsOptions}>
     {#each iconUrls as src, i (src)}
-      <button
-        bind:this={icons[i]}
-        aria-label="icon"
-        class:selected={selectedIcon === icons[i]}
-        onclick={() => selectIcon(icons[i])}
-        onfocus={() => selectIcon(icons[i])}
-      >
+      <button bind:this={icons[i]} aria-label="icon" class:selected={selectedIcon === icons[i]} onclick={() => selectIcon(icons[i])} onfocus={() => selectIcon(icons[i])}>
         <svg><use href={src}></use></svg>
       </button>
     {/each}

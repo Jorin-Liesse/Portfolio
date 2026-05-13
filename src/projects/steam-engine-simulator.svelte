@@ -9,7 +9,7 @@
     link: 'project-steam-engine-simulator',
     title: 'Steam Engine Simulator',
     category: 'Games',
-    categories: 'games',
+    categories: ['Games'],
     avif: 'images-AV1/page-steam-engine-simulator.avif',
     fallback: 'images-fallback/page-steam-engine-simulator.jpg'
   };
@@ -32,8 +32,8 @@
   {#snippet content()}
     <div class="project-block text-box">
       <p class="service-item-text centered">
-        This project is a Research Competence (OZC) assignment that simulates a steam engine using Unity. It includes interactive elements, allowing
-        users to explore and learn how a steam engine works in an engaging and hands-on way.
+        This project is a Research Competence (OZC) assignment that simulates a steam engine using Unity. It includes interactive elements, allowing users to explore and learn how a steam engine works
+        in an engaging and hands-on way.
       </p>
     </div>
     <div class="project-block half">

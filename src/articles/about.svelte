@@ -9,14 +9,11 @@
 
 <ArticlePage title="About me" id="about" {active}>
   <section class="about-text">
-    <p>
-      I’m an indie game developer and designer focused on creating engaging player experiences. I work across all aspects of game development:
-      programming, design, and art.
-    </p>
+    <p>I’m an indie game developer and designer focused on creating engaging player experiences. I work across all aspects of game development: programming, design, and art.</p>
 
     <p>
-      This gives me the flexibility to shape both the technical and visual sides of a project. I enjoy experimenting with small game projects, joining
-      game jams, and tackling technical challenges to deliver fun and polished results.
+      This gives me the flexibility to shape both the technical and visual sides of a project. I enjoy experimenting with small game projects, joining game jams, and tackling technical challenges to
+      deliver fun and polished results.
     </p>
   </section>
 
@@ -41,22 +38,10 @@
     <h3 class="h3 service-title">What i'm doing</h3>
 
     <ul class="service-list">
-      <ServiceCard
-        title="Small Games"
-        text="Creating small but polished games to experiment with mechanics, explore new ideas, and deliver fun, focused player experiences."
-      />
-      <ServiceCard
-        title="Development Tooling"
-        text="Building tools and systems to streamline game development workflows, including reusable code frameworks, and visual assets."
-      />
-      <ServiceCard
-        title="Learning"
-        text="I’m continually expanding my skills, trying on new game programming techniques, and design principles to stay at the forefront of the industry."
-      />
-      <ServiceCard
-        title="Game Jam"
-        text="Participating in game jams to rapidly prototype new ideas, test gameplay concepts, all while enjoying the fast-paced nature of game development."
-      />
+      <ServiceCard title="Small Games" text="Creating small but polished games to experiment with mechanics, explore new ideas, and deliver fun, focused player experiences." />
+      <ServiceCard title="Development Tooling" text="Building tools and systems to streamline game development workflows, including reusable code frameworks, and visual assets." />
+      <ServiceCard title="Learning" text="I’m continually expanding my skills, trying on new game programming techniques, and design principles to stay at the forefront of the industry." />
+      <ServiceCard title="Game Jam" text="Participating in game jams to rapidly prototype new ideas, test gameplay concepts, all while enjoying the fast-paced nature of game development." />
     </ul>
   </section>
 </ArticlePage>

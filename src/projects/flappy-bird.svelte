@@ -9,7 +9,7 @@
     link: 'project-flappy-bird',
     title: 'Flappy Bird Clone',
     category: 'Games',
-    categories: 'games best',
+    categories: ['Games', 'Best'],
     avif: 'images-AV1/page-flappy-bird.avif',
     fallback: 'images-fallback/page-flappy-bird.jpg'
   };
@@ -17,7 +17,7 @@
 
 <ProjectPage id="project-flappy-bird">
   {#snippet presenter()}
-    <iframe title="Flappy Bird Clone" src="https://jorin-liesse.github.io/Flappy-Bird-JS/?muteMusic=true" loading="lazy"></iframe>
+    <iframe class="presenter-content" title="Flappy Bird Clone" src="https://jorin-liesse.github.io/Flappy-Bird-JS/?muteMusic=true" loading="lazy"></iframe>
   {/snippet}
 
   {#snippet skills()}
@@ -30,8 +30,8 @@
   {#snippet content()}
     <div class="project-block text-box">
       <p class="service-item-text centered">
-        Flappy Bird Clone is a recreation of the classic Flappy Bird, designed to deliver a fun and nostalgic experience. It features simple controls
-        and addictive, challenging gameplay that captures the charm of the original.
+        Flappy Bird Clone is a recreation of the classic Flappy Bird, designed to deliver a fun and nostalgic experience. It features simple controls and addictive, challenging gameplay that captures
+        the charm of the original.
       </p>
     </div>
   {/snippet}

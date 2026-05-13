@@ -9,7 +9,7 @@
     link: 'project-diorama-by-the-ocean',
     title: 'Diorama - By the ocean',
     category: 'Models',
-    categories: 'models',
+    categories: ['Models'],
     avif: 'images-AV1/page-diorama-by-the-ocean.avif',
     fallback: 'images-fallback/page-diorama-by-the-ocean.jpg'
   };
@@ -18,6 +18,7 @@
 <ProjectPage id="project-diorama-by-the-ocean">
   {#snippet presenter()}
     <iframe
+      class="presenter-content"
       title="DAE Diorama - By the ocean"
       frameborder="0"
       allow="autoplay; fullscreen; xr-spatial-tracking"
@@ -34,10 +35,9 @@
   {#snippet content()}
     <div class="project-block text-box">
       <p class="service-item-text centered">
-        This 3D artwork captures the vibrant essence of a Philippines island. Bold architecture and striking colors come alive under the warm sun,
-        reflecting across the serene ocean waters. Set on a sandy beach surrounded by swaying palms and lush greenery, the scene evokes the rhythmic
-        crash of waves and the refreshing sea breeze. The piece is both an homage to the Philippines’ relaxed, tropical vibe and a tribute to the
-        beauty of nature.
+        This 3D artwork captures the vibrant essence of a Philippines island. Bold architecture and striking colors come alive under the warm sun, reflecting across the serene ocean waters. Set on a
+        sandy beach surrounded by swaying palms and lush greenery, the scene evokes the rhythmic crash of waves and the refreshing sea breeze. The piece is both an homage to the Philippines’ relaxed,
+        tropical vibe and a tribute to the beauty of nature.
       </p>
     </div>
     <div class="project-block half">

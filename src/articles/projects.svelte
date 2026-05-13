@@ -2,6 +2,8 @@
   import ArticlePage from '../components/article-page.svelte';
   import ProjectItem from '../components/project-item.svelte';
 
+  // import type { Category } from "$lib/types/category";
+
   import type { ProjectModule } from '$lib/types/project-module';
   const modules = import.meta.glob<ProjectModule>('../projects/*.svelte', { eager: true });
 
@@ -11,16 +13,30 @@
     component: module.default,
     metadata: module.projectMetadata
   }));
+
+  let activeProject: string | null = null;
+
+  // let activeFilter: Category = "All";
+
+  export function openProject(link: string) {
+    activeProject = link;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    console.log('Opening project:', link);
+  }
+
+  export function closeProject() {
+    activeProject = null;
+  }
 </script>
 
 <ArticlePage title="projects" id="projects" {active}>
   <ul class="filter-list">
-    <li class="filter-item"><button data-filter-btn>Best</button></li>
-    <li class="filter-item"><button data-filter-btn>Games</button></li>
-    <li class="filter-item"><button data-filter-btn>Models</button></li>
-    <li class="filter-item"><button data-filter-btn>Websites</button></li>
-    <li class="filter-item"><button data-filter-btn>UI</button></li>
-    <li class="filter-item"><button data-filter-btn>All</button></li>
+    <li class="filter-item"><button onclick={closeProject} data-filter-btn>Best</button></li>
+    <li class="filter-item"><button onclick={closeProject} data-filter-btn>Games</button></li>
+    <li class="filter-item"><button onclick={closeProject} data-filter-btn>Models</button></li>
+    <li class="filter-item"><button onclick={closeProject} data-filter-btn>Websites</button></li>
+    <li class="filter-item"><button onclick={closeProject} data-filter-btn>UI</button></li>
+    <li class="filter-item"><button onclick={closeProject} data-filter-btn>All</button></li>
   </ul>
 
   <div class="filter-select-box">
@@ -39,14 +55,18 @@
     </ul>
   </div>
 
-  <ul class="project-list">
-    {#each projects as project (project.metadata.link)}
-      <ProjectItem {...project.metadata} />
-    {/each}
-  </ul>
+  {#if activeProject === null}
+    <ul class="project-list">
+      {#each projects as project (project.metadata.link)}
+        <ProjectItem {...project.metadata} onclick={openProject} />
+      {/each}
+    </ul>
+  {/if}
 
   {#each projects as project (project.metadata.link)}
-    <svelte:component this={project.component} />
+    {#if activeProject === project.metadata.link}
+      <svelte:component this={project.component} />
+    {/if}
   {/each}
 </ArticlePage>
 
