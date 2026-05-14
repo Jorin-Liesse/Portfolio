@@ -1,8 +1,8 @@
 <script lang="ts">
-  let { src, title, value, link } = $props();
+  let { src, title, value, link }: { src: string; title: string; value: string; link: string } = $props();
 </script>
 
-<a class="contact-item" href={link} target="_blank">
+<a class="contact-item" href={link} target="_blank" rel="noopener noreferrer">
   <div class="icon-box">
     <svg><use href={src}></use></svg>
   </div>

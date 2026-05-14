@@ -1,5 +1,5 @@
 <script lang="ts">
-  let { title, text } = $props();
+  let { title, text }: { title: string; text: string } = $props();
 </script>
 
 <li class="service-item">

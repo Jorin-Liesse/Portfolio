@@ -1,5 +1,5 @@
 <script lang="ts">
-  let { link, title, category, categories, avif, fallback, onclick } = $props();
+  let { link, title, category, categories, avif, fallback, onclick }: { link: string; title: string; category: string; categories: string; avif: string; fallback: string; onclick: (link: string) => void } = $props();
 </script>
 
 <li class="project-item active" data-filter-item data-category={categories}>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  let { src, title, link } = $props();
+  let { src, title, link }: { src: string; title: string; link: string } = $props();
 </script>
 
 <li class="social-item">

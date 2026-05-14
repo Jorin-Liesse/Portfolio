@@ -1,5 +1,5 @@
 <script lang="ts">
-  let { icon, alt, title } = $props();
+  let { icon, alt, title }: { icon: string; alt?: string; title: string } = $props();
 
   let active = $state(false);
   const toggleCard = () => (active = !active);
