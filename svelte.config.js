@@ -7,6 +7,9 @@ export default {
       assets: 'dist',
       fallback: 'index.html'
     }),
+    paths: {
+      base: '/Portfolio'
+    },
     prerender: {
       entries: ['*']
     }
