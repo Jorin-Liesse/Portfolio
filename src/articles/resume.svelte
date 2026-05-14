@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import ArticlePage from '../components/article-page.svelte';
   import Button from '../components/button.svelte';
 
@@ -136,7 +137,7 @@
     </ol>
   </section>
 
-  <a href="/documents/Resume.pdf" download rel="external">
+  <a href={`${base}/documents/Resume.pdf`} download rel="external">
     <Button src="icons/download.svg" title="Download" />
   </a>
 </ArticlePage>
