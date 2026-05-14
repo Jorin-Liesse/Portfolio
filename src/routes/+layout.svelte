@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { base } from '$app/paths';
+  import { asset } from '$app/paths';
   import type { Snippet } from 'svelte';
   import '../app.css';
 
@@ -12,7 +12,7 @@
 	<meta name="description" content="Portfolio of Jorin Liesse, Game Developer." />
 	<meta name="text-scale" content="scale" />
 	
-	<link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+	<link rel="icon" type="image/svg+xml" href={asset('/favicon.svg')} />
 
 	<title>Portfolio, Jorin Liesse</title>
 
