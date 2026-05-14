@@ -21,7 +21,6 @@
   export function openProject(link: string) {
     activeProject = link;
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    console.log('Opening project:', link);
   }
 
   export function closeProject() {
