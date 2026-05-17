@@ -4,7 +4,7 @@
   import SkillCard from '../components/skill-card.svelte';
   import ServiceCard from '../components/service-card.svelte';
 
-  export let active = false;
+  let { active = false } = $props< { active: boolean }>();
 </script>
 
 <ArticlePage title="About me" id="about" {active}>

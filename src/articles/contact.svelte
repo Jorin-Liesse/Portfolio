@@ -2,7 +2,7 @@
   import ArticlePage from '../components/article-page.svelte';
   import Button from '../components/button.svelte';
 
-  export let active = false;
+  let { active = false } = $props< { active: boolean }>();
 </script>
 
 <ArticlePage title="Contact" id="contact" {active}>

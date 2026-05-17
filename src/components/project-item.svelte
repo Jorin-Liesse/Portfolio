@@ -1,7 +1,15 @@
 <script lang="ts">
   import type { Category } from '$lib/types/category';
 
-  let { link, title, category, categories, avif, fallback, onclick }: { link: string; title: string; category: Category; categories: Category[]; avif: string; fallback: string; onclick: (link: string) => void } = $props();
+  let {
+    link,
+    title,
+    category,
+    categories,
+    avif,
+    fallback,
+    onclick
+  }: { link: string; title: string; category: Category; categories: Category[]; avif: string; fallback: string; onclick: (link: string) => void } = $props();
 </script>
 
 <li class="project-item active" data-filter-item data-category={categories}>

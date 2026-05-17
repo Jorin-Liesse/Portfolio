@@ -2,21 +2,26 @@
   import ArticlePage from '../components/article-page.svelte';
   import ProjectItem from '../components/project-item.svelte';
 
-  // import type { Category } from "$lib/types/category";
-
+  import { ALL_CATEGORIES, type Category } from '$lib/types/category';
   import type { ProjectModule } from '$lib/types/project-module';
+
   const modules = import.meta.glob<ProjectModule>('../projects/*.svelte', { eager: true });
 
-  export let active = false;
+  let { active = false } = $props<{ active: boolean }>();
 
-  const projects = Object.values(modules).map((module) => ({
-    component: module.default,
-    metadata: module.projectMetadata
-  }));
+  let activeProject = $state<string | null>(null);
+  let activeCategory = $state<Category>('Best');
 
-  let activeProject: string | null = null;
+  const projects = Object.values(modules).map((module) => ({ component: module.default, metadata: module.projectMetadata }));
 
-  // let activeFilter: Category = "All";
+  const filteredProjects = $derived(activeCategory === 'All' ? projects : projects.filter((p) => p.metadata.categories.includes(activeCategory)));
+
+  const activeProjectComponent = $derived(projects.find((p) => p.metadata.link === activeProject));
+
+  function setCategory(category: Category) {
+    activeCategory = category;
+    closeProject();
+  }
 
   export function openProject(link: string) {
     activeProject = link;
@@ -30,43 +35,41 @@
 
 <ArticlePage title="projects" id="projects" {active}>
   <ul class="filter-list">
-    <li class="filter-item"><button onclick={closeProject} data-filter-btn>Best</button></li>
-    <li class="filter-item"><button onclick={closeProject} data-filter-btn>Games</button></li>
-    <li class="filter-item"><button onclick={closeProject} data-filter-btn>Models</button></li>
-    <li class="filter-item"><button onclick={closeProject} data-filter-btn>Websites</button></li>
-    <li class="filter-item"><button onclick={closeProject} data-filter-btn>UI</button></li>
-    <li class="filter-item"><button onclick={closeProject} data-filter-btn>All</button></li>
+    {#each ALL_CATEGORIES as category}
+      <li class="filter-item">
+        <button class:active={activeCategory === category} onclick={() => setCategory(category)} data-filter-btn>
+          {category}
+        </button>
+      </li>
+    {/each}
   </ul>
 
   <div class="filter-select-box">
-    <button class="filter-select" data-select>
-      <div class="select-value" data-select-value>Select category</div>
+    <button class="filter-select">
+      <div class="select-value">{activeCategory}</div>
       <svg class="select-icon"><use href="icons/chevron.svg"></use></svg>
     </button>
 
     <ul class="select-list">
-      <li class="select-item"><button data-select-item>Best</button></li>
-      <li class="select-item"><button data-select-item>Games</button></li>
-      <li class="select-item"><button data-select-item>Models</button></li>
-      <li class="select-item"><button data-select-item>Websites</button></li>
-      <li class="select-item"><button data-select-item>UI</button></li>
-      <li class="select-item"><button data-select-item>All</button></li>
+      {#each ALL_CATEGORIES as category}
+        <li class="select-item">
+          <button onclick={() => setCategory(category)} data-select-item>{category}</button>
+        </li>
+      {/each}
     </ul>
   </div>
 
   {#if activeProject === null}
     <ul class="project-list">
-      {#each projects as project (project.metadata.link)}
-        <ProjectItem {...project.metadata} onclick={openProject} />
+      {#each filteredProjects as project (activeCategory + project.metadata.link)}
+        <ProjectItem {...project.metadata} onclick={() => openProject(project.metadata.link)} />
       {/each}
     </ul>
   {/if}
 
-  {#each projects as project (project.metadata.link)}
-    {#if activeProject === project.metadata.link}
-      <svelte:component this={project.component} />
-    {/if}
-  {/each}
+  {#if activeProjectComponent}
+    <activeProjectComponent.component />
+  {/if}
 </ArticlePage>
 
 <style>

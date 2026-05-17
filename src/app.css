@@ -702,15 +702,6 @@ article.active {
   transition: var(--transition-1);
 }
 
-@keyframes scaleUpPage {
-  0% {
-    --animation-scale: 0.5;
-  }
-  100% {
-    --animation-scale: 1;
-  }
-}
-
 .presenter {
   width: 100%;
   height: calc(100% / (9 / 16));
