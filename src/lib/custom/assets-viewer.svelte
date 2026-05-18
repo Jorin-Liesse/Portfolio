@@ -1,11 +1,12 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { page } from '$app/state';
   import ResizeHandle from '$lib/custom/resize-handle.svelte';
 
   const iconFiles = import.meta.glob(['$lib/ICON/*.svg', '$lib/SVG/*.svg'], { eager: true, import: 'default' });
   const iconUrls = Object.keys(iconFiles);
 
-  let devMode: boolean = false;
+  const devMode = page.url.searchParams.get('dev') === 'true';
 
   let icons: HTMLElement[] = [];
   let selectedIcon: HTMLElement | null = null;
@@ -69,8 +70,6 @@
   }
 
   onMount(() => {
-    const params = new URLSearchParams(window.location.search);
-    devMode = params.has('dev');
     if (!devMode) return;
 
     document.addEventListener('pointerdown', handleClickOutside);

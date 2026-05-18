@@ -1,13 +1,9 @@
 <script lang="ts">
-  import ArticlePage from '$lib/components/article-page.svelte';
   import ProjectItem from '$lib/components/project-item.svelte';
-
   import { ALL_CATEGORIES, type Category } from '$lib/types/category';
   import type { ProjectModule } from '$lib/types/project-module';
 
   const modules = import.meta.glob<ProjectModule>('$lib/projects/*.svelte', { eager: true });
-
-  let { active = false } = $props<{ active: boolean }>();
 
   let activeProject = $state<string | null>(null);
   let activeCategory = $state<Category>('Best');
@@ -31,44 +27,44 @@
   }
 </script>
 
-<ArticlePage title="projects" id="projects" {active}>
-  <ul class="filter-list">
+<h2 class="h2 article-title">Projects</h2>
+
+<ul class="filter-list">
+  {#each ALL_CATEGORIES as category}
+    <li class="filter-item">
+      <button class:active={activeCategory === category} onclick={() => setCategory(category)} data-filter-btn>
+        {category}
+      </button>
+    </li>
+  {/each}
+</ul>
+
+<div class="filter-select-box">
+  <button class="filter-select">
+    <div class="select-value">{activeCategory}</div>
+    <svg class="select-icon"><use href="icons/chevron.svg"></use></svg>
+  </button>
+
+  <ul class="select-list">
     {#each ALL_CATEGORIES as category}
-      <li class="filter-item">
-        <button class:active={activeCategory === category} onclick={() => setCategory(category)} data-filter-btn>
-          {category}
-        </button>
+      <li class="select-item">
+        <button onclick={() => setCategory(category)} data-select-item>{category}</button>
       </li>
     {/each}
   </ul>
+</div>
 
-  <div class="filter-select-box">
-    <button class="filter-select">
-      <div class="select-value">{activeCategory}</div>
-      <svg class="select-icon"><use href="icons/chevron.svg"></use></svg>
-    </button>
+{#if activeProject === null}
+  <ul class="project-list">
+    {#each filteredProjects as project (activeCategory + project.metadata.link)}
+      <ProjectItem {...project.metadata} onclick={() => openProject(project.metadata.link)} />
+    {/each}
+  </ul>
+{/if}
 
-    <ul class="select-list">
-      {#each ALL_CATEGORIES as category}
-        <li class="select-item">
-          <button onclick={() => setCategory(category)} data-select-item>{category}</button>
-        </li>
-      {/each}
-    </ul>
-  </div>
-
-  {#if activeProject === null}
-    <ul class="project-list">
-      {#each filteredProjects as project (activeCategory + project.metadata.link)}
-        <ProjectItem {...project.metadata} onclick={() => openProject(project.metadata.link)} />
-      {/each}
-    </ul>
-  {/if}
-
-  {#if activeProjectComponent}
-    <activeProjectComponent.component />
-  {/if}
-</ArticlePage>
+{#if activeProjectComponent}
+  <activeProjectComponent.component />
+{/if}
 
 <style>
   .select-icon {
