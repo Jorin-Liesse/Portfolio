@@ -412,10 +412,6 @@
       margin-bottom: 15px;
     }
 
-    .service {
-      margin-bottom: 35px;
-    }
-
     .service-title {
       margin-bottom: 20px;
     }
@@ -433,6 +429,11 @@
       border-radius: 14px;
       box-shadow: var(--shadow-2);
       z-index: 1;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 18px;
     }
 
     .service-item::before {
@@ -453,10 +454,12 @@
     }
 
     .service-content-box {
-      text-align: center;
+      text-align: left;
     }
 
     .service-item-title {
+      margin-bottom: 0;
+      margin-top: 5px;
       margin-bottom: 7px;
     }
 
@@ -465,6 +468,14 @@
       font-size: var(--fs-6);
       font-weight: var(--fw-3);
       line-height: 1.6;
+    }
+
+    .service-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 30px;
     }
 
     .skills {

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import ResizeHandle from './resize-handle.svelte';
+  import ResizeHandle from '$lib/custom/resize-handle.svelte';
 
   const iconFiles = import.meta.glob(['$lib/ICON/*.svg', '$lib/SVG/*.svg'], { eager: true, import: 'default' });
   const iconUrls = Object.keys(iconFiles);

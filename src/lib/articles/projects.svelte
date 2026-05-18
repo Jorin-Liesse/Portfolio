@@ -1,11 +1,11 @@
 <script lang="ts">
-  import ArticlePage from '../components/article-page.svelte';
-  import ProjectItem from '../components/project-item.svelte';
+  import ArticlePage from '$lib/components/article-page.svelte';
+  import ProjectItem from '$lib/components/project-item.svelte';
 
   import { ALL_CATEGORIES, type Category } from '$lib/types/category';
   import type { ProjectModule } from '$lib/types/project-module';
 
-  const modules = import.meta.glob<ProjectModule>('../projects/*.svelte', { eager: true });
+  const modules = import.meta.glob<ProjectModule>('$lib/projects/*.svelte', { eager: true });
 
   let { active = false } = $props<{ active: boolean }>();
 
@@ -13,9 +13,7 @@
   let activeCategory = $state<Category>('Best');
 
   const projects = Object.values(modules).map((module) => ({ component: module.default, metadata: module.projectMetadata }));
-
   const filteredProjects = $derived(activeCategory === 'All' ? projects : projects.filter((p) => p.metadata.categories.includes(activeCategory)));
-
   const activeProjectComponent = $derived(projects.find((p) => p.metadata.link === activeProject));
 
   function setCategory(category: Category) {

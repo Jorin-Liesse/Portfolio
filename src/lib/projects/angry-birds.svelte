@@ -1,10 +1,9 @@
 <script module lang="ts">
-  import ProjectPage from '../components/project-page.svelte';
+  import ProjectPage from '$lib/components/project-page.svelte';
+  import SkillCard from '$lib/components/skill-card.svelte';
+  import Button from '$lib/components/button.svelte';
 
   import type { ProjectMetadata } from '$lib/types/project-meta-data';
-
-  import SkillCard from '../components/skill-card.svelte';
-  import Button from '../components/button.svelte';
 
   export const projectMetadata: ProjectMetadata = {
     link: 'project-angry-birds',

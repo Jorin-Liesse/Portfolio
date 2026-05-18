@@ -9,27 +9,27 @@
     <section class="presenter">
       {@render presenter()}
     </section>
-
-    <div class="project-spacer"></div>
   {/if}
 
   {#if skills}
+    <div class="project-spacer"></div>
+
     <section class="skills">
       {@render skills()}
     </section>
-
-    <div class="project-spacer"></div>
   {/if}
 
   {#if content}
+    <div class="project-spacer"></div>
+
     <section class="content">
       {@render content()}
     </section>
-
-    <div class="project-spacer"></div>
   {/if}
 
   {#if links}
+    <div class="project-spacer"></div>
+
     <section class="links">
       {@render links()}
     </section>

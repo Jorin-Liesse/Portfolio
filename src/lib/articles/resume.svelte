@@ -1,9 +1,9 @@
 <script lang="ts">
   import { asset } from '$app/paths';
-  import ArticlePage from '../components/article-page.svelte';
-  import Button from '../components/button.svelte';
+  import ArticlePage from '$lib/components/article-page.svelte';
+  import Button from '$lib/components/button.svelte';
 
-  let { active = false } = $props< { active: boolean }>();
+  let { active = false } = $props<{ active: boolean }>();
 </script>
 
 <ArticlePage title="Resume" id="resume" {active}>

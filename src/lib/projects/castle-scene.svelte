@@ -1,8 +1,8 @@
 <script module lang="ts">
-  import ProjectPage from '../components/project-page.svelte';
-  import type { ProjectMetadata } from '$lib/types/project-meta-data';
+  import ProjectPage from '$lib/components/project-page.svelte';
+  import SkillCard from '$lib/components/skill-card.svelte';
 
-  import SkillCard from '../components/skill-card.svelte';
+  import type { ProjectMetadata } from '$lib/types/project-meta-data';
 
   export const projectMetadata: ProjectMetadata = {
     link: 'project-castle-scene',
@@ -91,9 +91,6 @@
         <img src="images-fallback/castle-scene/metal.jpg" alt="metalness render" loading="lazy" />
       </picture>
       <p class="h5 on-top-text">Metalness</p>
-    </div>
-    <div class="project-block half">
-      <p class="h5"></p>
     </div>
   {/snippet}
 </ProjectPage>

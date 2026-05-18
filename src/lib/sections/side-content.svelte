@@ -1,6 +1,6 @@
 <script lang="ts">
-  import ContactCard from '../components/contact-card.svelte';
-  import SocialItem from '../components/social-item.svelte';
+  import ContactCard from '$lib/components/contact-card.svelte';
+  import SocialItem from '$lib/components/social-item.svelte';
 
   let sidebarOpen: boolean = false;
 
@@ -45,7 +45,6 @@
       <SocialItem src="icons/linkedin.svg" title="LinkedIn" link="https://www.linkedin.com/in/jorin-liesse-755774287" />
       <SocialItem src="icons/github.svg" title="GitHub" link="https://github.com/Jorin-Liesse" />
     </ul>
-    <br />
   </div>
 </aside>
 

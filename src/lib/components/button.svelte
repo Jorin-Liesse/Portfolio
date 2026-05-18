@@ -1,5 +1,5 @@
 <script lang="ts">
-  let { src, title}: { src: string; title: string } = $props();
+  let { src, title }: { src: string; title: string } = $props();
 </script>
 
 <button class="form-btn" type="submit" data-form-btn>

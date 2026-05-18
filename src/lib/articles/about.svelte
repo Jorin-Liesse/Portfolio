@@ -1,10 +1,10 @@
 <script lang="ts">
-  import ArticlePage from '../components/article-page.svelte';
+  import ArticlePage from '$lib/components/article-page.svelte';
 
-  import SkillCard from '../components/skill-card.svelte';
-  import ServiceCard from '../components/service-card.svelte';
+  import SkillCard from '$lib/components/skill-card.svelte';
+  import ServiceCard from '$lib/components/service-card.svelte';
 
-  let { active = false } = $props< { active: boolean }>();
+  let { active = false } = $props<{ active: boolean }>();
 </script>
 
 <ArticlePage title="About me" id="about" {active}>
