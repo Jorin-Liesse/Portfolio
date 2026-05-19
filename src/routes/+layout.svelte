@@ -4,22 +4,19 @@
   import { goto } from '$app/navigation';
   import type { Snippet } from 'svelte';
 
-  import { ALL_ARTICLES, type Articles } from '$lib/types/articles';
-
   import ContactCard from '$lib/components/contact-card.svelte';
   import SocialItem from '$lib/components/social-item.svelte';
 
+  import { ALL_ARTICLES, type Articles } from '$lib/types/articles';
+
   let sidebarOpen = $state<boolean>(false);
 
-  const activePage = $derived(() => {
+  const activePage = $derived.by(() => {
     const path = page.url.pathname;
     const baseURL = import.meta.env.BASE_URL || '/';
     const relativePath = path.startsWith(baseURL) ? path.slice(baseURL.length) : path;
     const firstSegment = relativePath.split('/').filter(Boolean)[0] ?? '';
-
-    console.log('First segment:', firstSegment);
-
-    return ALL_ARTICLES.includes(firstSegment as Articles) ? (firstSegment as Articles) : 'About';
+    return ALL_ARTICLES.includes(firstSegment as Articles) ? (firstSegment as Articles) : null;
   }) as unknown as Articles;
 
   let { children }: { children?: Snippet } = $props();
@@ -151,6 +148,9 @@
     display: none;
   }
 
+  @media (min-width: 450px) {
+  }
+
   @media (min-width: 580px) {
     .info_more-btn {
       top: -30px;
@@ -166,6 +166,15 @@
     .info_more-btn svg {
       display: none;
     }
+  }
+
+  @media (max-width: 768px) {
+  }
+
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1024px) {
   }
 
   @media (min-width: 1250px) {
@@ -291,6 +300,24 @@
     margin: 15px 12px;
     margin-bottom: 75px;
     min-width: 259px;
+  }
+
+  @media (min-width: 450px) {
+  }
+
+  @media (min-width: 580px) {
+  }
+
+  @media (max-width: 768px) {
+  }
+
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1024px) {
+  }
+
+  @media (min-width: 1250px) {
   }
 
   :global {
@@ -662,77 +689,6 @@
 
     .article-title {
       margin-bottom: 30px;
-    }
-
-    .timeline {
-      margin-bottom: 3rem;
-    }
-
-    .timeline .title-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 25px;
-    }
-
-    .timeline-list {
-      font-size: var(--fs-6);
-      margin-left: 45px;
-    }
-
-    .timeline-item {
-      position: relative;
-    }
-
-    .timeline-item:not(:last-child) {
-      margin-bottom: 20px;
-    }
-
-    .timeline-item-title {
-      font-size: var(--fs-6);
-      line-height: 1.3;
-      margin-bottom: 7px;
-    }
-
-    .timeline-list span {
-      color: var(--vegas-gold);
-      font-weight: var(--fw-400);
-      line-height: 1.6;
-    }
-
-    .timeline-list a {
-      text-decoration: underline;
-      color: var(--vegas-gold);
-      font-weight: var(--fw-400);
-      line-height: 1.6;
-    }
-
-    .timeline-item:not(:last-child)::before {
-      content: '';
-      position: absolute;
-      top: -25px;
-      left: -30px;
-      width: 1px;
-      height: calc(100% + 50px);
-      background: var(--jet);
-    }
-
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      top: 5px;
-      left: -33px;
-      height: 6px;
-      width: 6px;
-      background: var(--text-gradient-yellow);
-      border-radius: 50%;
-      box-shadow: 0 0 0 4px var(--jet);
-    }
-
-    .timeline-text {
-      color: var(--light-gray);
-      font-weight: var(--fw-300);
-      line-height: 1.6;
     }
 
     .skills-title {
@@ -1234,21 +1190,6 @@
       /**
    * #RESUME
    */
-
-      .timeline-list {
-        margin-left: 65px;
-      }
-
-      .timeline-item:not(:last-child)::before {
-        left: -40px;
-      }
-
-      .timeline-item::after {
-        height: 8px;
-        width: 8px;
-        left: -43px;
-      }
-
       .skills-item:not(:last-child) {
         margin-bottom: 25px;
       }
@@ -1581,14 +1522,6 @@
 
       .social-list {
         justify-content: center;
-      }
-
-      /**
-	 * RESUME
-	 */
-
-      .timeline-text {
-        max-width: 700px;
       }
     }
   }
