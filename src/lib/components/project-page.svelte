@@ -62,12 +62,28 @@
     padding-bottom: 16px;
   }
 
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
   @keyframes scaleUp {
     0% {
       transform: scale(0.5);
     }
     100% {
       transform: scale(1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+      justify-content: center;
     }
   }
 </style>

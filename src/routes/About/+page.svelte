@@ -62,6 +62,22 @@
     gap: 20px;
   }
 
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+      justify-content: center;
+    }
+  }
+
   @media (min-width: 1024px) {
     .service-list {
       grid-template-columns: 1fr 1fr;

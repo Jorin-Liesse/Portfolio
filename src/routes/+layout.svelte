@@ -757,13 +757,6 @@
       padding: 30px;
     }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
     /*-----------------------------------*\
   #PORTFOLIO
 \*-----------------------------------*/
@@ -893,15 +886,6 @@
         align-items: flex-start;
         gap: 18px;
         padding: 30px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem 1rem;
-        justify-content: center;
       }
     }
   }
