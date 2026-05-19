@@ -98,12 +98,52 @@
     margin-left: 10px;
   }
 
+  .project-img {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+
+  .project-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+    transition: var(--transition-1);
+  }
+
+  .project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-1);
+  }
+
   @keyframes scaleUp {
     0% {
       transform: scale(0.5);
     }
     100% {
       transform: scale(1);
+    }
+  }
+
+  @media (min-width: 450px) {
+    .project-img {
+      height: auto;
+    }
+  }
+
+  @media (min-width: 580px) {
+    .project-img {
+      border-radius: 16px;
     }
   }
 </style>

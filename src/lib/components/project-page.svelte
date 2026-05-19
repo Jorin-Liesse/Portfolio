@@ -58,6 +58,10 @@
     justify-content: center;
   }
 
+  .project-spacer {
+    padding-bottom: 16px;
+  }
+
   @keyframes scaleUp {
     0% {
       transform: scale(0.5);
