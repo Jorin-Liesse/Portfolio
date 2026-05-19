@@ -706,6 +706,10 @@
       border-radius: 3px;
     }
 
+    .article-title {
+      margin-bottom: 30px;
+    }
+
     /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
@@ -754,63 +758,9 @@
       justify-content: center;
     }
 
-    .skill-card {
-      position: relative;
-      z-index: 1;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--border-gradient-onyx);
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      padding: 0.5rem 0.75rem;
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-      width: auto;
-    }
-
-    .skill-card::before {
-      content: '';
-      position: absolute;
-      inset: 1px;
-      background: var(--bg-gradient-jet);
-      border-radius: inherit;
-      z-index: -1;
-    }
-
-    .skill-card img {
-      width: 28px;
-      height: 28px;
-    }
-
-    .skill-card h3 {
-      color: var(--light-gray);
-      font-size: 1rem;
-      font-weight: 600;
-      margin: 0;
-    }
-
     /*-----------------------------------*\
   #RESUME
 \*-----------------------------------*/
-
-    .article-title {
-      margin-bottom: 30px;
-    }
-
-    .skills-title {
-      margin-bottom: 20px;
-    }
-
-    .skills-list {
-      padding: 20px;
-    }
-
-    .skills-item:not(:last-child) {
-      margin-bottom: 15px;
-    }
-
     .skill .title-wrapper {
       display: flex;
       align-items: center;
@@ -1194,16 +1144,6 @@
         font-size: 18px;
       }
 
-      /**
-   * #ABOUT
-   */
-
-      .about .article-title {
-        margin-bottom: 20px;
-      }
-
-      /* service */
-
       .service-item {
         display: flex;
         justify-content: flex-start;
@@ -1211,17 +1151,6 @@
         gap: 18px;
         padding: 30px;
       }
-
-      /**
-   * #RESUME
-   */
-      .skills-item:not(:last-child) {
-        margin-bottom: 25px;
-      }
-
-      /**
-   * #PORTFOLIO
-   */
 
       .project-img {
         border-radius: 16px;
@@ -1295,10 +1224,6 @@
       /**
    * PORTFOLIO
    */
-
-      .article-title {
-        padding-bottom: 20px;
-      }
 
       .filter-select-box {
         display: none;
