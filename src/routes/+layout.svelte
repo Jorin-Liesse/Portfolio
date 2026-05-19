@@ -68,7 +68,6 @@
 
   <div class="sidebar-info_more">
     <div class="separator"></div>
-
     <ul class="contacts-list">
       <ContactCard src="icons/mail.svg" title="Email" value="liesse.jorin@gmail.com" link="mailto:liesse.jorin@gmail.com" />
       <ContactCard src="icons/phone.svg" title="Phone" value="+32 483 45 06 05" link="tel:+32483450605" />
@@ -102,8 +101,52 @@
 </main>
 
 <style>
+  .avatar-box {
+    border-radius: 50px;
+  }
+
+  .info-content .name {
+    color: var(--white-2);
+    font-size: var(--fs-3);
+    font-weight: var(--fw-500);
+    letter-spacing: -0.25px;
+    margin-bottom: 10px;
+  }
+
+  .info-content .title {
+    color: var(--white-1);
+    background: var(--onyx);
+    font-size: var(--fs-8);
+    font-weight: var(--fw-300);
+    width: max-content;
+    padding: 3px 12px;
+    border-radius: 8px;
+  }
+
+  .contacts-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .social-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+  }
+
   .sidebar.active .info_more-btn svg {
     transform: rotate(0.5turn);
+  }
+
+  .separator {
+    width: 100%;
+    height: 1px;
+    background: var(--jet);
+    margin: 16px 0;
   }
 
   .info_more-btn svg {
@@ -159,10 +202,63 @@
     z-index: 1;
   }
 
+  .sidebar {
+    margin-bottom: 15px;
+    max-height: 112px;
+    overflow: hidden;
+    transition: var(--transition-2);
+  }
+
+  .sidebar.active {
+    max-height: 405px;
+  }
+
+  .sidebar-info {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .sidebar-info_more {
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-2);
+  }
+
+  .sidebar.active .sidebar-info_more {
+    opacity: 1;
+    visibility: visible;
+  }
+
   @media (min-width: 450px) {
+    .avatar-box {
+      border-radius: 30px;
+    }
+
+    .avatar-box picture img {
+      width: 120px;
+    }
   }
 
   @media (min-width: 580px) {
+    .info-content .name {
+      margin-bottom: 15px;
+    }
+
+    .info-content .title {
+      padding: 5px 18px;
+    }
+
+    .contacts-list {
+      gap: 20px;
+    }
+
+    .separator {
+      margin: 32px 0;
+    }
+
     .sidebar,
     article {
       width: 520px;
@@ -184,12 +280,30 @@
     .info_more-btn svg {
       display: none;
     }
+
+    .sidebar {
+      max-height: 180px;
+      margin-bottom: 30px;
+    }
+
+    .sidebar.active {
+      max-height: 584px;
+    }
+
+    .sidebar-info {
+      gap: 25px;
+    }
   }
 
   @media (max-width: 768px) {
   }
 
   @media (min-width: 768px) {
+    .contacts-list {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px 15px;
+    }
+
     .sidebar,
     article {
       width: 700px;
@@ -205,6 +319,32 @@
   }
 
   @media (min-width: 1250px) {
+    .contacts-list {
+      grid-template-columns: 1fr;
+    }
+
+    .social-list {
+      justify-content: center;
+    }
+
+    .info-content .name {
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .info-content .title {
+      margin: auto;
+    }
+
+    .avatar-box picture img {
+      width: 150px;
+    }
+
+    .separator:last-of-type {
+      margin: 15px 0;
+      opacity: 0;
+    }
+
     .info_more-btn {
       display: none;
     }
@@ -220,6 +360,25 @@
 
     .sidebar {
       margin: 0;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 60px;
+      max-height: max-content;
+      height: 100%;
+      margin-bottom: 0;
+      padding-top: 60px;
+      z-index: 1;
+    }
+
+    .sidebar-info {
+      flex-direction: column;
+    }
+
+    .sidebar-info_more {
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -361,13 +520,6 @@
   }
 
   :global {
-    .separator {
-      width: 100%;
-      height: 1px;
-      background: var(--jet);
-      margin: 16px 0;
-    }
-
     .icon-box {
       position: relative;
       background: var(--border-gradient-onyx);
@@ -431,116 +583,6 @@
       height: 3px;
       background: var(--text-gradient-yellow);
       border-radius: 3px;
-    }
-
-    .has-scrollbar::-webkit-scrollbar {
-      width: 5px; /* for vertical scrollbar */
-      height: 5px; /* for horizontal scrollbar */
-    }
-
-    .has-scrollbar::-webkit-scrollbar-track {
-      background: var(--onyx);
-      border-radius: 5px;
-    }
-
-    .has-scrollbar::-webkit-scrollbar-thumb {
-      background: var(--orange-yellow);
-      border-radius: 5px;
-    }
-
-    .has-scrollbar::-webkit-scrollbar-button {
-      width: 20px;
-    }
-
-    .content-card {
-      position: relative;
-      background: var(--border-gradient-onyx);
-      padding: 15px;
-      padding-top: 45px;
-      border-radius: 14px;
-      box-shadow: var(--shadow-2);
-      cursor: pointer;
-      z-index: 1;
-    }
-
-    .content-card::before {
-      content: '';
-      position: absolute;
-      inset: 1px;
-      background: var(--bg-gradient-jet);
-      border-radius: inherit;
-      z-index: -1;
-    }
-
-    /*-----------------------------------*\
-  #SIDEBAR
-\*-----------------------------------*/
-
-    .sidebar {
-      margin-bottom: 15px;
-      max-height: 112px;
-      overflow: hidden;
-      transition: var(--transition-2);
-    }
-
-    .sidebar.active {
-      max-height: 405px;
-    }
-
-    .sidebar-info {
-      position: relative;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .avatar-box {
-      border-radius: 50px;
-    }
-
-    .info-content .name {
-      color: var(--white-2);
-      font-size: var(--fs-3);
-      font-weight: var(--fw-500);
-      letter-spacing: -0.25px;
-      margin-bottom: 10px;
-    }
-
-    .info-content .title {
-      color: var(--white-1);
-      background: var(--onyx);
-      font-size: var(--fs-8);
-      font-weight: var(--fw-300);
-      width: max-content;
-      padding: 3px 12px;
-      border-radius: 8px;
-    }
-
-    .sidebar-info_more {
-      opacity: 0;
-      visibility: hidden;
-      transition: var(--transition-2);
-    }
-
-    .sidebar.active .sidebar-info_more {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .contacts-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-
-    .social-list {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 15px;
-      padding-bottom: 4px;
-      padding-left: 7px;
     }
 
     /*-----------------------------------*\
@@ -1122,52 +1164,6 @@
       }
 
       /**
-   * #SIDEBAR
-   */
-
-      .sidebar {
-        max-height: 180px;
-        margin-bottom: 30px;
-      }
-
-      .sidebar.active {
-        max-height: 584px;
-      }
-
-      .sidebar-info {
-        gap: 25px;
-      }
-
-      .avatar-box {
-        border-radius: 30px;
-      }
-
-      .avatar-box picture img {
-        width: 120px;
-      }
-
-      .info-content .name {
-        margin-bottom: 15px;
-      }
-
-      .info-content .title {
-        padding: 5px 18px;
-      }
-
-      .separator {
-        margin: 32px 0;
-      }
-
-      .contacts-list {
-        gap: 20px;
-      }
-
-      .contact-info {
-        max-width: calc(100% - 64px);
-        width: calc(100% - 64px);
-      }
-
-      /**
    * #NAVBAR
    */
 
@@ -1288,15 +1284,6 @@
     @media (min-width: 768px) {
       .has-scrollbar::-webkit-scrollbar-button {
         width: 100px;
-      }
-
-      /**
-   * SIDEBAR
-   */
-
-      .contacts-list {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px 15px;
       }
 
       /**
@@ -1466,62 +1453,6 @@
       /**
    * SIDEBAR
    */
-
-      .sidebar {
-        position: sticky;
-        top: 60px;
-        max-height: max-content;
-        height: 100%;
-        margin-bottom: 0;
-        padding-top: 60px;
-        z-index: 1;
-      }
-
-      .sidebar-info {
-        flex-direction: column;
-      }
-
-      .avatar-box picture img {
-        width: 150px;
-      }
-
-      .info-content .name {
-        white-space: nowrap;
-        text-align: center;
-      }
-
-      .info-content .title {
-        margin: auto;
-      }
-
-      .sidebar-info_more {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .contacts-list {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-info :is(.contact-link) {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      .contact-info :is(.contact-link, time, address, phone, mail) {
-        --fs-7: 14px;
-        font-weight: var(--fw-300);
-      }
-
-      .separator:last-of-type {
-        margin: 15px 0;
-        opacity: 0;
-      }
-
-      .social-list {
-        justify-content: center;
-      }
     }
   }
 </style>

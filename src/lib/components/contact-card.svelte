@@ -43,4 +43,11 @@
     width: 1.5rem;
     height: 1.5rem;
   }
+
+  @media (min-width: 580px) {
+    .contact-info {
+      max-width: calc(100% - 64px);
+      width: calc(100% - 64px);
+    }
+  }
 </style>
