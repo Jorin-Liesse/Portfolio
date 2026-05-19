@@ -105,6 +105,7 @@
   .sidebar.active .info_more-btn svg {
     transform: rotate(0.5turn);
   }
+
   .info_more-btn svg {
     --primary-color: var(--orange-yellow);
     width: 1rem;
@@ -148,10 +149,27 @@
     display: none;
   }
 
+  .sidebar,
+  article {
+    background: var(--eerie-black-2);
+    border: 1px solid var(--jet);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: var(--shadow-1);
+    z-index: 1;
+  }
+
   @media (min-width: 450px) {
   }
 
   @media (min-width: 580px) {
+    .sidebar,
+    article {
+      width: 520px;
+      margin-inline: auto;
+      padding: 30px;
+    }
+
     .info_more-btn {
       top: -30px;
       right: -30px;
@@ -172,14 +190,36 @@
   }
 
   @media (min-width: 768px) {
+    .sidebar,
+    article {
+      width: 700px;
+    }
   }
 
   @media (min-width: 1024px) {
+    .sidebar,
+    article {
+      width: 950px;
+      box-shadow: var(--shadow-5);
+    }
   }
 
   @media (min-width: 1250px) {
     .info_more-btn {
       display: none;
+    }
+
+    .sidebar,
+    article {
+      width: auto;
+    }
+
+    article {
+      min-height: 100%;
+    }
+
+    .sidebar {
+      margin: 0;
     }
   }
 
@@ -321,16 +361,6 @@
   }
 
   :global {
-    .sidebar,
-    article {
-      background: var(--eerie-black-2);
-      border: 1px solid var(--jet);
-      border-radius: 20px;
-      padding: 15px;
-      box-shadow: var(--shadow-1);
-      z-index: 1;
-    }
-
     .separator {
       width: 100%;
       height: 1px;
@@ -1069,13 +1099,6 @@
     }
 
     @media (min-width: 580px) {
-      .sidebar,
-      article {
-        width: 520px;
-        margin-inline: auto;
-        padding: 30px;
-      }
-
       .article-title {
         font-weight: var(--fw-600);
         padding-bottom: 15px;
@@ -1263,11 +1286,6 @@
     }
 
     @media (min-width: 768px) {
-      .sidebar,
-      article {
-        width: 700px;
-      }
-
       .has-scrollbar::-webkit-scrollbar-button {
         width: 100px;
       }
@@ -1345,12 +1363,6 @@
     }
 
     @media (min-width: 1024px) {
-      .sidebar,
-      article {
-        width: 950px;
-        box-shadow: var(--shadow-5);
-      }
-
       body {
         margin-bottom: 60px;
       }
@@ -1435,19 +1447,6 @@
       /**
    * REUSED STYLE
    */
-
-      .sidebar,
-      article {
-        width: auto;
-      }
-
-      article {
-        min-height: 100%;
-      }
-
-      .sidebar {
-        margin: 0;
-      }
 
       body {
         max-width: 1200px;
