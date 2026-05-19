@@ -392,6 +392,12 @@
   }
 
   @media (min-width: 1250px) {
+    .main-content {
+      min-width: 75%;
+      width: 75%;
+      margin: 0;
+    }
+
     .contacts-list {
       grid-template-columns: 1fr;
     }
@@ -567,7 +573,7 @@
     border: red solid 1px;
   }
 
-  :global(body) {
+  :global body {
     background: var(--smoky-black);
     margin: 15px 12px;
     margin-bottom: 75px;
@@ -578,6 +584,10 @@
   }
 
   @media (min-width: 580px) {
+    :global body {
+      margin-top: 60px;
+      margin-bottom: 100px;
+    }
   }
 
   @media (max-width: 768px) {
@@ -587,10 +597,48 @@
   }
 
   @media (min-width: 1024px) {
+    :global body {
+      margin-bottom: 60px;
+    }
   }
 
   @media (min-width: 1250px) {
+    :global body::-webkit-scrollbar {
+      width: 20px;
+    }
+
+    :global body::-webkit-scrollbar-track {
+      background: var(--smoky-black);
+    }
+
+    :global body::-webkit-scrollbar-thumb {
+      border: 5px solid var(--smoky-black);
+      background: hsla(0, 0%, 100%, 0.1);
+      border-radius: 20px;
+      box-shadow:
+        inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+        inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+    }
+
+    :global body::-webkit-scrollbar-thumb:hover {
+      background: hsla(0, 0%, 100%, 0.15);
+    }
+
+    :global body::-webkit-scrollbar-button {
+      height: 60px;
+    }
+
+    :global body {
+      max-width: 1200px;
+      margin-inline: auto;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 25px;
+    }
   }
+
+  /* -------------- */
 
   :global {
     .icon-box {
@@ -1164,11 +1212,6 @@
         font-size: 18px;
       }
 
-      body {
-        margin-top: 60px;
-        margin-bottom: 100px;
-      }
-
       /**
    * #ABOUT
    */
@@ -1332,10 +1375,6 @@
     }
 
     @media (min-width: 1024px) {
-      body {
-        margin-bottom: 60px;
-      }
-
       .main-content {
         position: relative;
         width: max-content;
@@ -1349,56 +1388,6 @@
       .project-list {
         grid-template-columns: repeat(3, 1fr);
       }
-    }
-
-    @media (min-width: 1250px) {
-      body::-webkit-scrollbar {
-        width: 20px;
-      }
-
-      body::-webkit-scrollbar-track {
-        background: var(--smoky-black);
-      }
-
-      body::-webkit-scrollbar-thumb {
-        border: 5px solid var(--smoky-black);
-        background: hsla(0, 0%, 100%, 0.1);
-        border-radius: 20px;
-        box-shadow:
-          inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
-          inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
-      }
-
-      body::-webkit-scrollbar-thumb:hover {
-        background: hsla(0, 0%, 100%, 0.15);
-      }
-
-      body::-webkit-scrollbar-button {
-        height: 60px;
-      }
-
-      /**
-   * REUSED STYLE
-   */
-
-      body {
-        max-width: 1200px;
-        margin-inline: auto;
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-        gap: 25px;
-      }
-
-      .main-content {
-        min-width: 75%;
-        width: 75%;
-        margin: 0;
-      }
-
-      /**
-   * SIDEBAR
-   */
     }
   }
 </style>
