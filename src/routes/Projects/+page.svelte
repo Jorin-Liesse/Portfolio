@@ -30,7 +30,7 @@
 <h2 class="h2 article-title">Projects</h2>
 
 <ul class="filter-list">
-  {#each ALL_CATEGORIES as category}
+  {#each ALL_CATEGORIES as category (category)}
     <li class="filter-item">
       <button class:active={activeCategory === category} onclick={() => setCategory(category)} data-filter-btn>
         {category}
@@ -46,7 +46,7 @@
   </button>
 
   <ul class="select-list">
-    {#each ALL_CATEGORIES as category}
+    {#each ALL_CATEGORIES as category (category)}
       <li class="select-item">
         <button onclick={() => setCategory(category)} data-select-item>{category}</button>
       </li>

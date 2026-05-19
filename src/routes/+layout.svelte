@@ -1,6 +1,7 @@
 <script lang="ts">
   import { asset } from '$app/paths';
   import { page } from '$app/state';
+  import { resolve } from '$app/paths';
   import { goto } from '$app/navigation';
   import type { Snippet } from 'svelte';
 
@@ -26,7 +27,7 @@
   }
 
   function setArticle(page: Articles) {
-    goto(`${page}`);
+    goto(resolve(`/${page}`));
   }
 </script>
 
@@ -87,7 +88,7 @@
 <main class="main-content">
   <nav class="navbar">
     <ul class="navbar-list">
-      {#each ALL_ARTICLES as article}
+      {#each ALL_ARTICLES as article (article)}
         <li class="navbar-item">
           <button class="navbar-link" class:active={activePage === article} onclick={() => setArticle(article)} data-select-item>{article}</button>
         </li>
@@ -823,11 +824,11 @@
 
     .project-block .on-top-text {
       position: absolute;
-      bottom: 12px; /* distance from bottom of image */
-      left: 12px; /* distance from left */
+      bottom: 12px;
+      left: 12px;
       margin: 0;
       padding: 8px 12px;
-      background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+      background: rgba(0, 0, 0, 0.5);
       color: white;
       border-radius: 8px;
       font-size: 1rem;

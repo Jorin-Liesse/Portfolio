@@ -39,7 +39,7 @@ export default defineConfig(
       'svelte/no-navigation-without-resolve': [
         'error',
         {
-          allowExternalLinks: true
+          ignoreLinks: true
         }
       ]
     }

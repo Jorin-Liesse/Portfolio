@@ -39,11 +39,9 @@
 <style>
   .project-page {
     position: relative;
-    /* display: none; */
   }
 
   .project-page.active {
-    /* display: block; */
     animation: fade 0.5s ease backwards;
   }
 
