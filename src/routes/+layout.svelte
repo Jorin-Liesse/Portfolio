@@ -101,6 +101,43 @@
 </main>
 
 <style>
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--onyx-75);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--jet);
+    border-radius: 12px 12px 0 0;
+    box-shadow: var(--shadow-2);
+    z-index: 5;
+  }
+
+  .navbar-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .navbar-link {
+    color: var(--light-gray);
+    font-size: var(--fs-8);
+    padding: 20px 7px;
+    transition: color var(--transition-1);
+  }
+
+  .navbar-link:hover,
+  .navbar-link:focus {
+    color: var(--light-gray-70);
+  }
+
+  .navbar-link.active {
+    color: var(--orange-yellow);
+  }
+
   .avatar-box {
     border-radius: 50px;
   }
@@ -243,6 +280,18 @@
   }
 
   @media (min-width: 580px) {
+    .navbar {
+      border-radius: 20px 20px 0 0;
+    }
+
+    .navbar-list {
+      gap: 20px;
+    }
+
+    .navbar-link {
+      --fs-8: 14px;
+    }
+
     .info-content .name {
       margin-bottom: 15px;
     }
@@ -296,6 +345,9 @@
   }
 
   @media (max-width: 768px) {
+    .navbar-link {
+      --fs-8: 15px;
+    }
   }
 
   @media (min-width: 768px) {
@@ -315,6 +367,27 @@
     article {
       width: 950px;
       box-shadow: var(--shadow-5);
+    }
+
+    .navbar {
+      position: absolute;
+      bottom: auto;
+      top: 0;
+      left: auto;
+      right: 0;
+      width: max-content;
+      border-radius: 0 20px;
+      padding: 0 20px;
+      box-shadow: none;
+    }
+
+    .navbar-list {
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .navbar-link {
+      font-weight: var(--fw-500);
     }
   }
 
@@ -586,75 +659,8 @@
     }
 
     /*-----------------------------------*\
-  #NAVBAR
-\*-----------------------------------*/
-
-    .navbar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: var(--onyx-75);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--jet);
-      border-radius: 12px 12px 0 0;
-      box-shadow: var(--shadow-2);
-      z-index: 5;
-    }
-
-    .navbar-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      padding: 0 10px;
-    }
-
-    .navbar-link {
-      color: var(--light-gray);
-      font-size: var(--fs-8);
-      padding: 20px 7px;
-      transition: color var(--transition-1);
-    }
-
-    .navbar-link:hover,
-    .navbar-link:focus {
-      color: var(--light-gray-70);
-    }
-
-    .navbar-link.active {
-      color: var(--orange-yellow);
-    }
-
-    /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
-
-    .about .article-title {
-      margin-bottom: 15px;
-    }
-
-    .about-text {
-      color: var(--light-gray);
-      font-size: var(--fs-6);
-      font-weight: var(--fw-300);
-      line-height: 1.6;
-    }
-
-    .about-text p {
-      margin-bottom: 15px;
-    }
-
-    .service-title {
-      margin-bottom: 20px;
-    }
-
-    .service-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-
     .service-item {
       position: relative;
       background: var(--border-gradient-onyx);
@@ -1164,22 +1170,6 @@
       }
 
       /**
-   * #NAVBAR
-   */
-
-      .navbar {
-        border-radius: 20px 20px 0 0;
-      }
-
-      .navbar-list {
-        gap: 20px;
-      }
-
-      .navbar-link {
-        --fs-8: 14px;
-      }
-
-      /**
    * #ABOUT
    */
 
@@ -1287,14 +1277,6 @@
       }
 
       /**
-   * NAVBAR
-   */
-
-      .navbar-link {
-        --fs-8: 15px;
-      }
-
-      /**
    * PORTFOLIO
    */
 
@@ -1358,42 +1340,6 @@
         position: relative;
         width: max-content;
         margin: auto;
-      }
-
-      /**
-   * NAVBAR
-   */
-
-      .navbar {
-        position: absolute;
-        bottom: auto;
-        top: 0;
-        left: auto;
-        right: 0;
-        width: max-content;
-        border-radius: 0 20px;
-        padding: 0 20px;
-        box-shadow: none;
-      }
-
-      .navbar-list {
-        gap: 30px;
-        padding: 0 20px;
-      }
-
-      .navbar-link {
-        font-weight: var(--fw-500);
-      }
-
-      /**
-   * ABOUT
-   */
-
-      /* service */
-
-      .service-list {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px 25px;
       }
 
       /**

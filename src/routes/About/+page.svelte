@@ -40,4 +40,32 @@
   </ul>
 </section>
 
-<style></style>
+<style>
+  .about-text {
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+    line-height: 1.6;
+  }
+
+  .about-text p {
+    margin-bottom: 15px;
+  }
+
+  .service-title {
+    margin-bottom: 20px;
+  }
+
+  .service-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    .service-list {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 25px;
+    }
+  }
+</style>
