@@ -31,4 +31,100 @@
   </form>
 </section>
 
-<style></style>
+<style>
+  .mapbox {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    border: 1px solid var(--jet);
+    overflow: hidden;
+  }
+
+  .mapbox figure {
+    height: 100%;
+  }
+
+  .mapbox iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(1) invert(1);
+  }
+
+  .contact-form {
+    margin-bottom: 10px;
+  }
+
+  .form-title {
+    margin-bottom: 20px;
+  }
+
+  .input-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+
+  .form-input {
+    color: var(--white-2);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-400);
+    padding: 13px 20px;
+    border: 1px solid var(--jet);
+    border-radius: 14px;
+    outline: none;
+  }
+
+  .form-input::placeholder {
+    font-weight: var(--fw-500);
+  }
+
+  .form-input:focus {
+    border-color: var(--orange-yellow);
+  }
+
+  textarea.form-input {
+    min-height: 100px;
+    height: 120px;
+    max-height: 200px;
+    resize: vertical;
+    margin-bottom: 25px;
+  }
+
+  textarea.form-input::-webkit-resizer {
+    display: none;
+  }
+
+  .form-input:focus:invalid {
+    border-color: var(--bittersweet-shimmer);
+  }
+
+  @media (min-width: 580px) {
+    .mapbox {
+      height: 380px;
+      border-radius: 18px;
+    }
+
+    .input-wrapper {
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .form-input {
+      padding: 15px 20px;
+    }
+
+    textarea.form-input {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .input-wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
