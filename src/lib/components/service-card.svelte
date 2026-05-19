@@ -19,4 +19,29 @@
     width: 2.5rem;
     height: 2.5rem;
   }
+
+  .service-icon-box {
+    margin-bottom: 10px;
+  }
+
+  .service-content-box {
+    text-align: left;
+  }
+
+  .service-item-title {
+    margin-bottom: 0;
+    margin-top: 5px;
+    margin-bottom: 7px;
+  }
+
+  @media (min-width: 580px) {
+    .service-icon-box {
+      margin-bottom: 0;
+      margin-top: 5px;
+    }
+
+    .service-content-box {
+      text-align: left;
+    }
+  }
 </style>
