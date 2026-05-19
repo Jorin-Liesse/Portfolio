@@ -72,4 +72,22 @@
     width: 1rem;
     height: 1rem;
   }
+
+  .project-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: 768px) {
+    .project-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .project-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 </style>

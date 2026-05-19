@@ -831,12 +831,6 @@
       --eerie-black-2: hsl(240, 2%, 20%);
     }
 
-    .project-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-
     .project-img {
       position: relative;
       width: 100%;
@@ -955,13 +949,6 @@
       padding-bottom: 16px;
     }
 
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
     @media (min-width: 450px) {
       .project-img {
         height: auto;
@@ -1007,34 +994,12 @@
         justify-content: center;
       }
 
-      .skill-card h3 {
-        display: none;
-      }
-
-      .skill-card.active h3 {
-        display: block;
-      }
-
-      .skill-card {
-        cursor: pointer;
-        justify-content: center;
-        padding: 0.5rem;
-      }
-
       .project-block.half {
         flex: 1 1 100%;
       }
     }
 
     @media (min-width: 768px) {
-      .has-scrollbar::-webkit-scrollbar-button {
-        width: 100px;
-      }
-
-      /**
-   * PORTFOLIO
-   */
-
       .filter-select-box {
         display: none;
       }
@@ -1060,16 +1025,6 @@
 
       .filter-item button.active {
         color: var(--orange-yellow);
-      }
-
-      .project-list {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .project-list {
-        grid-template-columns: repeat(3, 1fr);
       }
     }
   }

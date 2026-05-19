@@ -51,6 +51,13 @@
     animation: scaleUp 0.25s ease forwards;
   }
 
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
   @keyframes scaleUp {
     0% {
       transform: scale(0.5);
