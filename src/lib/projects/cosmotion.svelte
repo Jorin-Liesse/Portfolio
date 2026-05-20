@@ -23,9 +23,9 @@
   {/snippet}
 
   {#snippet skills()}
-    <SkillCard icon="icons/html-icon.svg" alt="HTML icon" title="HTML" />
-    <SkillCard icon="icons/css-icon.svg" alt="CSS icon" title="CSS" />
-    <SkillCard icon="icons/javascript-icon.svg" alt="JavaScript icon" title="JavaScript" />
+    <SkillCard icon="icons/unity-icon.svg" alt="Unity icon" title="Unity" />
+    <SkillCard icon="icons/affinity-designer-icon.svg" alt="Affinity Designer icon" title="Affinity Designer" />
+    <SkillCard icon="icons/blender-icon.svg" alt="Blender icon" title="Blender" />
     <SkillCard icon="icons/photoshop-icon.svg" alt="Photoshop icon" title="Photoshop" />
   {/snippet}
 
