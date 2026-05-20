@@ -2,138 +2,96 @@
   import { asset } from '$app/paths';
   import Button from '$lib/components/button.svelte';
   import Article from '$lib/components/article.svelte';
+  import Timeline from '$lib/components/timeline.svelte';
 </script>
 
 <Article title="Resume">
-  <section class="timeline">
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <svg><use href={asset('/icons/book.svg')}></use></svg>
-      </div>
+  <Timeline title="Education">
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Digital Arts & Entertainment</h4>
+      <span class="timeline-span">September 2023 - June 2026, Kortrijk Belgium</span>
+      <p class="timeline-text">Independent Game Production (Bachelor's Degree)</p>
+    </li>
 
-      <h3 class="h3">Education</h3>
-    </div>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Van Veldeke</h4>
+      <span class="timeline-span">September 2017 - June 2023, Hasselt Belgium</span>
+      <p class="timeline-text">Math & Sciences (High School Degree)</p>
+    </li>
 
-    <ol class="timeline-list">
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Digital Arts & Entertainment</h4>
-        <span>September 2023 - June 2026, Kortrijk Belgium</span>
-        <p class="timeline-text">Independent Game Production (Bachelor's Degree)</p>
-      </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Het Vlaamse Kruis</h4>
+      <span class="timeline-span">November 2021 - February 2022, Hasselt Belgium</span>
+      <p class="timeline-text">First Aid (Certificate)</p>
+    </li>
+  </Timeline>
 
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Van Veldeke</h4>
-        <span>September 2017 - June 2023, Hasselt Belgium</span>
-        <p class="timeline-text">Math & Sciences (High School Degree)</p>
-      </li>
+  <Timeline title="Skills">
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">3D Modeling</h4>
+      <p class="timeline-text">Blender, Maya</p>
+    </li>
 
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Het Vlaamse Kruis</h4>
-        <span>November 2021 - February 2022, Hasselt Belgium</span>
-        <p class="timeline-text">First Aid (Certificate)</p>
-      </li>
-    </ol>
-  </section>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Texturing</h4>
+      <p class="timeline-text">Photoshop, Substance Painter</p>
+    </li>
 
-  <section class="timeline">
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <svg><use href={asset('/icons/book.svg')}></use></svg>
-      </div>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">UI/UX Design</h4>
+      <p class="timeline-text">Affinity Designer, Affinity Photo</p>
+    </li>
 
-      <h3 class="h3">Skills</h3>
-    </div>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Game Engine</h4>
+      <p class="timeline-text">Unity</p>
+    </li>
 
-    <ol class="timeline-list">
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">3D Modeling</h4>
-        <p class="timeline-text">Blender, Maya</p>
-      </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Programming</h4>
+      <p class="timeline-text">C#, C++, Python, HTML, CSS, Javascript</p>
+    </li>
 
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Texturing</h4>
-        <p class="timeline-text">Photoshop, Substance Painter</p>
-      </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Game Design</h4>
+      <p class="timeline-text">Unity, Pen & Paper, Miro</p>
+    </li>
+  </Timeline>
 
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">UI/UX Design</h4>
-        <p class="timeline-text">Affinity Designer, Affinity Photo</p>
-      </li>
+  <Timeline title="Experience">
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Nationale-Loterij - Game Developer</h4>
+      <span class="timeline-span">February 2026 - June 2026, Brussel Belgium</span>
+      <p class="timeline-text">• Developing gamified training modules</p>
+      <p class="timeline-text">• Working in a small team with the agile workflow</p>
+    </li>
 
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Game Engine</h4>
-        <p class="timeline-text">Unity</p>
-      </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Kuehne + Nagel / Logistiek Assistent</h4>
+      <span class="timeline-span">August 2022 - August 2022, Tessenderlo Belgium</span>
+      <p class="timeline-text">• Sorting and organizing goods in the warehouse</p>
+      <p class="timeline-text">• Assist in checking properly labeled goods in a warehouse</p>
+    </li>
+  </Timeline>
 
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Programming</h4>
-        <p class="timeline-text">C#, C++, Python, HTML, CSS, Javascript</p>
-      </li>
-
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Game Design</h4>
-        <p class="timeline-text">Unity, Pen & Paper, Miro</p>
-      </li>
-    </ol>
-  </section>
-
-  <section class="timeline">
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <svg><use href={asset('/icons/book.svg')}></use></svg>
-      </div>
-
-      <h3 class="h3">Experience</h3>
-    </div>
-
-    <ol class="timeline-list">
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Nationale-Loterij - Game Developer</h4>
-
-        <span>February 2026 - June 2026, Brussel Belgium</span>
-
-        <p class="timeline-text">• Developing gamified training modules</p>
-        <p class="timeline-text">• Working in a small team with the agile workflow</p>
-      </li>
-
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Kuehne + Nagel / Logistiek Assistent</h4>
-        <span>August 2022 - August 2022, Tessenderlo Belgium</span>
-
-        <p class="timeline-text">• Sorting and organizing goods in the warehouse</p>
-        <p class="timeline-text">• Assist in checking properly labeled goods in a warehouse</p>
-      </li>
-    </ol>
-  </section>
-
-  <section class="timeline">
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <svg><use href={asset('/icons/book.svg')}></use></svg>
-      </div>
-
-      <h3 class="h3">Achievements</h3>
-    </div>
-
-    <ol class="timeline-list">
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Brackeys Game Jam 2025.2</h4>
-        <a href="https://jorinliesse.itch.io/crumbs-pirate" target="_blank">Crumbs Pirate</a>
-      </li>
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">DAE Game Jam 2025.1</h4>
-        <a href="https://jorinliesse.itch.io/zombrush" target="_blank">ZomBrush</a>
-      </li>
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">DAE Game Jam 2024.2</h4>
-        <a href="https://jorinliesse.itch.io/ghost-of-nature" target="_blank">Ghost Of Nature</a>
-      </li>
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Brackeys Game Jam 2024.2</h4>
-        <a href="https://jorinliesse.itch.io/crazy-coast" target="_blank">Crazy Coast</a>
-      </li>
-    </ol>
-  </section>
+  <Timeline title="Achievements">
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Brackeys Game Jam 2025.2</h4>
+      <a class="timeline-link" href="https://jorinliesse.itch.io/crumbs-pirate" target="_blank">Crumbs Pirate</a>
+    </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">DAE Game Jam 2025.1</h4>
+      <a class="timeline-link" href="https://jorinliesse.itch.io/zombrush" target="_blank">ZomBrush</a>
+    </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">DAE Game Jam 2024.2</h4>
+      <a class="timeline-link" href="https://jorinliesse.itch.io/ghost-of-nature" target="_blank">Ghost Of Nature</a>
+    </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Brackeys Game Jam 2024.2</h4>
+      <a class="timeline-link" href="https://jorinliesse.itch.io/crazy-coast" target="_blank">Crazy Coast</a>
+    </li>
+  </Timeline>
 
   <a href={asset(`/documents/Resume.pdf`)} download rel="external">
     <Button src="icons/download.svg" title="Download" />
@@ -141,28 +99,6 @@
 </Article>
 
 <style>
-  .icon-box svg {
-    --primary-color: var(--orange-yellow);
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  .timeline {
-    margin-bottom: 3rem;
-  }
-
-  .timeline .title-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
-  }
-
-  .timeline-list {
-    font-size: var(--fs-6);
-    margin-left: 45px;
-  }
-
   .timeline-item {
     position: relative;
   }
@@ -177,13 +113,14 @@
     margin-bottom: 7px;
   }
 
-  .timeline-list span {
+  .timeline-span {
+    text-decoration: underline;
     color: var(--vegas-gold);
     font-weight: var(--fw-400);
     line-height: 1.6;
   }
 
-  .timeline-list a {
+  .timeline-link {
     text-decoration: underline;
     color: var(--vegas-gold);
     font-weight: var(--fw-400);
@@ -219,10 +156,6 @@
   }
 
   @media (min-width: 580px) {
-    .timeline-list {
-      margin-left: 65px;
-    }
-
     .timeline-item:not(:last-child)::before {
       left: -40px;
     }
