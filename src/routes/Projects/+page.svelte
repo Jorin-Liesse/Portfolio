@@ -5,7 +5,6 @@
   import type { RouteId } from '$app/types';
   import Article from '$lib/components/article.svelte';
   import ProjectItem from '$lib/components/project-item.svelte';
-  // import type { ProjectMetadata } from '$lib/types/project-meta-data';
   import { ALL_CATEGORIES, type Category } from '$lib/types/category';
   import type { ProjectModule } from '$lib/types/project-module';
 
@@ -23,7 +22,7 @@
   }
 
   function openProject(link: string) {
-    goto(resolve(`/Projects/${link}` as RouteId));
+    goto(resolve(`/Projects/${link}` as RouteId), { noScroll: true });
   }
 </script>
 

@@ -5,7 +5,7 @@
   let { title, presenter, skills, content, links }: { title: string; presenter?: Snippet; skills?: Snippet; content?: Snippet; links?: Snippet } = $props();
 </script>
 
-<Article title={title}>
+<Article {title}>
   <div class="project-page">
     {#if presenter}
       <section class="presenter">

@@ -27,7 +27,7 @@
   }
 
   function setArticle(page: Articles) {
-    goto(resolve(`/${page}`));
+    goto(resolve(`/${page}`), { noScroll: true });
   }
 </script>
 
