@@ -1,10 +1,11 @@
 <script lang="ts">
+  import { asset } from '$app/paths';
   let { title, text }: { title: string; text: string } = $props();
 </script>
 
 <li class="service-item">
   <div class="service-icon-box">
-    <svg><use href="icons/dev.svg"></use></svg>
+    <svg><use href={asset('/icons/dev.svg')}></use></svg>
   </div>
 
   <div class="service-content-box">

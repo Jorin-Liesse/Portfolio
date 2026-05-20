@@ -1,4 +1,5 @@
 <script module lang="ts">
+  import { asset } from '$app/paths';
   import ProjectPage from '$lib/components/project-page.svelte';
   import SkillCard from '$lib/components/skill-card.svelte';
   import Button from '$lib/components/button.svelte';
@@ -6,16 +7,16 @@
   import type { ProjectMetadata } from '$lib/types/project-meta-data';
 
   export const projectMetadata: ProjectMetadata = {
-    link: 'project-diorama-by-the-ocean',
+    link: 'Diorama-By-The-Ocean',
     title: 'Diorama - By the ocean',
     category: 'Models',
     categories: ['Models'],
-    avif: 'images-AV1/page-diorama-by-the-ocean.avif',
-    fallback: 'images-fallback/page-diorama-by-the-ocean.jpg'
+    avif: asset('/images-AV1/page-diorama-by-the-ocean.avif'),
+    fallback: asset('/images-fallback/page-diorama-by-the-ocean.jpg')
   };
 </script>
 
-<ProjectPage id="project-diorama-by-the-ocean">
+<ProjectPage title={projectMetadata.title}>
   {#snippet presenter()}
     <iframe
       class="presenter-content"
@@ -28,8 +29,8 @@
   {/snippet}
 
   {#snippet skills()}
-    <SkillCard icon="icons/unity-icon.svg" alt="Unity icon" title="Unity" />
-    <SkillCard icon="icons/photoshop-icon.svg" alt="Photoshop icon" title="Photoshop" />
+    <SkillCard icon={asset('/icons/unity-icon.svg')} alt="Unity icon" title="Unity" />
+    <SkillCard icon={asset('/icons/photoshop-icon.svg')} alt="Photoshop icon" title="Photoshop" />
   {/snippet}
 
   {#snippet content()}
@@ -42,21 +43,21 @@
     </div>
     <div class="project-block half">
       <picture>
-        <source srcset="images-AV1/diorama-by-the-ocean/boat.avif" type="image/avif" />
-        <img src="images-fallback/diorama-by-the-ocean/boat.jpg" alt="Detail render" loading="lazy" />
+        <source srcset={asset('/images-AV1/diorama-by-the-ocean/boat.avif')} type="image/avif" />
+        <img src={asset('/images-fallback/diorama-by-the-ocean/boat.jpg')} alt="Detail render" loading="lazy" />
       </picture>
     </div>
     <div class="project-block half">
       <picture>
-        <source srcset="images-AV1/diorama-by-the-ocean/house.avif" type="image/avif" />
-        <img src="images-fallback/diorama-by-the-ocean/house.jpg" alt="Detail render" loading="lazy" />
+        <source srcset={asset('/images-AV1/diorama-by-the-ocean/house.avif')} type="image/avif" />
+        <img src={asset('/images-fallback/diorama-by-the-ocean/house.jpg')} alt="Detail render" loading="lazy" />
       </picture>
     </div>
   {/snippet}
 
   {#snippet links()}
     <a href="https://skfb.ly/oPyCE" class="link" target="_blank">
-      <Button src="icons/sketchfab.svg" title="Sketchfab" />
+      <Button src={asset('/icons/sketchfab.svg')} title="Sketchfab" />
     </a>
   {/snippet}
 </ProjectPage>

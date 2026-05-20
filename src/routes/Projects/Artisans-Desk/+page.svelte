@@ -1,4 +1,5 @@
 <script module lang="ts">
+  import { asset } from '$app/paths';
   import ProjectPage from '$lib/components/project-page.svelte';
   import SkillCard from '$lib/components/skill-card.svelte';
   import Button from '$lib/components/button.svelte';
@@ -6,16 +7,16 @@
   import type { ProjectMetadata } from '$lib/types/project-meta-data';
 
   export const projectMetadata: ProjectMetadata = {
-    link: 'project-artisans-desk',
+    link: 'Artisans-Desk',
     title: 'Artisans Desk',
     category: 'Models',
     categories: ['Models', 'Best'],
-    avif: 'images-AV1/page-artisans-desk.avif',
-    fallback: 'images-fallback/page-artisans-desk.jpg'
+    avif: asset('/images-AV1/page-artisans-desk.avif'),
+    fallback: asset('/images-fallback/page-artisans-desk.jpg')
   };
 </script>
 
-<ProjectPage id="project-artisans-desk">
+<ProjectPage title={projectMetadata.title}>
   {#snippet presenter()}
     <iframe
       class="presenter-content"
@@ -28,37 +29,37 @@
   {/snippet}
 
   {#snippet skills()}
-    <SkillCard icon="icons/unity-icon.svg" alt="Unity icon" title="Unity" />
-    <SkillCard icon="icons/blender-icon.svg" alt="Blender icon" title="Blender" />
-    <SkillCard icon="icons/substance-painter-icon.svg" alt="Substance Painter icon" title="Substance Painter" />
+    <SkillCard icon={asset('/icons/unity-icon.svg')} alt="Unity icon" title="Unity" />
+    <SkillCard icon={asset('/icons/blender-icon.svg')} alt="Blender icon" title="Blender" />
+    <SkillCard icon={asset('/icons/substance-painter-icon.svg')} alt="Substance Painter icon" title="Substance Painter" />
   {/snippet}
 
   {#snippet content()}
     <div class="project-block half">
       <picture>
-        <source srcset="images-AV1/artisans-desk/albedo.avif" type="image/avif" />
-        <img src="images-fallback/artisans-desk/albedo.jpg" alt="albedo render" loading="lazy" />
+        <source srcset={asset('/images-AV1/artisans-desk/albedo.avif')} type="image/avif" />
+        <img src={asset('/images-fallback/artisans-desk/albedo.jpg')} alt="albedo render" loading="lazy" />
       </picture>
       <p class="h5 on-top-text">Albedo</p>
     </div>
     <div class="project-block half">
       <picture>
-        <source srcset="images-AV1/artisans-desk/wireframe.avif" type="image/avif" />
-        <img src="images-fallback/artisans-desk/wireframe.jpg" alt="wireframe render" loading="lazy" />
+        <source srcset={asset('/images-AV1/artisans-desk/wireframe.avif')} type="image/avif" />
+        <img src={asset('/images-fallback/artisans-desk/wireframe.jpg')} alt="wireframe render" loading="lazy" />
       </picture>
       <p class="h5 on-top-text">Wireframe</p>
     </div>
     <div class="project-block half">
       <picture>
-        <source srcset="images-AV1/artisans-desk/emission.avif" type="image/avif" />
-        <img src="images-fallback/artisans-desk/emission.jpg" alt="emission render" loading="lazy" />
+        <source srcset={asset('/images-AV1/artisans-desk/emission.avif')} type="image/avif" />
+        <img src={asset('/images-fallback/artisans-desk/emission.jpg')} alt="emission render" loading="lazy" />
       </picture>
       <p class="h5 on-top-text">Emission</p>
     </div>
     <div class="project-block half">
       <picture>
-        <source srcset="images-AV1/artisans-desk/smoothness.avif" type="image/avif" />
-        <img src="images-fallback/artisans-desk/smoothness.jpg" alt="smoothness render" loading="lazy" />
+        <source srcset={asset('/images-AV1/artisans-desk/smoothness.avif')} type="image/avif" />
+        <img src={asset('/images-fallback/artisans-desk/smoothness.jpg')} alt="smoothness render" loading="lazy" />
       </picture>
       <p class="h5 on-top-text">Smoothness</p>
     </div>
@@ -66,7 +67,7 @@
 
   {#snippet links()}
     <a href="https://skfb.ly/pCznq" class="link" target="_blank">
-      <Button src="icons/sketchfab.svg" title="Sketchfab" />
+      <Button src={asset('/icons/sketchfab.svg')} title="Sketchfab" />
     </a>
   {/snippet}
 </ProjectPage>

@@ -1,70 +1,64 @@
 <script lang="ts">
+  import { asset } from '$app/paths';
+  import { goto } from '$app/navigation';
+  import { resolve } from '$app/paths';
+  import type { RouteId } from '$app/types';
+  import Article from '$lib/components/article.svelte';
   import ProjectItem from '$lib/components/project-item.svelte';
+  // import type { ProjectMetadata } from '$lib/types/project-meta-data';
   import { ALL_CATEGORIES, type Category } from '$lib/types/category';
   import type { ProjectModule } from '$lib/types/project-module';
 
-  const modules = import.meta.glob<ProjectModule>('$lib/projects/*.svelte', { eager: true });
+  const modules = import.meta.glob<ProjectModule>('./**/+page.svelte', { eager: true });
 
-  let activeProject = $state<string | null>(null);
   let activeCategory = $state<Category>('Best');
 
-  const projects = Object.values(modules).map((module) => ({ component: module.default, metadata: module.projectMetadata }));
-  const filteredProjects = $derived(activeCategory === 'All' ? projects : projects.filter((p) => p.metadata.categories.includes(activeCategory)));
-  const activeProjectComponent = $derived(projects.find((p) => p.metadata.link === activeProject));
+  const projects = Object.entries(modules)
+    .filter(([path]) => path !== './+page.svelte')
+    .map(([, module]) => module.projectMetadata);
+  const filteredProjects = $derived(activeCategory === 'All' ? projects : projects.filter((project) => project.categories.includes(activeCategory)));
 
   function setCategory(category: Category) {
     activeCategory = category;
-    closeProject();
   }
 
-  export function openProject(link: string) {
-    activeProject = link;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  export function closeProject() {
-    activeProject = null;
+  function openProject(link: string) {
+    goto(resolve(`/Projects/${link}` as RouteId));
   }
 </script>
 
-<h2 class="h2 article-title">Projects</h2>
-
-<ul class="filter-list">
-  {#each ALL_CATEGORIES as category (category)}
-    <li class="filter-item">
-      <button class:active={activeCategory === category} onclick={() => setCategory(category)} data-filter-btn>
-        {category}
-      </button>
-    </li>
-  {/each}
-</ul>
-
-<div class="filter-select-box">
-  <button class="filter-select">
-    <div class="select-value">{activeCategory}</div>
-    <svg class="select-icon"><use href="icons/chevron.svg"></use></svg>
-  </button>
-
-  <ul class="select-list">
+<Article title="Projects">
+  <ul class="filter-list">
     {#each ALL_CATEGORIES as category (category)}
-      <li class="select-item">
-        <button onclick={() => setCategory(category)} data-select-item>{category}</button>
+      <li class="filter-item">
+        <button class:active={activeCategory === category} onclick={() => setCategory(category)} data-filter-btn>
+          {category}
+        </button>
       </li>
     {/each}
   </ul>
-</div>
 
-{#if activeProject === null}
+  <div class="filter-select-box">
+    <button class="filter-select">
+      <div class="select-value">{activeCategory}</div>
+      <svg class="select-icon"><use href={asset('/icons/chevron.svg')}></use></svg>
+    </button>
+
+    <ul class="select-list">
+      {#each ALL_CATEGORIES as category (category)}
+        <li class="select-item">
+          <button onclick={() => setCategory(category)} data-select-item>{category}</button>
+        </li>
+      {/each}
+    </ul>
+  </div>
+
   <ul class="project-list">
-    {#each filteredProjects as project (activeCategory + project.metadata.link)}
-      <ProjectItem {...project.metadata} onclick={() => openProject(project.metadata.link)} />
+    {#each filteredProjects as project (activeCategory + project.link)}
+      <ProjectItem {...project} onclick={() => openProject(project.link)} />
     {/each}
   </ul>
-{/if}
-
-{#if activeProjectComponent}
-  <activeProjectComponent.component />
-{/if}
+</Article>
 
 <style>
   .select-icon {

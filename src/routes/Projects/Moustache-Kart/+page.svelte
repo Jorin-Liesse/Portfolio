@@ -1,4 +1,5 @@
 <script module lang="ts">
+  import { asset } from '$app/paths';
   import ProjectPage from '$lib/components/project-page.svelte';
   import SkillCard from '$lib/components/skill-card.svelte';
   import Button from '$lib/components/button.svelte';
@@ -6,16 +7,16 @@
   import type { ProjectMetadata } from '$lib/types/project-meta-data';
 
   export const projectMetadata: ProjectMetadata = {
-    link: 'project-moustachekart',
+    link: 'Moustache-Kart',
     title: 'MoustacheKart',
     category: 'Models',
     categories: ['Models', 'Best'],
-    avif: 'images-AV1/page-moustachekart.avif',
-    fallback: 'images-fallback/page-moustachekart.jpg'
+    avif: asset('/images-AV1/page-moustachekart.avif'),
+    fallback: asset('/images-fallback/page-moustachekart.jpg')
   };
 </script>
 
-<ProjectPage id="project-moustachekart">
+<ProjectPage title={projectMetadata.title}>
   {#snippet presenter()}
     <iframe
       class="presenter-content"
@@ -28,9 +29,9 @@
   {/snippet}
 
   {#snippet skills()}
-    <SkillCard icon="icons/unity-icon.svg" alt="Unity icon" title="Unity" />
-    <SkillCard icon="icons/blender-icon.svg" alt="Blender icon" title="Blender" />
-    <SkillCard icon="icons/substance-painter-icon.svg" alt="Substance Painter icon" title="Substance Painter" />
+    <SkillCard icon={asset('/icons/unity-icon.svg')} alt="Unity icon" title="Unity" />
+    <SkillCard icon={asset('/icons/blender-icon.svg')} alt="Blender icon" title="Blender" />
+    <SkillCard icon={asset('/icons/substance-painter-icon.svg')} alt="Substance Painter icon" title="Substance Painter" />
   {/snippet}
 
   {#snippet content()}
@@ -42,43 +43,43 @@
     </div>
     <div class="project-block half">
       <picture>
-        <source srcset="images-AV1/moustachekart/albedo.avif" type="image/avif" />
-        <img src="images-fallback/moustachekart/albedo.jpg" alt="albedo render" loading="lazy" />
+        <source srcset={asset('/images-AV1/moustachekart/albedo.avif')} type="image/avif" />
+        <img src={asset('/images-fallback/moustachekart/albedo.jpg')} alt="albedo render" loading="lazy" />
       </picture>
       <p class="h5 on-top-text">Albedo</p>
     </div>
     <div class="project-block half">
       <picture>
-        <source srcset="images-AV1/moustachekart/wireframe.avif" type="image/avif" />
-        <img src="images-fallback/moustachekart/wireframe.jpg" alt="wireframe render" loading="lazy" />
+        <source srcset={asset('/images-AV1/moustachekart/wireframe.avif')} type="image/avif" />
+        <img src={asset('/images-fallback/moustachekart/wireframe.jpg')} alt="wireframe render" loading="lazy" />
       </picture>
       <p class="h5 on-top-text">Wireframe</p>
     </div>
     <div class="project-block half">
       <picture>
-        <source srcset="images-AV1/moustachekart/normal.avif" type="image/avif" />
-        <img src="images-fallback/moustachekart/normal.jpg" alt="normal render" loading="lazy" />
+        <source srcset={asset('/images-AV1/moustachekart/normal.avif')} type="image/avif" />
+        <img src={asset('/images-fallback/moustachekart/normal.jpg')} alt="normal render" loading="lazy" />
       </picture>
       <p class="h5 on-top-text">Normal</p>
     </div>
     <div class="project-block half">
       <picture>
-        <source srcset="images-AV1/moustachekart/ambient-occlusion.avif" type="image/avif" />
-        <img src="images-fallback/moustachekart/ambient-occlusion.jpg" alt="ambient occlusion render" loading="lazy" />
+        <source srcset={asset('/images-AV1/moustachekart/ambient-occlusion.avif')} type="image/avif" />
+        <img src={asset('/images-fallback/moustachekart/ambient-occlusion.jpg')} alt="ambient occlusion render" loading="lazy" />
       </picture>
       <p class="h5 on-top-text">Ambient Occlusion</p>
     </div>
     <div class="project-block half">
       <picture>
-        <source srcset="images-AV1/moustachekart/smoothness.avif" type="image/avif" />
-        <img src="images-fallback/moustachekart/smoothness.jpg" alt="smoothness render" loading="lazy" />
+        <source srcset={asset('/images-AV1/moustachekart/smoothness.avif')} type="image/avif" />
+        <img src={asset('/images-fallback/moustachekart/smoothness.jpg')} alt="smoothness render" loading="lazy" />
       </picture>
       <p class="h5 on-top-text">Smoothness</p>
     </div>
     <div class="project-block half">
       <picture>
-        <source srcset="images-AV1/moustachekart/metal.avif" type="image/avif" />
-        <img src="images-fallback/moustachekart/metal.jpg" alt="metal render" loading="lazy" />
+        <source srcset={asset('/images-AV1/moustachekart/metal.avif')} type="image/avif" />
+        <img src={asset('/images-fallback/moustachekart/metal.jpg')} alt="metal render" loading="lazy" />
       </picture>
       <p class="h5 on-top-text">Metal</p>
     </div>
@@ -86,7 +87,7 @@
 
   {#snippet links()}
     <a href="https://skfb.ly/ptKUA" class="link" target="_blank">
-      <Button src="icons/sketchfab.svg" title="Sketchfab" />
+      <Button src={asset('/icons/sketchfab.svg')} title="Sketchfab" />
     </a>
   {/snippet}
 </ProjectPage>

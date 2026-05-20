@@ -51,8 +51,8 @@
   <div class="sidebar-info">
     <figure class="avatar-box">
       <picture>
-        <source srcset="images-AV1/my-avatar-2.avif" type="image/avif" />
-        <img src="images-fallback/my-avatar-2.png" alt="light-bridger" loading="lazy" width="80" />
+        <source srcset={asset('/images-AV1/my-avatar-2.avif')} type="image/avif" />
+        <img src={asset('/images-fallback/my-avatar-2.png')} alt="light-bridger" loading="lazy" width="80" />
       </picture>
     </figure>
 
@@ -63,24 +63,24 @@
 
     <button class="info_more-btn" onclick={toggleSidebar}>
       <span>Show Contacts</span>
-      <svg><use href="icons/chevron.svg"></use></svg>
+      <svg><use href={asset('/icons/chevron.svg')}></use></svg>
     </button>
   </div>
 
   <div class="sidebar-info_more">
     <div class="separator"></div>
     <ul class="contacts-list">
-      <ContactCard src="icons/mail.svg" title="Email" value="liesse.jorin@gmail.com" link="mailto:liesse.jorin@gmail.com" />
-      <ContactCard src="icons/phone.svg" title="Phone" value="+32 483 45 06 05" link="tel:+32483450605" />
-      <ContactCard src="icons/calendar.svg" title="Birthday" value="June 9, 2005" link="https://calendar.google.com/calendar/u/0/r/day/2005/06/09" />
-      <ContactCard src="icons/location.svg" title="Location" value="Zonhoven, Belgium" link="https://www.google.com/maps/search/?api=1&query=Zonhoven,Belgium" />
+      <ContactCard src={asset('/icons/mail.svg')} title="Email" value="liesse.jorin@gmail.com" link="mailto:liesse.jorin@gmail.com" />
+      <ContactCard src={asset('/icons/phone.svg')} title="Phone" value="+32 483 45 06 05" link="tel:+32483450605" />
+      <ContactCard src={asset('/icons/calendar.svg')} title="Birthday" value="June 9, 2005" link="https://calendar.google.com/calendar/u/0/r/day/2005/06/09" />
+      <ContactCard src={asset('/icons/location.svg')} title="Location" value="Zonhoven, Belgium" link="https://www.google.com/maps/search/?api=1&query=Zonhoven,Belgium" />
     </ul>
 
     <div class="separator"></div>
 
     <ul class="social-list">
-      <SocialItem src="icons/linkedin.svg" title="LinkedIn" link="https://www.linkedin.com/in/jorin-liesse-755774287" />
-      <SocialItem src="icons/github.svg" title="GitHub" link="https://github.com/Jorin-Liesse" />
+      <SocialItem src={asset('/icons/mail.svg')} title="LinkedIn" link="https://www.linkedin.com/in/jorin-liesse-755774287" />
+      <SocialItem src={asset('/icons/github.svg')} title="GitHub" link="https://github.com/Jorin-Liesse" />
     </ul>
   </div>
 </aside>
@@ -580,6 +580,31 @@
     border: red solid 1px;
   }
 
+  :global .h2,
+  :global .h3,
+  :global .h4,
+  :global .h5 {
+    color: var(--white-2);
+    text-transform: capitalize;
+  }
+
+  :global .h2 {
+    font-size: var(--fs-1);
+  }
+
+  :global .h3 {
+    font-size: var(--fs-2);
+  }
+
+  :global .h4 {
+    font-size: var(--fs-4);
+  }
+
+  :global .h5 {
+    font-size: var(--fs-7);
+    font-weight: var(--fw-500);
+  }
+
   :global body {
     background: var(--smoky-black);
     margin: 15px 12px;
@@ -670,51 +695,6 @@
       background: var(--eerie-black-1);
       border-radius: inherit;
       z-index: -1;
-    }
-
-    .h2,
-    .h3,
-    .h4,
-    .h5 {
-      color: var(--white-2);
-      text-transform: capitalize;
-    }
-
-    .h2 {
-      font-size: var(--fs-1);
-    }
-
-    .h3 {
-      font-size: var(--fs-2);
-    }
-
-    .h4 {
-      font-size: var(--fs-4);
-    }
-
-    .h5 {
-      font-size: var(--fs-7);
-      font-weight: var(--fw-500);
-    }
-
-    .article-title {
-      position: relative;
-      padding-bottom: 7px;
-    }
-
-    .article-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 30px;
-      height: 3px;
-      background: var(--text-gradient-yellow);
-      border-radius: 3px;
-    }
-
-    .article-title {
-      margin-bottom: 30px;
     }
 
     /*-----------------------------------*\

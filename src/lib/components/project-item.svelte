@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { asset } from '$app/paths';
   import type { Category } from '$lib/types/category';
 
   let {
@@ -16,7 +17,7 @@
   <button data-project-link={link} onclick={() => onclick(link)}>
     <figure class="project-img">
       <div class="project-item-icon-box">
-        <svg><use href="icons/eye.svg"></use></svg>
+        <svg><use href={asset('/icons/eye.svg')}></use></svg>
       </div>
 
       <picture>

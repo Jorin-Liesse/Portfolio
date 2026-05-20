@@ -1,4 +1,5 @@
 <script module lang="ts">
+  import { asset } from '$app/paths';
   import ProjectPage from '$lib/components/project-page.svelte';
   import SkillCard from '$lib/components/skill-card.svelte';
   import Button from '$lib/components/button.svelte';
@@ -6,24 +7,24 @@
   import type { ProjectMetadata } from '$lib/types/project-meta-data';
 
   export const projectMetadata: ProjectMetadata = {
-    link: 'project-recipe-book',
+    link: 'Recipe-Book',
     title: 'Recipe Book',
     category: 'Websites',
     categories: ['Websites'],
-    avif: 'images-AV1/page-recipe-book.avif',
-    fallback: 'images-fallback/page-recipe-book.jpg'
+    avif: asset('/images-AV1/page-recipe-book.avif'),
+    fallback: asset('/images-fallback/page-recipe-book.jpg')
   };
 </script>
 
-<ProjectPage id="project-recipe-book">
+<ProjectPage title={projectMetadata.title}>
   {#snippet presenter()}
     <iframe class="presenter-content" title="Recipe Book" src="https://jorin-liesse.github.io/Recipe-Book/" loading="lazy"></iframe>
   {/snippet}
 
   {#snippet skills()}
-    <SkillCard icon="icons/html-icon.svg" alt="HTML icon" title="HTML" />
-    <SkillCard icon="icons/css-icon.svg" alt="CSS icon" title="CSS" />
-    <SkillCard icon="icons/javascript-icon.svg" alt="JavaScript icon" title="JavaScript" />
+    <SkillCard icon={asset('/icons/html-icon.svg')} alt="HTML icon" title="HTML" />
+    <SkillCard icon={asset('/icons/css-icon.svg')} alt="CSS icon" title="CSS" />
+    <SkillCard icon={asset('/icons/javascript-icon.svg')} alt="JavaScript icon" title="JavaScript" />
   {/snippet}
 
   {#snippet content()}
@@ -37,13 +38,13 @@
 
   {#snippet links()}
     <a href="https://github.com/Jorin-Liesse/Recipe-Book" class="link" target="_blank">
-      <Button src="icons/github.svg" title="Github Frontend" />
+      <Button src={asset('/icons/github.svg')} title="Github Frontend" />
     </a>
     <a href="https://github.com/Jorin-Liesse/Recipes-API" class="link" target="_blank">
-      <Button src="icons/github.svg" title="Github Backend" />
+      <Button src={asset('/icons/github.svg')} title="Github Backend" />
     </a>
     <a href="https://jorin-liesse.github.io/Recipe-Book/" class="link" target="_blank">
-      <Button src="icons/website.svg" title="Website" />
+      <Button src={asset('/icons/website.svg')} title="Website" />
     </a>
   {/snippet}
 </ProjectPage>

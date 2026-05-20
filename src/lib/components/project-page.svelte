@@ -1,48 +1,47 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
+  import Article from '$lib/components/article.svelte';
 
-  let { id, presenter, skills, content, links }: { id: string; presenter?: Snippet; skills?: Snippet; content?: Snippet; links?: Snippet } = $props();
+  let { title, presenter, skills, content, links }: { title: string; presenter?: Snippet; skills?: Snippet; content?: Snippet; links?: Snippet } = $props();
 </script>
 
-<div class="{id} project-page">
-  {#if presenter}
-    <section class="presenter">
-      {@render presenter()}
-    </section>
-  {/if}
+<Article title={title}>
+  <div class="project-page">
+    {#if presenter}
+      <section class="presenter">
+        {@render presenter()}
+      </section>
+    {/if}
 
-  {#if skills}
-    <div class="project-spacer"></div>
+    {#if skills}
+      <div class="project-spacer"></div>
 
-    <section class="skills">
-      {@render skills()}
-    </section>
-  {/if}
+      <section class="skills">
+        {@render skills()}
+      </section>
+    {/if}
 
-  {#if content}
-    <div class="project-spacer"></div>
+    {#if content}
+      <div class="project-spacer"></div>
 
-    <section class="content">
-      {@render content()}
-    </section>
-  {/if}
+      <section class="content">
+        {@render content()}
+      </section>
+    {/if}
 
-  {#if links}
-    <div class="project-spacer"></div>
+    {#if links}
+      <div class="project-spacer"></div>
 
-    <section class="links">
-      {@render links()}
-    </section>
-  {/if}
-</div>
+      <section class="links">
+        {@render links()}
+      </section>
+    {/if}
+  </div>
+</Article>
 
 <style>
   .project-page {
     position: relative;
-  }
-
-  .project-page.active {
-    animation: fade 0.5s ease backwards;
   }
 
   .project-page * {
