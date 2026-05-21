@@ -1,5 +1,6 @@
 <script lang="ts">
   import { asset } from '$app/paths';
+  import { page } from '$app/state';
   import { goto } from '$app/navigation';
   import { resolve } from '$app/paths';
   import type { RouteId } from '$app/types';
@@ -10,15 +11,24 @@
 
   const modules = import.meta.glob<ProjectModule>('./**/+page.svelte', { eager: true });
 
-  let activeCategory = $state<Category>('Best');
+  const activeCategory = $derived.by<Category>(() => {
+    const urlCategory = page.url.searchParams.get('category') as Category | null;
+    return urlCategory ?? 'Best';
+  });
 
   const projects = Object.entries(modules)
     .filter(([path]) => path !== './+page.svelte')
     .map(([, module]) => module.projectMetadata);
+
   const filteredProjects = $derived(activeCategory === 'All' ? projects : projects.filter((project) => project.categories.includes(activeCategory)));
 
   function setCategory(category: Category) {
-    activeCategory = category;
+    const url = new URL(page.url);
+
+    url.searchParams.set('category', category);
+
+    // eslint-disable-next-line svelte/no-navigation-without-resolve
+    goto(url.pathname + url.search, { replaceState: true, noScroll: true });
   }
 
   function openProject(link: string) {
