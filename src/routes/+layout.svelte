@@ -673,30 +673,6 @@
   /* -------------- */
 
   :global {
-    .icon-box {
-      position: relative;
-      background: var(--border-gradient-onyx);
-      width: 30px;
-      height: 30px;
-      border-radius: 8px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 16px;
-      color: var(--orange-yellow);
-      box-shadow: var(--shadow-1);
-      z-index: 1;
-    }
-
-    .icon-box::before {
-      content: '';
-      position: absolute;
-      inset: 1px;
-      background: var(--eerie-black-1);
-      border-radius: inherit;
-      z-index: -1;
-    }
-
     /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
@@ -844,23 +820,6 @@
     }
 
     @media (min-width: 580px) {
-      .article-title {
-        font-weight: var(--fw-600);
-        padding-bottom: 15px;
-      }
-
-      .article-title::after {
-        width: 40px;
-        height: 5px;
-      }
-
-      .icon-box {
-        width: 48px;
-        height: 48px;
-        border-radius: 12px;
-        font-size: 18px;
-      }
-
       .service-item {
         display: flex;
         justify-content: flex-start;

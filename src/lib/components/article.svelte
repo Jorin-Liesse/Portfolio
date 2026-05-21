@@ -27,4 +27,16 @@
   .article-title {
     margin-bottom: 30px;
   }
+
+  @media (min-width: 580px) {
+    .article-title {
+      font-weight: var(--fw-600);
+      padding-bottom: 15px;
+    }
+
+    .article-title::after {
+      width: 40px;
+      height: 5px;
+    }
+  }
 </style>

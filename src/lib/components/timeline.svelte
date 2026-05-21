@@ -1,4 +1,6 @@
 <script lang="ts">
+  import IconBox from '$lib/components/icon-box.svelte';
+
   import { asset } from '$app/paths';
   import type { Snippet } from 'svelte';
 
@@ -7,10 +9,7 @@
 
 <section class="timeline">
   <div class="title-wrapper">
-    <div class="icon-box">
-      <svg><use href={asset('/icons/book.svg')}></use></svg>
-    </div>
-
+    <IconBox src={asset('/icons/book.svg')} />
     <h3 class="h3">{title}</h3>
   </div>
 
@@ -20,12 +19,6 @@
 </section>
 
 <style>
-  .icon-box svg {
-    --primary-color: var(--orange-yellow);
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
   .timeline {
     margin-bottom: 3rem;
   }

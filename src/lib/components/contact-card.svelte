@@ -1,11 +1,11 @@
 <script lang="ts">
+  import IconBox from '$lib/components/icon-box.svelte';
+
   let { src, title, value, link }: { src: string; title: string; value: string; link: string } = $props();
 </script>
 
 <a class="contact-item" href={link} target="_blank" rel="noopener noreferrer">
-  <div class="icon-box">
-    <svg><use href={src}></use></svg>
-  </div>
+  <IconBox {src} />
 
   <div class="contact-info">
     <p class="contact-title">{title}</p>
@@ -36,12 +36,6 @@
   .contact-info .contact-value {
     color: var(--white-2);
     font-size: var(--fs-7);
-  }
-
-  .icon-box svg {
-    --primary-color: var(--orange-yellow);
-    width: 1.5rem;
-    height: 1.5rem;
   }
 
   @media (min-width: 580px) {
