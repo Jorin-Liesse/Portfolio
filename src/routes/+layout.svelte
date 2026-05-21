@@ -13,12 +13,18 @@
   let sidebarOpen = $state<boolean>(false);
 
   const activePage = $derived.by(() => {
-    const path = page.url.pathname;
-    const baseURL = import.meta.env.BASE_URL || '/';
-    const relativePath = path.startsWith(baseURL) ? path.slice(baseURL.length) : path;
-    const firstSegment = relativePath.split('/').filter(Boolean)[0] ?? '';
-    return ALL_ARTICLES.includes(firstSegment as Articles) ? (firstSegment as Articles) : null;
-  }) as unknown as Articles;
+    const currentRoute = page.url.pathname.split('/').filter(Boolean).pop();
+    if (!currentRoute) return null;
+    return ALL_ARTICLES.includes(currentRoute as Articles) ? (currentRoute as Articles) : null;
+  });
+
+  // const activePage = $derived.by(() => {
+  //   const path = page.url.pathname;
+  //   const baseURL = import.meta.env.BASE_URL || '/';
+  //   const relativePath = path.startsWith(baseURL) ? path.slice(baseURL.length) : path;
+  //   const firstSegment = relativePath.split('/').filter(Boolean)[0] ?? '';
+  //   return ALL_ARTICLES.includes(firstSegment as Articles) ? (firstSegment as Articles) : null;
+  // }) as unknown as Articles;
 
   let { children }: { children?: Snippet } = $props();
 
