@@ -80,7 +80,7 @@
     <div class="separator"></div>
 
     <ul class="social-list">
-      <SocialItem src={asset('/icons/mail.svg')} title="LinkedIn" link="https://www.linkedin.com/in/jorin-liesse-755774287" />
+      <SocialItem src={asset('/icons/linkedin.svg')} title="LinkedIn" link="https://www.linkedin.com/in/jorin-liesse-755774287" />
       <SocialItem src={asset('/icons/github.svg')} title="GitHub" link="https://github.com/Jorin-Liesse" />
     </ul>
   </div>
