@@ -36,7 +36,7 @@
 
   {#snippet content()}
     <div class="project-block text-box">
-      <p class="service-item-text centered">
+      <p class="box-frame-text centered">
         I made a kart for a playful, stylized racing game, based on a jeep design. I handled every step: modeling in Blender, baking, texturing with PBR materials, rigging, animating, and importing
         into Unity. The pipeline was set up for quick iterations, keeping the kart fun, readable, and full of personality.
       </p>

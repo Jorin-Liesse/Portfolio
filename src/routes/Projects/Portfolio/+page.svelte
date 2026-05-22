@@ -29,7 +29,7 @@
 
   {#snippet content()}
     <div class="project-block text-box">
-      <p class="service-item-text centered">
+      <p class="box-frame-text centered">
         I created a portfolio website to showcase my projects and works effectively. I started from a template but heavily modified it to fit my needs, customizing layouts, styles, and functionality
         to best present my skills and projects. The result is a tailored, professional site that highlights my work clearly and interactively.
       </p>

@@ -32,7 +32,7 @@
 
   {#snippet content()}
     <div class="project-block text-box">
-      <p class="service-item-text centered">
+      <p class="box-frame-text centered">
         CosMotion is a mobility game developed by a team of six people for the Sport Innovatie Campus in Bruges. It is designed to be played on two connected tables, featuring four minigames that
         players experience together. In each game, players control the gameplay by moving their hands in front of a camera, encouraging physical interaction and movement in a fun way. I was partially
         responsible for both the design and development of the games.

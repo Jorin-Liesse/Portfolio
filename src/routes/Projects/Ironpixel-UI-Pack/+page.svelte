@@ -29,7 +29,7 @@
 
   {#snippet content()}
     <div class="project-block text-box">
-      <p class="service-item-text centered">
+      <p class="box-frame-text centered">
         For this project, I developed a sleek, monochrome UI focused on clarity and modern aesthetics. The clean lines and simple shapes make it adaptable to a wide range of game genres, from sci-fi
         to strategy. I aimed for a consistent visual language that feels professional and easy to read, ensuring both functionality and strong visual identity.
       </p>

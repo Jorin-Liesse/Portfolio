@@ -134,6 +134,13 @@
     text-align: center;
   }
 
+  .project-page :global .box-frame-text {
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-3);
+    line-height: 1.6;
+  }
+
   .project-page :global(.project-block.text-box p) {
     color: var(--white-2);
     font-size: 1rem;

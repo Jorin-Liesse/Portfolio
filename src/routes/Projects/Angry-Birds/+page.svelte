@@ -30,7 +30,7 @@
 
   {#snippet content()}
     <div class="project-block text-box">
-      <p class="service-item-text centered">
+      <p class="box-frame-text centered">
         Angry Birds Clone is a faithful recreation of the classic Angry Birds game, designed to deliver a fun and nostalgic experience. The game features simple controls, intuitive physics-based
         gameplay, and engaging levels that capture the charm of the original.
       </p>

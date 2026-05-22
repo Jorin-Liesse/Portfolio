@@ -36,7 +36,7 @@
 
   {#snippet content()}
     <div class="project-block text-box">
-      <p class="service-item-text centered">
+      <p class="box-frame-text centered">
         This project features Robuddy, a retro-futuristic robot designed to assist with daily tasks in a ’70s suburban neighborhood. Modeled, rigged, and animated in Blender, PBR textured in Substance
         Painter, and rendered in Unity, Robuddy is optimized for game environments. Its whimsical yet practical design brings charm and personality to the scene. High-quality screenshots and a
         Sketchfab upload showcase the finished model and animations. This project was created as part of a Game Art course at DAE Howest, teaching rigging, animation, and the full PBR workflow.

@@ -32,7 +32,7 @@
 
   {#snippet content()}
     <div class="project-block text-box">
-      <p class="service-item-text centered">
+      <p class="box-frame-text centered">
         This project is a Research Competence (OZC) assignment that simulates a steam engine using Unity. It includes interactive elements, allowing users to explore and learn how a steam engine works
         in an engaging and hands-on way.
       </p>

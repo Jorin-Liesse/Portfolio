@@ -32,9 +32,9 @@
 
   {#snippet content()}
     <div class="project-block text-box">
-      <p class="service-item-text centered">The city is overrun… and it’s a mess.</p>
-      <p class="service-item-text">‎</p>
-      <p class="service-item-text centered">
+      <p class="box-frame-text centered">The city is overrun… and it’s a mess.</p>
+      <p class="box-frame-text">‎</p>
+      <p class="box-frame-text centered">
         Zombrush was created for the Unwrap Game Jam in just three days. It’s an action-packed co-op game where zombies have taken over the city, and your team must repaint the town to restore
         order—quickly and creatively! Our team consisted of four developers, and I served as Programmer, building the gameplay systems that make spreading paint and battling zombies fun and
         responsive. The game is designed for two players with controllers, emphasizing teamwork and fast-paced action.

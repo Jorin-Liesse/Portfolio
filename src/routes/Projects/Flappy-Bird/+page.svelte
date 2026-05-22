@@ -30,7 +30,7 @@
 
   {#snippet content()}
     <div class="project-block text-box">
-      <p class="service-item-text centered">
+      <p class="box-frame-text centered">
         Flappy Bird Clone is a recreation of the classic Flappy Bird, designed to deliver a fun and nostalgic experience. It features simple controls and addictive, challenging gameplay that captures
         the charm of the original.
       </p>

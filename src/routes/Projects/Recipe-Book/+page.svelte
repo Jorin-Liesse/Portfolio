@@ -29,7 +29,7 @@
 
   {#snippet content()}
     <div class="project-block text-box">
-      <p class="service-item-text centered">
+      <p class="box-frame-text centered">
         This project is a dynamic recipe book where users can add and remove recipes. Data is stored in a MongoDB database and managed through an Express.js backend API hosted on Render. The frontend,
         built with HTML, CSS, and JavaScript, interacts with the backend to display and update recipes in real time, and is hosted on GitHub Pages.
       </p>

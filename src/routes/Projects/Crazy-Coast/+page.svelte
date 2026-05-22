@@ -32,9 +32,9 @@
 
   {#snippet content()}
     <div class="project-block text-box">
-      <p class="service-item-text centered">It’s calm on the island of Crazy Coast… until the storm hits.</p>
-      <p class="service-item-text">‎</p>
-      <p class="service-item-text centered">
+      <p class="box-frame-text centered">It’s calm on the island of Crazy Coast… until the storm hits.</p>
+      <p class="box-frame-text">‎</p>
+      <p class="box-frame-text centered">
         Crazy Coast was created for the Brackeys Game Jam in just one week. It’s a survival game where players must escape the islands by completing tasks while avoiding natural disasters. Our team
         consisted of seven developers, and I served as Lead Programmer, Project Manager, and Animator, guiding the project while contributing to gameplay systems and visual elements.
       </p>

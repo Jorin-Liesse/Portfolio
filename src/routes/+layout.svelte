@@ -25,7 +25,10 @@
   }
 
   function setArticle(page: Articles) {
-    goto(resolve(`/${page}`), { noScroll: true });
+    const params = new URLSearchParams(window.location.search);
+
+    // eslint-disable-next-line svelte/no-navigation-without-resolve
+    goto(`${resolve(`/${page}`)}?${params.toString()}`, { noScroll: true });
   }
 </script>
 
@@ -665,65 +668,6 @@
       justify-content: center;
       align-items: stretch;
       gap: 25px;
-    }
-  }
-
-  /* -------------- */
-
-  :global {
-    /*-----------------------------------*\
-  #ABOUT
-\*-----------------------------------*/
-    .service-item {
-      position: relative;
-      background: var(--border-gradient-onyx);
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: var(--shadow-2);
-      z-index: 1;
-
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 18px;
-    }
-
-    .service-item::before {
-      content: '';
-      position: absolute;
-      inset: 1px;
-      background: var(--bg-gradient-jet);
-      border-radius: inherit;
-      z-index: -1;
-    }
-
-    .service-item-text {
-      color: var(--light-gray);
-      font-size: var(--fs-6);
-      font-weight: var(--fw-3);
-      line-height: 1.6;
-    }
-
-    .service-item {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 18px;
-      padding: 30px;
-    }
-
-    /*-----------------------------------*\
-  #PORTFOLIO
-\*-----------------------------------*/
-
-    @media (min-width: 580px) {
-      .service-item {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 18px;
-        padding: 30px;
-      }
     }
   }
 </style>

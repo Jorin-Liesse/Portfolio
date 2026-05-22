@@ -32,7 +32,7 @@
 
   {#snippet content()}
     <div class="project-block text-box">
-      <p class="service-item-text centered">
+      <p class="box-frame-text centered">
         For this project, I focused on creating a soft, inviting scene featuring a castle. I used a modular workflow to build the castle efficiently and applied custom shaders to enhance the
         surrounding nature elements. I also explored volumetric fog and clouds to give the scene a more atmospheric and immersive feel.
       </p>

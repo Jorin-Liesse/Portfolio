@@ -33,28 +33,28 @@
 
   {#snippet content()}
     <div class="project-block text-box">
-      <p class="service-item-text centered">
+      <p class="box-frame-text centered">
         For Light Bridger, I started from the idea of using light as a physical tool. This evolved into a puzzle platformer where players build bridges and paths out of laser beams. I explored how
         light could interact with the environment through mirrors and reflections to create clever, skill-based puzzles. Through this project, I learned to design mechanics that encourage creative
         problem-solving while maintaining a clear and consistent vision.
       </p>
     </div>
     <div class="project-block half text-box">
-      <p class="service-item-text">• State</p>
-      <p class="service-item-text">• Singleton</p>
-      <p class="service-item-text">• Observer</p>
-      <p class="service-item-text">• Composite</p>
-      <p class="service-item-text">‎</p>
-      <p class="service-item-text">‎</p>
+      <p class="box-frame-text">• State</p>
+      <p class="box-frame-text">• Singleton</p>
+      <p class="box-frame-text">• Observer</p>
+      <p class="box-frame-text">• Composite</p>
+      <p class="box-frame-text">‎</p>
+      <p class="box-frame-text">‎</p>
       <p class="h5 on-top-text">Design Patterns</p>
     </div>
     <div class="project-block half text-box">
-      <p class="service-item-text">• Code written from scratch</p>
-      <p class="service-item-text">• Game design by me</p>
-      <p class="service-item-text">• Some 3D assets packs used</p>
-      <p class="service-item-text">• Started with prototyping</p>
-      <p class="service-item-text">‎</p>
-      <p class="service-item-text">‎</p>
+      <p class="box-frame-text">• Code written from scratch</p>
+      <p class="box-frame-text">• Game design by me</p>
+      <p class="box-frame-text">• Some 3D assets packs used</p>
+      <p class="box-frame-text">• Started with prototyping</p>
+      <p class="box-frame-text">‎</p>
+      <p class="box-frame-text">‎</p>
       <p class="h5 on-top-text">Project Highlights</p>
     </div>
   {/snippet}

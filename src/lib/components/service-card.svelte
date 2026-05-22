@@ -9,12 +9,35 @@
   </div>
 
   <div class="service-content-box">
-    <h4 class="h4 service-item-title">{title}</h4>
-    <p class="service-item-text">{text}</p>
+    <h4 class="h4 service-title">{title}</h4>
+    <p class="service-text">{text}</p>
   </div>
 </li>
 
 <style>
+  .service-item {
+    position: relative;
+    background: var(--border-gradient-onyx);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-2);
+    z-index: 1;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .service-item::before {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background: var(--bg-gradient-jet);
+    border-radius: inherit;
+    z-index: -1;
+  }
+
   .service-icon-box svg {
     --primary-color: var(--orange-yellow);
     width: 2.5rem;
@@ -29,10 +52,17 @@
     text-align: left;
   }
 
-  .service-item-title {
+  .service-title {
     margin-bottom: 0;
     margin-top: 5px;
     margin-bottom: 7px;
+  }
+
+  .service-text {
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-3);
+    line-height: 1.6;
   }
 
   @media (min-width: 580px) {
