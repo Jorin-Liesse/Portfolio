@@ -3,6 +3,7 @@
   import { page } from '$app/state';
   import { goto } from '$app/navigation';
   import { resolve } from '$app/paths';
+  import { onMount } from 'svelte';
   import type { RouteId } from '$app/types';
   import Article from '$lib/components/article.svelte';
   import ProjectItem from '$lib/components/project-item.svelte';
@@ -22,6 +23,9 @@
 
   const filteredProjects = $derived(activeCategory === 'All' ? projects : projects.filter((project) => project.categories.includes(activeCategory)));
 
+  let isSelectOpen = $state(false);
+  let selectBox: HTMLButtonElement | null = null;
+
   function setCategory(category: Category) {
     const url = new URL(page.url);
 
@@ -34,6 +38,22 @@
   function openProject(link: string) {
     goto(resolve(`/Projects/${link}` as RouteId), { noScroll: true });
   }
+
+  function handleFilterButtonClick() {
+    isSelectOpen = !isSelectOpen;
+  }
+
+  function handleClickOutside(event: MouseEvent) {
+    if (!isSelectOpen) return;
+    if (!selectBox) return;
+    if (selectBox.contains(event.target as Node)) return;
+
+    isSelectOpen = false;
+  }
+
+  onMount(() => {
+    document.addEventListener('click', handleClickOutside);
+  });
 </script>
 
 <Article title="Projects">
@@ -48,18 +68,19 @@
   </ul>
 
   <div class="filter-select-box">
-    <button class="filter-select">
+    <button class="filter-select" onclick={handleFilterButtonClick} bind:this={selectBox}>
       <div class="select-value">{activeCategory}</div>
       <svg class="select-icon"><use href={asset('/icons/chevron.svg')}></use></svg>
     </button>
-
-    <ul class="select-list">
-      {#each ALL_CATEGORIES as category (category)}
-        <li class="select-item">
-          <button onclick={() => setCategory(category)} data-select-item>{category}</button>
-        </li>
-      {/each}
-    </ul>
+    {#if isSelectOpen}
+      <ul class="select-list">
+        {#each ALL_CATEGORIES as category (category)}
+          <li class="select-item">
+            <button onclick={() => setCategory(category)}>{category}</button>
+          </li>
+        {/each}
+      </ul>
+    {/if}
   </div>
 
   <ul class="project-list">
@@ -108,9 +129,6 @@
     border: 1px solid var(--jet);
     border-radius: 14px;
     z-index: 2;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
     transition: 0.15s ease-in-out;
   }
 
@@ -118,6 +136,21 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .select-item button {
+    background: var(--eerie-black-2);
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+    text-transform: capitalize;
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 8px;
+  }
+
+  .select-item button:hover {
+    --eerie-black-2: hsl(240, 2%, 20%);
   }
 
   @media (min-width: 768px) {

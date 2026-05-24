@@ -69,6 +69,7 @@
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    margin-bottom: 20px;
   }
 
   @media (max-width: 768px) {

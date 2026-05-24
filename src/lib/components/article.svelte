@@ -3,11 +3,17 @@
   let { title, children }: { title: string; children?: Snippet } = $props();
 </script>
 
-<h2 class="h2 article-title">{title}</h2>
-
-{@render children?.()}
+<div class="article-content">
+  <h2 class="h2 article-title">{title}</h2>
+  {@render children?.()}
+</div>
 
 <style>
+  .article-content {
+    display: block;
+    animation: fade 0.5s ease backwards;
+  }
+
   .article-title {
     position: relative;
     padding-bottom: 7px;
@@ -37,6 +43,15 @@
     .article-title::after {
       width: 40px;
       height: 5px;
+    }
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 </style>

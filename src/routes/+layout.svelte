@@ -91,7 +91,7 @@
     <ul class="navbar-list">
       {#each ALL_ARTICLES as article (article)}
         <li class="navbar-item">
-          <button class="navbar-link" class:active={activePage === article} onclick={() => setArticle(article)} data-select-item>{article}</button>
+          <button class="navbar-link" class:active={activePage === article} onclick={() => setArticle(article)}>{article}</button>
         </li>
       {/each}
     </ul>
@@ -611,6 +611,28 @@
     margin: 15px 12px;
     margin-bottom: 75px;
     min-width: 259px;
+    overflow-y: scroll;
+  }
+
+  :global body::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  :global body::-webkit-scrollbar-track {
+    background: var(--smoky-black);
+  }
+
+  :global body::-webkit-scrollbar-thumb {
+    border: 5px solid var(--smoky-black);
+    background: hsla(0, 0%, 100%, 0.1);
+    border-radius: 20px;
+    box-shadow:
+      inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+      inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+  }
+
+  :global body::-webkit-scrollbar-thumb:hover {
+    background: hsla(0, 0%, 100%, 0.15);
   }
 
   @media (min-width: 450px) {
@@ -636,31 +658,6 @@
   }
 
   @media (min-width: 1250px) {
-    :global body::-webkit-scrollbar {
-      width: 20px;
-    }
-
-    :global body::-webkit-scrollbar-track {
-      background: var(--smoky-black);
-    }
-
-    :global body::-webkit-scrollbar-thumb {
-      border: 5px solid var(--smoky-black);
-      background: hsla(0, 0%, 100%, 0.1);
-      border-radius: 20px;
-      box-shadow:
-        inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
-        inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
-    }
-
-    :global body::-webkit-scrollbar-thumb:hover {
-      background: hsla(0, 0%, 100%, 0.15);
-    }
-
-    :global body::-webkit-scrollbar-button {
-      height: 60px;
-    }
-
     :global body {
       max-width: 1200px;
       margin-inline: auto;

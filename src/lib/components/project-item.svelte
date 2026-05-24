@@ -13,7 +13,7 @@
   }: { link: string; title: string; category: Category; categories: Category[]; avif: string; fallback: string; onclick: (link: string) => void } = $props();
 </script>
 
-<li class="project-item active" data-filter-item data-category={categories}>
+<li class="project-item" data-filter-item data-category={categories}>
   <button data-project-link={link} onclick={() => onclick(link)}>
     <figure class="project-img">
       <div class="project-item-icon-box">
@@ -33,10 +33,6 @@
 
 <style>
   .project-item {
-    display: none;
-  }
-
-  .project-item.active {
     display: block;
     animation: scaleUp 0.25s ease forwards;
   }
@@ -127,15 +123,6 @@
     transition: var(--transition-1);
   }
 
-  @keyframes scaleUp {
-    0% {
-      transform: scale(0.5);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
   @media (min-width: 450px) {
     .project-img {
       height: auto;
@@ -145,6 +132,15 @@
   @media (min-width: 580px) {
     .project-img {
       border-radius: 16px;
+    }
+  }
+
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
     }
   }
 </style>
