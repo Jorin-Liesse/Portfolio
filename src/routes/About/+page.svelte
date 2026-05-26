@@ -1,8 +1,8 @@
 <script lang="ts">
   import { asset } from '$app/paths';
-  import Article from '$lib/components/article.svelte';
-  import SkillCard from '$lib/components/skill-card.svelte';
-  import ServiceCard from '$lib/components/service-card.svelte';
+  import Article from '$components/article.svelte';
+  import SkillCard from '$components/skill-card.svelte';
+  import ServiceCard from '$components/service-card.svelte';
 </script>
 
 <Article title="About me">

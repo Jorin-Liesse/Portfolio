@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
-  import Article from '$lib/components/article.svelte';
+  import Article from '$components/article.svelte';
 
   let { title, presenter, skills, content, links }: { title: string; presenter?: Snippet; skills?: Snippet; content?: Snippet; links?: Snippet } = $props();
 </script>

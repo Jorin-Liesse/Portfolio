@@ -1,9 +1,9 @@
 <script module lang="ts">
   import { asset } from '$app/paths';
-  import ProjectPage from '$lib/components/project-page.svelte';
-  import SkillCard from '$lib/components/skill-card.svelte';
+  import ProjectPage from '$components/project-page.svelte';
+  import SkillCard from '$components/skill-card.svelte';
 
-  import type { ProjectMetadata } from '$lib/types/project-meta-data';
+  import type { ProjectMetadata } from '$types/project-meta-data';
 
   export const projectMetadata: ProjectMetadata = {
     link: 'Bubblebyte-UI-Pack',

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import IconBox from '$lib/components/icon-box.svelte';
+  import IconBox from '$components/icon-box.svelte';
 
   let { src, title, value, link }: { src: string; title: string; value: string; link: string } = $props();
 </script>

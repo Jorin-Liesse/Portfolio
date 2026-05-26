@@ -1,7 +1,7 @@
 <script lang="ts">
   import { asset } from '$app/paths';
-  import Button from '$lib/components/button.svelte';
-  import Article from '$lib/components/article.svelte';
+  import Button from '$components/button.svelte';
+  import Article from '$components/article.svelte';
 </script>
 
 <Article title="Contact">

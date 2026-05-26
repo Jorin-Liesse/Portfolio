@@ -1,6 +1,6 @@
 <script lang="ts">
   import { asset } from '$app/paths';
-  import type { Category } from '$lib/types/category';
+  import type { Category } from '$types/category';
 
   let {
     link,

@@ -10,6 +10,11 @@ export default {
     paths: {
       base: '/Portfolio'
     },
+    alias: {
+      $lib: 'src/lib',
+      $components: 'src/lib/components',
+      $types: 'src/lib/types'
+    },
     prerender: {
       entries: ['*']
     }

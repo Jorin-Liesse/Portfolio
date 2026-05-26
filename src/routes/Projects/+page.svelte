@@ -5,10 +5,10 @@
   import { resolve } from '$app/paths';
   import { onMount } from 'svelte';
   import type { RouteId } from '$app/types';
-  import Article from '$lib/components/article.svelte';
-  import ProjectItem from '$lib/components/project-item.svelte';
-  import { ALL_CATEGORIES, type Category } from '$lib/types/category';
-  import type { ProjectModule } from '$lib/types/project-module';
+  import Article from '$components/article.svelte';
+  import ProjectItem from '$components/project-item.svelte';
+  import { ALL_CATEGORIES, type Category } from '$types/category';
+  import type { ProjectModule } from '$types/project-module';
 
   const modules = import.meta.glob<ProjectModule>('./**/+page.svelte', { eager: true });
 

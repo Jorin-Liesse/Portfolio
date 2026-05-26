@@ -1,5 +1,5 @@
 <script lang="ts">
-  import IconBox from '$lib/components/icon-box.svelte';
+  import IconBox from '$components/icon-box.svelte';
 
   import { asset } from '$app/paths';
   import type { Snippet } from 'svelte';

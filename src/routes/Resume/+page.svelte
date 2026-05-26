@@ -1,8 +1,8 @@
 <script lang="ts">
   import { asset } from '$app/paths';
-  import Button from '$lib/components/button.svelte';
-  import Article from '$lib/components/article.svelte';
-  import Timeline from '$lib/components/timeline.svelte';
+  import Button from '$components/button.svelte';
+  import Article from '$components/article.svelte';
+  import Timeline from '$components/timeline.svelte';
 </script>
 
 <Article title="Resume">

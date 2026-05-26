@@ -5,10 +5,10 @@
   import { goto } from '$app/navigation';
   import type { Snippet } from 'svelte';
 
-  import ContactCard from '$lib/components/contact-card.svelte';
-  import SocialItem from '$lib/components/social-item.svelte';
+  import ContactCard from '$components/contact-card.svelte';
+  import SocialItem from '$components/social-item.svelte';
 
-  import { ALL_ARTICLES, type Articles } from '$lib/types/articles';
+  import { ALL_ARTICLES, type Articles } from '$types/articles';
 
   let sidebarOpen = $state<boolean>(false);
 
