@@ -166,6 +166,10 @@
       gap: 0.75rem 1rem;
       justify-content: center;
     }
+
+    .project-page :global(.project-block.half) {
+      flex: 1 1 100%;
+    }
   }
 
   @keyframes scaleUp {
