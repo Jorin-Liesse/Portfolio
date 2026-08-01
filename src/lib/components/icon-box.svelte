@@ -33,8 +33,8 @@
 
   .icon-box svg {
     --primary-color: var(--orange-yellow);
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1rem;
+    height: 1rem;
   }
 
   @media (min-width: 580px) {
@@ -43,6 +43,11 @@
       height: 48px;
       border-radius: 12px;
       font-size: 18px;
+    }
+
+    .icon-box svg {
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 </style>
