@@ -98,10 +98,21 @@
   .project-img {
     position: relative;
     width: 100%;
-    height: 200px;
+    aspect-ratio: 16 / 9; /* or whatever your images use */
     border-radius: 16px;
     overflow: hidden;
     margin-bottom: 5px;
+  }
+
+  .project-img picture,
+  .project-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-img img {
+    object-fit: cover;
+    transition: var(--transition-1);
   }
 
   .project-img::before {
@@ -121,18 +132,6 @@
     height: 100%;
     object-fit: cover;
     transition: var(--transition-1);
-  }
-
-  @media (min-width: 450px) {
-    .project-img {
-      height: auto;
-    }
-  }
-
-  @media (min-width: 580px) {
-    .project-img {
-      border-radius: 16px;
-    }
   }
 
   @keyframes scaleUp {
