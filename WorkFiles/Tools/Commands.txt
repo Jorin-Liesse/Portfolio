@@ -1,0 +1,12 @@
+bash ListFiles.sh "C:\Users\liess\Documents\Projects\Sales-Star-Production\Assets\StreamingAssets" "./ImagesFiles.txt"
+
+bash CompressVideo.sh "./VideoFiles.txt" "./../Output"
+
+bash CompressVideo.sh "./ImagesFiles.txt" "./../Output"
+
+512x512
+940x540
+1280×720
+
+
+bash ConvertImages.sh "C:\Users\liess\Documents\Projects\Sales-Star-Production\Assets\StreamingAssets" "C:\Users\liess\Desktop\Output"

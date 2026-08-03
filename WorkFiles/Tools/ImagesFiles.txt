@@ -1,0 +1,7 @@
+C:\Users\liess\Desktop\cosmotion\asteroids-game.png
+C:\Users\liess\Desktop\cosmotion\bugs-game.png
+C:\Users\liess\Desktop\cosmotion\connecting.png
+C:\Users\liess\Desktop\cosmotion\doors-game.png
+C:\Users\liess\Desktop\cosmotion\hosting.png
+C:\Users\liess\Desktop\cosmotion\selection.png
+C:\Users\liess\Desktop\cosmotion\shroomers-game.png
