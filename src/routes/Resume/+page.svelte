@@ -93,7 +93,7 @@
     </li>
   </Timeline>
 
-  <a href={asset(`/documents/Resume, Jorin Liesse.pdf`)} download rel="external">
+  <a href={asset(`/documents/CV, Jorin Liesse.pdf`)} download rel="external">
     <Button src="icons/download.svg" title="Download" />
   </a>
 </Article>
