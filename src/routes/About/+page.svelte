@@ -7,7 +7,7 @@
 
 <Article title="About me">
   <section class="about-text">
-    <p>I’m an indie game developer and designer focused on creating engaging player experiences. I work across all aspects of game development: programming, design, and art.</p>
+    <p>I’m an game developer and designer focused on creating engaging games. I work across multiple aspects of game development: programming, design, and art.</p>
 
     <p>
       This gives me the flexibility to shape both the technical and visual sides of a project. I enjoy experimenting with small game projects, joining game jams, and tackling technical challenges to
@@ -51,7 +51,7 @@
   }
 
   .about-text p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .service-title {

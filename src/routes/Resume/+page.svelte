@@ -49,7 +49,7 @@
 
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">Programming</h4>
-      <p class="timeline-text">C#, C++, Python, HTML, CSS, Javascript</p>
+      <p class="timeline-text">C#, HTML, CSS, Javascript, Python</p>
     </li>
 
     <li class="timeline-item">
@@ -93,7 +93,7 @@
     </li>
   </Timeline>
 
-  <a href={asset(`/documents/Resume.pdf`)} download rel="external">
+  <a href={asset(`/documents/Resume, Jorin Liesse.pdf`)} download rel="external">
     <Button src="icons/download.svg" title="Download" />
   </a>
 </Article>
