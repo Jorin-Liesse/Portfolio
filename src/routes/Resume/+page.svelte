@@ -77,19 +77,27 @@
   <Timeline title="Achievements">
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">Brackeys Game Jam 2025.2</h4>
-      <a class="timeline-link" href="https://jorinliesse.itch.io/crumbs-pirate" target="_blank">Crumbs Pirate</a>
+      <a class="timeline-link" href="https://jorinliesse.itch.io/crumbs-pirate" target="_blank"
+        >Crumbs Pirate</a
+      >
     </li>
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">DAE Game Jam 2025.1</h4>
-      <a class="timeline-link" href="https://jorinliesse.itch.io/zombrush" target="_blank">ZomBrush</a>
+      <a class="timeline-link" href="https://jorinliesse.itch.io/zombrush" target="_blank"
+        >ZomBrush</a
+      >
     </li>
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">DAE Game Jam 2024.2</h4>
-      <a class="timeline-link" href="https://jorinliesse.itch.io/ghost-of-nature" target="_blank">Ghost Of Nature</a>
+      <a class="timeline-link" href="https://jorinliesse.itch.io/ghost-of-nature" target="_blank"
+        >Ghost Of Nature</a
+      >
     </li>
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">Brackeys Game Jam 2024.2</h4>
-      <a class="timeline-link" href="https://jorinliesse.itch.io/crazy-coast" target="_blank">Crazy Coast</a>
+      <a class="timeline-link" href="https://jorinliesse.itch.io/crazy-coast" target="_blank"
+        >Crazy Coast</a
+      >
     </li>
   </Timeline>
 

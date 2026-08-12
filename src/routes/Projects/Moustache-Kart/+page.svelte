@@ -31,55 +31,88 @@
   {#snippet skills()}
     <SkillCard icon={asset('/icons/unity-icon.svg')} alt="Unity icon" title="Unity" />
     <SkillCard icon={asset('/icons/blender-icon.svg')} alt="Blender icon" title="Blender" />
-    <SkillCard icon={asset('/icons/substance-painter-icon.svg')} alt="Substance Painter icon" title="Substance Painter" />
+    <SkillCard
+      icon={asset('/icons/substance-painter-icon.svg')}
+      alt="Substance Painter icon"
+      title="Substance Painter"
+    />
   {/snippet}
 
   {#snippet content()}
     <div class="project-block text-box">
       <p class="box-frame-text centered">
-        I made a kart for a playful, stylized racing game, based on a jeep design. I handled every step: modeling in Blender, baking, texturing with PBR materials, rigging, animating, and importing
-        into Unity. The pipeline was set up for quick iterations, keeping the kart fun, readable, and full of personality.
+        I made a kart for a playful, stylized racing game, based on a jeep design. I handled every
+        step: modeling in Blender, baking, texturing with PBR materials, rigging, animating, and
+        importing into Unity. The pipeline was set up for quick iterations, keeping the kart fun,
+        readable, and full of personality.
       </p>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/moustachekart/albedo.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/moustachekart/albedo.jpg')} alt="albedo render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/moustachekart/albedo.jpg')}
+          alt="albedo render"
+          loading="lazy"
+        />
       </picture>
       <p class="h5 on-top-text">Albedo</p>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/moustachekart/wireframe.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/moustachekart/wireframe.jpg')} alt="wireframe render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/moustachekart/wireframe.jpg')}
+          alt="wireframe render"
+          loading="lazy"
+        />
       </picture>
       <p class="h5 on-top-text">Wireframe</p>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/moustachekart/normal.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/moustachekart/normal.jpg')} alt="normal render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/moustachekart/normal.jpg')}
+          alt="normal render"
+          loading="lazy"
+        />
       </picture>
       <p class="h5 on-top-text">Normal</p>
     </div>
     <div class="project-block half">
       <picture>
-        <source srcset={asset('/images-AV1/moustachekart/ambient-occlusion.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/moustachekart/ambient-occlusion.jpg')} alt="ambient occlusion render" loading="lazy" />
+        <source
+          srcset={asset('/images-AV1/moustachekart/ambient-occlusion.avif')}
+          type="image/avif"
+        />
+        <img
+          src={asset('/images-fallback/moustachekart/ambient-occlusion.jpg')}
+          alt="ambient occlusion render"
+          loading="lazy"
+        />
       </picture>
       <p class="h5 on-top-text">Ambient Occlusion</p>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/moustachekart/smoothness.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/moustachekart/smoothness.jpg')} alt="smoothness render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/moustachekart/smoothness.jpg')}
+          alt="smoothness render"
+          loading="lazy"
+        />
       </picture>
       <p class="h5 on-top-text">Smoothness</p>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/moustachekart/metal.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/moustachekart/metal.jpg')} alt="metal render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/moustachekart/metal.jpg')}
+          alt="metal render"
+          loading="lazy"
+        />
       </picture>
       <p class="h5 on-top-text">Metal</p>
     </div>

@@ -36,21 +36,31 @@
   {#snippet content()}
     <div class="project-block text-box">
       <p class="box-frame-text centered">
-        This 3D artwork captures the vibrant essence of a Philippines island. Bold architecture and striking colors come alive under the warm sun, reflecting across the serene ocean waters. Set on a
-        sandy beach surrounded by swaying palms and lush greenery, the scene evokes the rhythmic crash of waves and the refreshing sea breeze. The piece is both an homage to the Philippines’ relaxed,
-        tropical vibe and a tribute to the beauty of nature.
+        This 3D artwork captures the vibrant essence of a Philippines island. Bold architecture and
+        striking colors come alive under the warm sun, reflecting across the serene ocean waters.
+        Set on a sandy beach surrounded by swaying palms and lush greenery, the scene evokes the
+        rhythmic crash of waves and the refreshing sea breeze. The piece is both an homage to the
+        Philippines’ relaxed, tropical vibe and a tribute to the beauty of nature.
       </p>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/diorama-by-the-ocean/boat.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/diorama-by-the-ocean/boat.jpg')} alt="Detail render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/diorama-by-the-ocean/boat.jpg')}
+          alt="Detail render"
+          loading="lazy"
+        />
       </picture>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/diorama-by-the-ocean/house.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/diorama-by-the-ocean/house.jpg')} alt="Detail render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/diorama-by-the-ocean/house.jpg')}
+          alt="Detail render"
+          loading="lazy"
+        />
       </picture>
     </div>
   {/snippet}

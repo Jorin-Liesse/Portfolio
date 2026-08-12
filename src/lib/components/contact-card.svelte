@@ -1,7 +1,8 @@
 <script lang="ts">
   import IconBox from '$components/icon-box.svelte';
 
-  let { src, title, value, link }: { src: string; title: string; value: string; link: string } = $props();
+  let { src, title, value, link }: { src: string; title: string; value: string; link: string } =
+    $props();
 </script>
 
 <a class="contact-item" href={link} target="_blank" rel="noopener noreferrer">

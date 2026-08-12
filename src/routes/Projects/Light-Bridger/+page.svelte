@@ -19,8 +19,14 @@
 <ProjectPage title={projectMetadata.title}>
   {#snippet presenter()}
     <video class="presenter-content" autoplay muted loop playsinline>
-      <source src={asset('/video-AV1/presenter-light-bridger.webm')} type="video/webm; codecs=av01.0.05M.08,opus" />
-      <source src={asset('/video-fallback/presenter-light-bridger.mp4')} type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
+      <source
+        src={asset('/video-AV1/presenter-light-bridger.webm')}
+        type="video/webm; codecs=av01.0.05M.08,opus"
+      />
+      <source
+        src={asset('/video-fallback/presenter-light-bridger.mp4')}
+        type="video/mp4; codecs=avc1.42E01E,mp4a.40.2"
+      />
     </video>
   {/snippet}
 
@@ -34,9 +40,11 @@
   {#snippet content()}
     <div class="project-block text-box">
       <p class="box-frame-text centered">
-        For Light Bridger, I started from the idea of using light as a physical tool. This evolved into a puzzle platformer where players build bridges and paths out of laser beams. I explored how
-        light could interact with the environment through mirrors and reflections to create clever, skill-based puzzles. Through this project, I learned to design mechanics that encourage creative
-        problem-solving while maintaining a clear and consistent vision.
+        For Light Bridger, I started from the idea of using light as a physical tool. This evolved
+        into a puzzle platformer where players build bridges and paths out of laser beams. I
+        explored how light could interact with the environment through mirrors and reflections to
+        create clever, skill-based puzzles. Through this project, I learned to design mechanics that
+        encourage creative problem-solving while maintaining a clear and consistent vision.
       </p>
     </div>
     <div class="project-block half text-box">
@@ -66,7 +74,11 @@
     <a href="https://github.com/Jorin-Liesse/Light-Bridger" class="link" target="_blank">
       <Button src={asset('/icons/github.svg')} title="Github" />
     </a>
-    <a href="https://miro.com/app/board/uXjVIf3QwEk=/?share_link_id=857605827096" class="link" target="_blank">
+    <a
+      href="https://miro.com/app/board/uXjVIf3QwEk=/?share_link_id=857605827096"
+      class="link"
+      target="_blank"
+    >
       <Button src={asset('/icons/miro.svg')} title="Miro" />
     </a>
   {/snippet}

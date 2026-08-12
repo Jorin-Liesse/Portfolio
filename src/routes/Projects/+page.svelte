@@ -21,7 +21,11 @@
     .filter(([path]) => path !== './+page.svelte')
     .map(([, module]) => module.projectMetadata);
 
-  const filteredProjects = $derived(activeCategory === 'All' ? projects : projects.filter((project) => project.categories.includes(activeCategory)));
+  const filteredProjects = $derived(
+    activeCategory === 'All'
+      ? projects
+      : projects.filter((project) => project.categories.includes(activeCategory))
+  );
 
   let isSelectOpen = $state(false);
   let selectBox: HTMLButtonElement | null = null;
@@ -60,7 +64,11 @@
   <ul class="filter-list">
     {#each ALL_CATEGORIES as category (category)}
       <li class="filter-item">
-        <button class:active={activeCategory === category} onclick={() => setCategory(category)} data-filter-btn>
+        <button
+          class:active={activeCategory === category}
+          onclick={() => setCategory(category)}
+          data-filter-btn
+        >
           {category}
         </button>
       </li>

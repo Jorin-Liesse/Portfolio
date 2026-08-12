@@ -18,21 +18,31 @@
 
 <ProjectPage title={projectMetadata.title}>
   {#snippet presenter()}
-    <iframe class="presenter-content" title="Angry Birds Clone" src="https://jorin-liesse.github.io/Angry-Birds-JS/?muteMusic=true" loading="lazy"></iframe>
+    <iframe
+      class="presenter-content"
+      title="Angry Birds Clone"
+      src="https://jorin-liesse.github.io/Angry-Birds-JS/?muteMusic=true"
+      loading="lazy"
+    ></iframe>
   {/snippet}
 
   {#snippet skills()}
     <SkillCard icon={asset('/icons/html-icon.svg')} alt="HTML icon" title="HTML" />
     <SkillCard icon={asset('/icons/css-icon.svg')} alt="CSS icon" title="CSS" />
-    <SkillCard icon={asset('/icons/javascript-icon.svg')} alt="JavaScript icon" title="JavaScript" />
+    <SkillCard
+      icon={asset('/icons/javascript-icon.svg')}
+      alt="JavaScript icon"
+      title="JavaScript"
+    />
     <SkillCard icon={asset('/icons/photoshop-icon.svg')} alt="Photoshop icon" title="Photoshop" />
   {/snippet}
 
   {#snippet content()}
     <div class="project-block text-box">
       <p class="box-frame-text centered">
-        Angry Birds Clone is a faithful recreation of the classic Angry Birds game, designed to deliver a fun and nostalgic experience. The game features simple controls, intuitive physics-based
-        gameplay, and engaging levels that capture the charm of the original.
+        Angry Birds Clone is a faithful recreation of the classic Angry Birds game, designed to
+        deliver a fun and nostalgic experience. The game features simple controls, intuitive
+        physics-based gameplay, and engaging levels that capture the charm of the original.
       </p>
     </div>
   {/snippet}

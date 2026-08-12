@@ -7,11 +7,19 @@
 
 <Article title="About me">
   <section class="about-text">
-    <p>I’m an game developer and designer focused on creating engaging games. I work across multiple aspects of game development: programming, design, and art.</p>
+    <p>
+      I’ve worked across several projects as both a developer and designer. For my graduation work,
+      I’m independently developing a grass rendering system in Unity, focusing on technical
+      challenges. In a group project, I worked with six people on a mobile game using hand tracking
+      and gyroscope controls, contributing to both design and programming. During my internship, I
+      worked alongside another programmer to create E-learning experiences for the National Lottery,
+      contributing as a programmer, designer, and artist.
+    </p>
 
     <p>
-      This gives me the flexibility to shape both the technical and visual sides of a project. I enjoy experimenting with small game projects, joining game jams, and tackling technical challenges to
-      deliver fun and polished results.
+      In the future, I want to work in a team where I can contribute to meaningful projects while
+      continuously improving my programming skills. I want to grow as a developer through
+      collaboration, learning from others, and taking on new technical challenges.
     </p>
   </section>
 
@@ -20,11 +28,19 @@
     <SkillCard icon={asset('/icons/unity-icon.svg')} alt="Unity icon" title="Unity" />
     <SkillCard icon={asset('/icons/blender-icon.svg')} alt="Blender icon" title="Blender" />
     <SkillCard icon={asset('/icons/photoshop-icon.svg')} alt="Photoshop icon" title="Photoshop" />
-    <SkillCard icon={asset('/icons/substance-painter-icon.svg')} alt="Substance Painter icon" title="Substance Painter" />
+    <SkillCard
+      icon={asset('/icons/substance-painter-icon.svg')}
+      alt="Substance Painter icon"
+      title="Substance Painter"
+    />
     <SkillCard icon={asset('/icons/affinity-icon.svg')} alt="Affinity icon" title="Affinity" />
     <SkillCard icon={asset('/icons/html-icon.svg')} alt="HTML icon" title="HTML" />
     <SkillCard icon={asset('/icons/css-icon.svg')} alt="CSS icon" title="CSS" />
-    <SkillCard icon={asset('/icons/javascript-icon.svg')} alt="JavaScript icon" title="JavaScript" />
+    <SkillCard
+      icon={asset('/icons/javascript-icon.svg')}
+      alt="JavaScript icon"
+      title="JavaScript"
+    />
     <SkillCard icon={asset('/icons/python-icon.svg')} alt="Python icon" title="Python" />
     <SkillCard icon={asset('/icons/miro-icon.svg')} alt="Miro icon" title="Miro" />
     <SkillCard icon={asset('/icons/github-icon.svg')} alt="Github icon" title="Github" />
@@ -34,10 +50,22 @@
     <h3 class="h3 service-title">What i'm doing</h3>
 
     <ul class="service-list">
-      <ServiceCard title="Small Games" text="Creating small but polished games to experiment with mechanics, explore new ideas, and deliver fun, focused player experiences." />
-      <ServiceCard title="Development Tooling" text="Building tools and systems to streamline game development workflows, including reusable code frameworks, and visual assets." />
-      <ServiceCard title="Learning" text="I’m continually expanding my skills, trying on new game programming techniques, and design principles to stay at the forefront of the industry." />
-      <ServiceCard title="Game Jam" text="Participating in game jams to rapidly prototype new ideas, test gameplay concepts, all while enjoying the fast-paced nature of game development." />
+      <ServiceCard
+        title="Small Games"
+        text="Creating small but polished games to experiment with mechanics, explore new ideas, and deliver fun, focused player experiences."
+      />
+      <ServiceCard
+        title="Development Tooling"
+        text="Building tools and systems to streamline game development workflows, including reusable code frameworks, and visual assets."
+      />
+      <ServiceCard
+        title="Learning"
+        text="I’m continually expanding my skills, trying on new game programming techniques, and design principles to stay at the forefront of the industry."
+      />
+      <ServiceCard
+        title="Game Jam"
+        text="Participating in game jams to rapidly prototype new ideas, test gameplay concepts, all while enjoying the fast-paced nature of game development."
+      />
     </ul>
   </section>
 </Article>

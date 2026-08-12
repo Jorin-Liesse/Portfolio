@@ -31,42 +31,66 @@
   {#snippet skills()}
     <SkillCard icon={asset('/icons/unity-icon.svg')} alt="Unity icon" title="Unity" />
     <SkillCard icon={asset('/icons/blender-icon.svg')} alt="Blender icon" title="Blender" />
-    <SkillCard icon={asset('/icons/substance-painter-icon.svg')} alt="Substance Painter icon" title="Substance Painter" />
+    <SkillCard
+      icon={asset('/icons/substance-painter-icon.svg')}
+      alt="Substance Painter icon"
+      title="Substance Painter"
+    />
   {/snippet}
 
   {#snippet content()}
     <div class="project-block text-box">
       <p class="box-frame-text centered">
-        This project features Robuddy, a retro-futuristic robot designed to assist with daily tasks in a ’70s suburban neighborhood. Modeled, rigged, and animated in Blender, PBR textured in Substance
-        Painter, and rendered in Unity, Robuddy is optimized for game environments. Its whimsical yet practical design brings charm and personality to the scene. High-quality screenshots and a
-        Sketchfab upload showcase the finished model and animations. This project was created as part of a Game Art course at DAE Howest, teaching rigging, animation, and the full PBR workflow.
+        This project features Robuddy, a retro-futuristic robot designed to assist with daily tasks
+        in a ’70s suburban neighborhood. Modeled, rigged, and animated in Blender, PBR textured in
+        Substance Painter, and rendered in Unity, Robuddy is optimized for game environments. Its
+        whimsical yet practical design brings charm and personality to the scene. High-quality
+        screenshots and a Sketchfab upload showcase the finished model and animations. This project
+        was created as part of a Game Art course at DAE Howest, teaching rigging, animation, and the
+        full PBR workflow.
       </p>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/roboddy/albedo.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/roboddy/albedo.jpg')} alt="albedo render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/roboddy/albedo.jpg')}
+          alt="albedo render"
+          loading="lazy"
+        />
       </picture>
       <p class="h5 on-top-text">Albedo</p>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/roboddy/wireframe.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/roboddy/wireframe.jpg')} alt="wireframe render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/roboddy/wireframe.jpg')}
+          alt="wireframe render"
+          loading="lazy"
+        />
       </picture>
       <p class="h5 on-top-text">Wireframe</p>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/roboddy/normal.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/roboddy/normal.jpg')} alt="normal render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/roboddy/normal.jpg')}
+          alt="normal render"
+          loading="lazy"
+        />
       </picture>
       <p class="h5 on-top-text">Normal</p>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/roboddy/smoothness.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/roboddy/smoothness.jpg')} alt="smoothness render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/roboddy/smoothness.jpg')}
+          alt="smoothness render"
+          loading="lazy"
+        />
       </picture>
       <p class="h5 on-top-text">Smoothness</p>
     </div>

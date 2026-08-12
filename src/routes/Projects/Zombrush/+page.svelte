@@ -19,8 +19,14 @@
 <ProjectPage title={projectMetadata.title}>
   {#snippet presenter()}
     <video class="presenter-content" autoplay muted loop playsinline>
-      <source src={asset('/video-AV1/presenter-zombrush.webm')} type="video/webm; codecs=av01.0.05M.08,opus" />
-      <source src={asset('/video-fallback/presenter-zombrush.mp4')} type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
+      <source
+        src={asset('/video-AV1/presenter-zombrush.webm')}
+        type="video/webm; codecs=av01.0.05M.08,opus"
+      />
+      <source
+        src={asset('/video-fallback/presenter-zombrush.mp4')}
+        type="video/mp4; codecs=avc1.42E01E,mp4a.40.2"
+      />
     </video>
   {/snippet}
 
@@ -35,9 +41,12 @@
       <p class="box-frame-text centered">The city is overrun… and it’s a mess.</p>
       <p class="box-frame-text">‎</p>
       <p class="box-frame-text centered">
-        Zombrush was created for the Unwrap Game Jam in just three days. It’s an action-packed co-op game where zombies have taken over the city, and your team must repaint the town to restore
-        order—quickly and creatively! Our team consisted of four developers, and I served as Programmer, building the gameplay systems that make spreading paint and battling zombies fun and
-        responsive. The game is designed for two players with controllers, emphasizing teamwork and fast-paced action.
+        Zombrush was created for the Unwrap Game Jam in just three days. It’s an action-packed co-op
+        game where zombies have taken over the city, and your team must repaint the town to restore
+        order—quickly and creatively! Our team consisted of four developers, and I served as
+        Programmer, building the gameplay systems that make spreading paint and battling zombies fun
+        and responsive. The game is designed for two players with controllers, emphasizing teamwork
+        and fast-paced action.
       </p>
     </div>
     <div class="project-block half">
@@ -49,13 +58,21 @@
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/zombrush/deading.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/zombrush/deading.jpg')} alt="Detail render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/zombrush/deading.jpg')}
+          alt="Detail render"
+          loading="lazy"
+        />
       </picture>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/zombrush/start.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/zombrush/start.jpg')} alt="Detail render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/zombrush/start.jpg')}
+          alt="Detail render"
+          loading="lazy"
+        />
       </picture>
     </div>
     <div class="project-block half">

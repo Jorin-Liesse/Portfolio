@@ -45,7 +45,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
 </svelte:head>
 
 <aside class="sidebar" class:active={sidebarOpen}>
@@ -53,7 +56,12 @@
     <figure class="avatar-box">
       <picture>
         <source srcset={asset('/images-AV1/my-avatar-2.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/my-avatar-2.png')} alt="light-bridger" loading="lazy" width="80" />
+        <img
+          src={asset('/images-fallback/my-avatar-2.png')}
+          alt="light-bridger"
+          loading="lazy"
+          width="80"
+        />
       </picture>
     </figure>
 
@@ -71,17 +79,45 @@
   <div class="sidebar-info_more">
     <div class="separator"></div>
     <ul class="contacts-list">
-      <ContactCard src={asset('/icons/mail.svg')} title="Email" value="liesse.jorin@gmail.com" link="mailto:liesse.jorin@gmail.com" />
-      <ContactCard src={asset('/icons/phone.svg')} title="Phone" value="+32 483 45 06 05" link="tel:+32483450605" />
-      <ContactCard src={asset('/icons/calendar.svg')} title="Birthday" value="June 9, 2005" link="https://calendar.google.com/calendar/u/0/r/day/2005/06/09" />
-      <ContactCard src={asset('/icons/location.svg')} title="Location" value="Zonhoven, Belgium" link="https://www.google.com/maps/search/?api=1&query=Zonhoven,Belgium" />
+      <ContactCard
+        src={asset('/icons/mail.svg')}
+        title="Email"
+        value="liesse.jorin@gmail.com"
+        link="mailto:liesse.jorin@gmail.com"
+      />
+      <ContactCard
+        src={asset('/icons/phone.svg')}
+        title="Phone"
+        value="+32 483 45 06 05"
+        link="tel:+32483450605"
+      />
+      <ContactCard
+        src={asset('/icons/calendar.svg')}
+        title="Birthday"
+        value="June 9, 2005"
+        link="https://calendar.google.com/calendar/u/0/r/day/2005/06/09"
+      />
+      <ContactCard
+        src={asset('/icons/location.svg')}
+        title="Location"
+        value="Zonhoven, Belgium"
+        link="https://www.google.com/maps/search/?api=1&query=Zonhoven,Belgium"
+      />
     </ul>
 
     <div class="separator"></div>
 
     <ul class="social-list">
-      <SocialItem src={asset('/icons/linkedin.svg')} title="LinkedIn" link="https://www.linkedin.com/in/jorin-liesse-755774287" />
-      <SocialItem src={asset('/icons/github.svg')} title="GitHub" link="https://github.com/Jorin-Liesse" />
+      <SocialItem
+        src={asset('/icons/linkedin.svg')}
+        title="LinkedIn"
+        link="https://www.linkedin.com/in/jorin-liesse-755774287"
+      />
+      <SocialItem
+        src={asset('/icons/github.svg')}
+        title="GitHub"
+        link="https://github.com/Jorin-Liesse"
+      />
     </ul>
   </div>
 </aside>
@@ -91,7 +127,11 @@
     <ul class="navbar-list">
       {#each ALL_ARTICLES as article (article)}
         <li class="navbar-item">
-          <button class="navbar-link" class:active={activePage === article} onclick={() => setArticle(article)}>{article}</button>
+          <button
+            class="navbar-link"
+            class:active={activePage === article}
+            onclick={() => setArticle(article)}>{article}</button
+          >
         </li>
       {/each}
     </ul>
@@ -474,10 +514,22 @@
   :global :root {
     /* gradient */
     --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
-    --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
-    --bg-gradient-yellow-1: linear-gradient(to bottom right, hsl(45, 100%, 71%) 0%, hsla(36, 100%, 69%, 0) 50%);
-    --bg-gradient-yellow-2: linear-gradient(135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
-    --border-gradient-onyx: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
+    --bg-gradient-jet:
+      linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%),
+      hsl(240, 2%, 13%);
+    --bg-gradient-yellow-1: linear-gradient(
+      to bottom right,
+      hsl(45, 100%, 71%) 0%,
+      hsla(36, 100%, 69%, 0) 50%
+    );
+    --bg-gradient-yellow-2:
+      linear-gradient(135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%),
+      hsl(240, 2%, 13%);
+    --border-gradient-onyx: linear-gradient(
+      to bottom right,
+      hsl(0, 0%, 25%) 0%,
+      hsla(0, 0%, 25%, 0) 50%
+    );
     --text-gradient-yellow: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
 
     /* solid */

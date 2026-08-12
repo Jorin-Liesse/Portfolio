@@ -10,7 +10,15 @@
     avif,
     fallback,
     onclick
-  }: { link: string; title: string; category: Category; categories: Category[]; avif: string; fallback: string; onclick: (link: string) => void } = $props();
+  }: {
+    link: string;
+    title: string;
+    category: Category;
+    categories: Category[];
+    avif: string;
+    fallback: string;
+    onclick: (link: string) => void;
+  } = $props();
 </script>
 
 <li class="project-item" data-filter-item data-category={categories}>

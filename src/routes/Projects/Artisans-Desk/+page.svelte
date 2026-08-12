@@ -31,35 +31,55 @@
   {#snippet skills()}
     <SkillCard icon={asset('/icons/unity-icon.svg')} alt="Unity icon" title="Unity" />
     <SkillCard icon={asset('/icons/blender-icon.svg')} alt="Blender icon" title="Blender" />
-    <SkillCard icon={asset('/icons/substance-painter-icon.svg')} alt="Substance Painter icon" title="Substance Painter" />
+    <SkillCard
+      icon={asset('/icons/substance-painter-icon.svg')}
+      alt="Substance Painter icon"
+      title="Substance Painter"
+    />
   {/snippet}
 
   {#snippet content()}
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/artisans-desk/albedo.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/artisans-desk/albedo.jpg')} alt="albedo render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/artisans-desk/albedo.jpg')}
+          alt="albedo render"
+          loading="lazy"
+        />
       </picture>
       <p class="h5 on-top-text">Albedo</p>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/artisans-desk/wireframe.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/artisans-desk/wireframe.jpg')} alt="wireframe render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/artisans-desk/wireframe.jpg')}
+          alt="wireframe render"
+          loading="lazy"
+        />
       </picture>
       <p class="h5 on-top-text">Wireframe</p>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/artisans-desk/emission.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/artisans-desk/emission.jpg')} alt="emission render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/artisans-desk/emission.jpg')}
+          alt="emission render"
+          loading="lazy"
+        />
       </picture>
       <p class="h5 on-top-text">Emission</p>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/artisans-desk/smoothness.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/artisans-desk/smoothness.jpg')} alt="smoothness render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/artisans-desk/smoothness.jpg')}
+          alt="smoothness render"
+          loading="lazy"
+        />
       </picture>
       <p class="h5 on-top-text">Smoothness</p>
     </div>

@@ -18,20 +18,31 @@
 
 <ProjectPage title={projectMetadata.title}>
   {#snippet presenter()}
-    <iframe class="presenter-content" title="Portfolio Website" src="https://jorin-liesse.github.io/Portfolio/" loading="lazy"></iframe>
+    <iframe
+      class="presenter-content"
+      title="Portfolio Website"
+      src="https://jorin-liesse.github.io/Portfolio/"
+      loading="lazy"
+    ></iframe>
   {/snippet}
 
   {#snippet skills()}
     <SkillCard icon={asset('/icons/html-icon.svg')} alt="HTML icon" title="HTML" />
     <SkillCard icon={asset('/icons/css-icon.svg')} alt="CSS icon" title="CSS" />
-    <SkillCard icon={asset('/icons/javascript-icon.svg')} alt="JavaScript icon" title="JavaScript" />
+    <SkillCard
+      icon={asset('/icons/javascript-icon.svg')}
+      alt="JavaScript icon"
+      title="JavaScript"
+    />
   {/snippet}
 
   {#snippet content()}
     <div class="project-block text-box">
       <p class="box-frame-text centered">
-        I created a portfolio website to showcase my projects and works effectively. I started from a template but heavily modified it to fit my needs, customizing layouts, styles, and functionality
-        to best present my skills and projects. The result is a tailored, professional site that highlights my work clearly and interactively.
+        I created a portfolio website to showcase my projects and works effectively. I started from
+        a template but heavily modified it to fit my needs, customizing layouts, styles, and
+        functionality to best present my skills and projects. The result is a tailored, professional
+        site that highlights my work clearly and interactively.
       </p>
     </div>
   {/snippet}

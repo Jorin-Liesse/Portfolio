@@ -19,8 +19,14 @@
 <ProjectPage title={projectMetadata.title}>
   {#snippet presenter()}
     <video class="presenter-content" autoplay muted loop playsinline>
-      <source src={asset('/video-AV1/presenter-ghost-of-nature.webm')} type="video/webm; codecs=av01.0.05M.08,opus" />
-      <source src={asset('/video-fallback/presenter-ghost-of-nature.mp4')} type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
+      <source
+        src={asset('/video-AV1/presenter-ghost-of-nature.webm')}
+        type="video/webm; codecs=av01.0.05M.08,opus"
+      />
+      <source
+        src={asset('/video-fallback/presenter-ghost-of-nature.mp4')}
+        type="video/mp4; codecs=avc1.42E01E,mp4a.40.2"
+      />
     </video>
   {/snippet}
 
@@ -34,25 +40,41 @@
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/ghost-of-nature/start.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/ghost-of-nature/start.jpg')} alt="Detail render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/ghost-of-nature/start.jpg')}
+          alt="Detail render"
+          loading="lazy"
+        />
       </picture>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/ghost-of-nature/end.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/ghost-of-nature/end.jpg')} alt="Detail render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/ghost-of-nature/end.jpg')}
+          alt="Detail render"
+          loading="lazy"
+        />
       </picture>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/ghost-of-nature/enemie.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/ghost-of-nature/enemie.jpg')} alt="Detail render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/ghost-of-nature/enemie.jpg')}
+          alt="Detail render"
+          loading="lazy"
+        />
       </picture>
     </div>
     <div class="project-block half">
       <picture>
         <source srcset={asset('/images-AV1/ghost-of-nature/hide.avif')} type="image/avif" />
-        <img src={asset('/images-fallback/ghost-of-nature/hide.jpg')} alt="Detail render" loading="lazy" />
+        <img
+          src={asset('/images-fallback/ghost-of-nature/hide.jpg')}
+          alt="Detail render"
+          loading="lazy"
+        />
       </picture>
     </div>
   {/snippet}
